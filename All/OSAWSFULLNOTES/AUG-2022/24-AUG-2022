@@ -1,0 +1,30 @@
+No-Sql database or semi-structure database
+Even though we have relational database management systems to store and query the data effectively, still we have certain limitations with them, alternate to them the No-sql database systems are introduced
+
+Following are the dis-advantages/limitations of relational database management system
+1. Relational database management systems allows us to store the data in structured format where each record in the table has fixed set of columns within them. But not all the data in the real-world is not structured, the skeleton or the attributes of the data we wanted to store per each record for an entity might vary
+
+For eg.. we wanted to store the information about mobile phone in the database, so we can create an mobile_phone table with all the possible information of the mobile to be captured. but all the mobile phones may not have all the features and specifications, in such case when we are storing a basic mobile information most of the columns are left with default values or null due to which huge amount of memory will be wasted while storing such data
+
+Let us take another example like we wanted to store information about the product. We cannot store information about the products in a RDBMS tables since the structure/attributes of the data is not fixed/same for all products
+
+even though we can model such un-structured data in relational tables, the data model becomes quite complex and difficult to program
+
+2. not ideal or suitable for storing non-textual data
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

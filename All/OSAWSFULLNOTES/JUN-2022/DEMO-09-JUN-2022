@@ -1,0 +1,258 @@
+AWS Cloud Platform
+Durtion: 3 months (+/- 15 days)
+Timings: [Monday - Saturday] [6:00 am IST - 7:00 am IST]	
+                             [6:30 am IST - 7:30 am IST]
+Fee: 6k 
+Devops with aws batch students: 4k
+Framework: 5k
+Live classroom notes: will be provided on weekly basis
+No recordings, no youtube, students are not allowed to record the sessions, if found we are going to cancel the admission without fee refund
+-----------------------------------------------------------------------------------------
+What job roles we get if we join the course, what i can apply for?
+You can get a AWS Cloud Engineer job role, for a minimum 3 experience
+2/3 experience: 3 lacs - 5 lacs
+
+Pre-requisite:-
+what I should know to attend these sessions or course?	
+1. basic knowledge on computer programming or any computer science relevant stream
+2. basic knowledge of linux operating system and shell commands
+	- File managements
+	- process managements
+	- disk managements
+	- user management / file permissions
+	- memory management
+	- networking
+	- ssh protocol
+3. distributed systems how do they work, it is an advantage (optional)
+	
+Target:-
+AWS Cloud Engineer = people who administer, manage the cloud services on the aws platform through 
+aws cli
+aws management console
+This is not an AWS Developer course, and we are not going to teach how to program aws cloud service (developers are eligible)
+	
+Certifiation:
+1. AWS Cloud Associate
+2. AWS Cloud Practioner
+3. AWS Cloud Solution Architect (requires an additional preparation)
+-------------------------------------------------------------------------------------------
+System Configuration
+1. Internet connection (decent bandwidth capacity 5 mbps)
+2. Intel i3 processor, with 4gb RAM or any other processor with equal capacity is required
+3. AWS Cloud account (dont create right now, I will guide you during our sessions)
+		- Free-Tier (1 Year) = only few services are free in AWS Cloud, not all
+		- Your bill will not cross 500/- (given if you follow the guidelines)
+	
+During these sessions we are going to see live project deployments around 7/10
+--------------------------------------------------------------------------------------------
+Syllabus
+----------
+#1    - 10/15 days
+Introduction to Cloud Computing
+IAAS
+PAAS
+SAAS
+Introduction AWS Cloud Architecture
+- Region
+- Availability Zones
+- Edge Location
+- Scope of Services
+How to create an AWS Free-tier account
+--------------------------------------------------------------------------------------------
+#2 [Warmup] 10 days
+Linux operating system fundamentals (brushup/quick revision)
+- File Management 
+- Process Management
+- User Management
+- Package Management
+- SSH Protocol 
+
+Distributed Webapplication, why do we need them?
+How to deploy a java web application in general?
+--------------------------------------------------------------------------------------------
+#3
+AWS Networking (10/15 days)
+Virtual Private Cloud (VPC)
+Subnet
+	- private subnet
+	- public subnet
+	- hybrid subnet
+Availability Zones
+Internet Gateway
+Nat Gateway
+VPN Gateway
+Security Groups
+NACL Rules
+VPC Peering
+--------------------------------------------------------------------------------------------
+#4. Compute Domain (10/15 days)
+1. EC2 Instance
+2. ASG
+3. Elastic Beanstalk
+4. Elastic Loadbalancer (Application Load balancer, Network Load Balancer, Gateway load balancer)
+5. Lambda
+6. Keypairs
+7. Amazon Machine Image (AMI)
+-------------------------------------------------------------------------------------------
+#5	
+Storage (10 days)
+-------
+Object Storage vs Block Storage
+S3 Storage (ACL and Bucket Policies)
+Amazon Glacier
+Elatic Block Storage
+	- Types of EBS Volumes
+	- Mounting an EBS Volumes on EC2 
+	- EBS Snapshots
+Elastic Filesystem
+Storage Gatway
+Snowball
+
+#6 
+Database Domain (10/15 days)
+Relational Data Service (MySql Database)
+Auroradb
+Dynamodb (partitions)
+Redshift
+Elastic Cache Reddis Cache
+	
+#7
+Identity and Access Management (IAM)
+AWS Cloud Accounts
+User, Group
+Grant Policies
+Roles
+Manage Access Keys
+MFA Devices
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

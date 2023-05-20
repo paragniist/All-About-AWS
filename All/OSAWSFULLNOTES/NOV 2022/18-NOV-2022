@@ -1,0 +1,73 @@
+How does s3 stores the data?
+S3 is an object storage service, which allows to store the data in storage buckets. Storage buckets are similar to folders of a FileSystem used for organizing and storing the group of related data. S3 is an flat storage model, a bucket is logical name that prepends to the filename, there is nothing existing in physical called an bucket
+
+we can control the access to the storage bucket and their objects in 2 ways
+1. acl
+2. policies
+
+we can build the acls or policies at 2 levels
+1. bucket level
+2. object level
+
+What is the difference between EFS and S3?
+1. EFS has to be mounted on to an ec2 instance in order to store files/folders into it, where as an S3 is shared storage service where we can perform operations either using sdk or api
+2. Programmer has to write complex logic in storing and organizing the data on EFS location, whereas we can store or access the data from S3 storage using simple api/sdks
+3. EFS is suitable for backup or data migration across the ec2 instances or on-premise and ec2 as well. where as S3 is used for storing application data.
+	
+What are the storage classes supported in S3?
+There are 7 storage classes are available in S3
+The storage classes basically differs on these parameters
+1. latency
+2. throughput
+3. durability
+4. availability
+5. cost
+
+1. S3 Standard
+S3 standard offers high durablility, availability and performance object storage, which can be used for frequent access of the data. It deliversy low-latency and high throughput in accessing the objects
+
+2. S3 Intelligent-Tiering
+When we are not certain about how the data is being used or access from the S3 storage bucket, then place the data in S3 Intelligent-Tiering. S3 automatically monitors the uage of the data based on which it moves the data across the storage classes for optimizing the cost
+
+3. S3 Standard IA
+S3 Standard IA (infrequent access)  is used for storing the data that is being access less-frequently. but we need durability, availability and low-latency then we need to use S3 Standard IA. The price of storing the data per GB is very less when compared with standard
+
+4. S3 One-Zone IA
+If the data is less frequently access, then we can place the data in one AZ only which lowers the cost of storage upto 20% when compared with S3 StandardIA. durability is not guaranteed.
+	
+5. S3 Glacier Instant Retrieval
+Glacier is an archival storage service where the data is stored on magnetic tapes.
+It is used for storing long-lived data that is rarely accessed and lowest-cost of storage. We can save upto 80% of storage cost in storing the data
+
+6. S3 Glacier Deep Archive
+durable across multiple availability zones, lowest-cost storage option. suitable for storing the data alternate to magnetic tapes. Retrival of the data takes 12 hours
+
+7. S3 outposts
+Instead of storing the data on cloud, we can store the data on on-premise servers of your organization using S3 outposts
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

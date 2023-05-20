@@ -1,0 +1,217 @@
+Storage domain
+--------------
+There are 7 services are there in storage domain
+1. elastic block storage (EBS)
+2. Elastic FileSystem (EFS)
+3. Simple Storage Service (S3)	
+4. Glacier
+5. Snowball
+6. Storage Gateway
+7. Cloud Front
+
+#3. Simple storage service (S3)
+-------------------------------
+An application might compute/produce different types of data that has to be stored in the underlying persistency storage, for eg.. the data could be
+1. structured data with business relationship being established between them
+2. semi-structured data
+3. few other data can be object in nature like audio, video, images, docs etc (unstructured data)
+	
+In the initial days there is only one way of storing all the types of data on the computer system interms of File-based persistency. If is an text/character data, it is stored in text files, else if the data is an image, audio, video etc it is stored in binary file.
+	
+There are lot of problems with File-based persistency in storing, managing and accessing the data, to overcome the problems database management systems are introduced.
+	
+RDBMS is the most popular database management system that is used for storing structured and relationl data which is being used by the people in the market. Not only the structured data, people used to store semi-structured and even object like audio, video etc in RDBMS itself
+
+There are lot of problems in storing semi-structured and un-structured data in RDBMS
+1. huge amount of storage memory will be wasted, when we store un-structured data in RDBMS
+2. cost of storage increases when we store binary or object-based data in RDBMS
+
+over the time, the technologies are evolved and there are new database persistency methodologies are innovated and different database managements systems are introduced for storing different types of data, rather than only using RDBMS
+There are 2 more categories of database management systems are introduced
+1. no-sql or semi-structured database
+2. object storage databases
+
+
+1. no-sql or semi structured database
+In these databases we store the data in collections or tables where each record within the collection/table will not have fixed-set of columns. Mostly these databases are 
+1. doc storage in nature
+2. key/value based storage
+
+few of the examples of no-sql databases are :
+1. mongo db
+2. casendra
+3. couch db
+4. cockroach db
+5. amazon dynamo db
+
+#2. Object storage databases
+These allows us to store and access objects of data like audio, videos, docs, images etc. few of the examples of object-storage databases are 
+1. aerospike
+2. hana
+3. S3
+
+Within an application we might have to store all these types of data, which might require one or more of the above databases, so to cater the needs of the application in storing/managing the data aws has provided 3 types of databases aspart of cloud platform
+1. rds service
+2. dynamodb
+3. s3
+------------------------------------------------------------------------------------------------------------------------
+
+How many types of web applications are there?
+There are 2 types of web applications are there
+1. static web application
+static web application serves only the static resources over the web like
+	1.1 html
+	1.2 css
+	1.3 javascript
+	1.4 images
+	1.5 icons
+	1.6 fonts
+	1.7 videos
+	1.8 audios
+	1.9 docs
+	
+2. dynamic web application
+A dynamic web application takes the data from the user as an input over the request, performs operations using the data (by executing programs) and computes the dynamic output (based-on user input) and returns it as an response to the user
+
+In every dynamic webapplication along with dynamic resource, we have even static resources also part of them, these static resources are typical placed/packaged within the dynamic webapplication itself and is served by the dynamic webservers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

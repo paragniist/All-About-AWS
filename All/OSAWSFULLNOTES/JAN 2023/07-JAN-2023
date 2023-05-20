@@ -1,0 +1,69 @@
+AWS Cloudwatch
+The CloudWatch offers 3 major services as part of it
+1. metrics 
+we want to monitor the usage of the compute services and wanted to derive metrics based on the usage of cpu/memory. and out of these metrics we want to draw dashboards or reports helping us in understanding the resources are being under utilized or highly utilized.
+based on which we can scale-out or scale-in the infrastructure and can save the cost, this can be achieved using aws cloudwatch.
+The AWS Cloudwatch has an close integration with all the aws servics, during the provisioning of the services we need to enable cloudwatch to capture usage metrics,so that cloud watch will capture and provides their usage
+
+CloudWatch will periodically polls the services/instances for every 5 minutes and gathers the metrics and provides the data. if we want the metrics to be capture more often we need to upgrade pricing plan
+
+2. log
+For each action/event performed by the aws service, the aws cloudplatform logs those events aspart of the cloud watch.
+For eg.. when we provision an ASG with threshold limits, 
+when the ASG reaches to the Threshold limit, it publishes event and scale/out the instances, along with that the cloud watch logs the event that has been triggered
+which helps us in debugging and understanding why does the ASG has scaled-out/scaled-in
+
+3. alarms/alerts
+We configure alarms based on threshold values, so that when the services falls in the threshold limits, the cloud watch can notify us either by publishing an message into an SNS or SQS queue
+------------------------------------------------------------------------------------------------------------------------
+Trusted Advisor
+By default for an AWS Account trusted advisor is not available. we need to change our plan to use trusted advisor and additional cost will be incurred.
+	
+Trusted advisor is an aws account level monitoring tool, that monitors the account activities and derives reports and provides recommendations on the areas where we can improve
+For eg.. 
+Cpu usage level of an ec2 instance is low= then trusted advisor sends an notification to reduce the shape of the ec2 instance
+Security Group = if it is open to the workd, it sends an notification about the security breach opened aspart of the security group
+
+
+AWS CloudTrail
+AWS CloudTrail is a service that helps you enable governance, compilaince and operational activities and risk auditing information of an aws account.
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,32 @@
+PAAS stands for platform as a service. all the required software packages, libraries and application server infrastructure which acts as a platform in running the enduser applications are managed by the cloud provider itself.
+	
+There are lot of advantages of using PAAS from a cloud provider
+1. The provisioning of the infrastructure along with PAAS layer ontop of it will be taken care by the cloud provider, so that we can get the machines with PAAS installed and pre-configured and ready for deploying our applications
+2. Upgrading and patching the PAAS layer is taken care by the cloud provider, so that we dont need apply or upgrade the PAAS infrastructure
+3. periodical backup and restoration (incase of crash) of PAAS software along with infra is taken care by the cloud provider
+4. The lifecycle operations like scale-out/scale-in , scaleup and scale-down are taken care by the cloud provider in managing the PAAS software
+
+#3. SAAS
+SAAS stands for Software as a Service.
+	
+									 
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

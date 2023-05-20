@@ -1,0 +1,68 @@
+Datacenter:
+Datacenter setup the multi-storage building in which they procure huge amount of infrastructure and hardware resources required for hosting the applications 
+
+advantages:-
+	1. The cost of investment needed for procuring the infrastructure and dedicated hardware required for running/hosting an enterprise business solutions are less when compared with in-house solution
+	2. The customers can procure a dedicated machines of required quantity quickly from a datacenter
+	3. The technical stack over which we want to host our applications are lies in the hands of the customer / business owner itself, since these are dedicated machines allotted to the business owner
+	4. 24x7 available of the infrastructure is taken care by the datacenter, so guaranteed availability of the business is an added advantage
+	5. disaster-recovery, fault tolerance and backup/recovery are taken care by the data center
+	6. highly secured
+	7. we can procure a cluster of computers on a private network for added security
+	8. based on-demand of the business we can procure more hardware/machines and scaleout the infrastructure in running the application
+	9. if the system requirements in running the application has increased, we can procure high-configuration machines by placing an scaleup request to the datacenter 
+	
+scale-out/scale-in = extending the cluster size or adding a computer to a group of machines is called scale-out. removing a machine from group of computers is called scale-in
+
+scaleup/scaledown = upgrading the physical configuration of a computer like increasing cpu, ram, storage etc is called scaleup and decreasing the machine capacity is called scaledown
+
+dis-advantages:-
+	1. upon procuring the hardware machines from the datacenter, since these machines doesnt have a platform software or pakcages or libraries installed, the business owner and a team of IT engineers has to setup, configure and bring the systems to the desired state to host the software applications, which might takes a couple weeks around 2-4 depends on the type of softwares we need to install. looks like the business owner invest or pay for nothing to be used out of the infrastructure he procured which is a considerable expenditure incurred
+	2. the datacenters usually has fixed shape of infrastructure. based on our application requirement we need to choose the closest possible hardware configuration machine, for which we might need to pay additional amount even though we dont utilize the hardware resources
+	3. There are fixed contractual agreements on the timelines in procuring the infrastructure from the datacenter, for eg.. an minimum of 6 months is required in taking the infra
+	4. For short-term usage the cost of infrastructure will be quite high. to get better pricing we need to signup long-term contractual agreements in using the infrastructure. ontop of it we need to pay upahead before the usage as per the contract
+	5. even though datacenters supports scaleout and scalein 
+		- it purely depends on availability and may have to be in waiting queue in procuring the additional infrastructure
+		- for a scaleup we need to get into an minimal term of contract in using those machines
+	6. along with the above scaleup/scaledown has their own challenges
+	
+Cloud Computing is about on-demand delivery of infrastructure/computing services to world
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

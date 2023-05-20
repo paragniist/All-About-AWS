@@ -1,0 +1,41 @@
+What is Hybrid subnet?
+Hybrid subnet is partially open to the public network. all the outbound/outgoing traffic from the resources of the subnet are allowed and all the public network traffic towards the resources within the subnet are blocked/not accessible.
+	
+When do we use it?	
+when we are hosting the applications behind the loadbalancer, we dont want public network resources to access our subnet resources or application directly, but the resources/application that is running within the subnet should be allowed to access the public network. because all the traffic to our application running within the subnet is routed throught the loadbalancer, so there is no need of our application to be directly exposed to the public. To handle this requirement we need to host our application on hybrid subnet.
+	
+How to create a subnet as Hybrid subnet?
+To create a subnet as Hybrid subnet, the aws cloud platform has provided NAT Gateway through which the traffic from the subnet resources to the external network should be routed through.
+The NAT Gateway is a network router that works based on Network address translation mechanism, which means 
+	1. all the external network traffic towards the subnet resources are not supported, because our subnet is technically a private subnet. So inbound traffic is not possible since the resources of our subnet are not exposed.
+	2. all the outbound/outgoing network traffic from the subnet resources are routed through NAT Gateway. The NAT Gateway upon receiving the request, it would replay the request to the public network resources as if the request is being originated from NAT Gateway itself (thus hiding the subnet resources from the external network). upon receiving the response the NAT Gateway will route the response back to the original sender of our subnet resource.
+		
+For NAT Gateway to route the request to the public network resources it should be created on a public network only.
+		
+2. we need to create an route table within the vpc by associating the subnet and add an routing rule to route the public network traffic through the NAT Gateway.
+
+Bastion host or jumpbox:
+How to ssh or connect the private subnet or hybrid subnet resources from the public network to carry installations, configurations and maintainance activities?
+To connect to the resources of a private or hybrid subnet we need to use bastion host or jumpbox. A bastion host or a jumpbox is nothing but an ec2 instance provisioned temporarily on a public subnet of the same vpc through which we can access any of the resources across the subnets of the vpc.
+upon completing the maintainance activity we generally de-provision the bastion host
+
+
+		
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

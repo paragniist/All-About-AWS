@@ -1,0 +1,59 @@
+AWS Developer Tools domain
+---------------------------
+All the development and delivery which is nothing but devops related tools in implementing ci/cd pipeline are provided aspart of the developer tools domain, there are 5 services are available under developer tools domain
+1. codecommit
+2. codebuild
+3. codedeploy
+4. codepipeline
+5. codeartifact
+
+1. codecommit
+codecommit is the version control system similar to git hosted and managed by the awscloud platform.
+
+2. codebuild
+codebuild is a service used for implementing continous integration, we can build, test and publish the artifacts through the help of codebuild 
+
+In general inorder to build, test and publish the artifact, we need to have
+1. infrastructure to run the build
+2. we need to install the software libraries, for eg.. if it is an maven based java project, we need to install the java and maven on the env
+3. pull the code from git repository and build, test and publish the artifact by writing the code
+
+either we need to have an dedicated env to run the builds or we need to automate the process of creating the infrastructure in running the build and destroying it at the end
+Instead of these we can make use of aws codebuild.
+
+In our project we need to write an build definition file called buildspec.yml in which we need to define the steps or stages in which the build has to be performed.
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

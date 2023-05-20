@@ -1,0 +1,67 @@
+What are client-server architecture based applications, how do they work?
+In the client-server architecture based applications there are 2 parts are there
+1. client program
+2. server program
+
+#2. Server program
+The server program is the located centrally and is accessible to all the client programs. The server program does minimal processing and is used for distributing the data across all the client programs
+
+#1. Client program
+The client program is the thick client program, it is installed on a computer and connects and communicates over the network to the server program to retreive data and perform operation. The client will access the data from the server program by communicating over the network	and performs operation locally on the client computer and stores/pushes the data back onto the server to distribute/share the data with others
+
+advantages:
+1. The operations are carried at the local to the client application, so that the load on the server is less and performance of system is very high
+2. By nature these client-server applications exchanges very less amount of data, so that these applications are idle suitable to work on low-bandwidth communication channels as well
+
+dis-advantages:
+1. The client programs are thick client applications that consumes the cpu/memory to perform operations on the client computer, we need high-end machines at the client side. So the cost of setting up the infrastructure required in running these applications are quite high
+
+2. The client application has to be installed on each client computer, setting/installing the application on each computer within the organization is going to take lot of time.
+	
+3. We need a dedicated IT team, required to be available 24X7 in monitoring, installing, configuring and maintaining the applications across the organization. The cost of maintainance of these client programs are pretty much high
+
+4. Different branches of the organization has different computers of varied hardware configurations and operating system platforms, the client application that is being built may not work across all the hardwares or operating system platforms. It is tough to achieve compatibilty in running the software application across varied architectures
+
+5. Patching and upgrading the client software program across all the machines of the organization is very difficult and requrires huge amount of time and cost
+
+6. since the processing/operations takes place at the client-side achieving data consistency is very difficult
+
+How to overcome the above problems?
+To overcome the above problems, the distributed web applications are introduced.
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

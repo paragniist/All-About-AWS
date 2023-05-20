@@ -1,0 +1,66 @@
+AWS Lambda
+Lambda is an server-less technology offered by aws cloudplatform to run burstable short-lived programs that lives at an span of nanoseconds/microseconds of time and performs an operation
+
+When to use Lambda?
+There are programs invoked/trigerred based on an action/event, that takes input, performs operation and produces an output. The lifespan of this program would be very short-interval of time. If these programs has to be executed on cloud platform, the aws engineer/devops engineer has to 
+1. provision infrastructure
+2. install & configure software packages required for running the program
+3. manage scalability aspects when there is huge traffic load
+4. takes care of high-availability of these instances
+
+If the program is executed on a dedicated infrastructure, where it might execute for short-interval of time only upon event/action, then we endup in wasting the cpu/memory and system resources in keeping this program alive on the infrastructure which results in huge amount of cost in running. In addition we need to bare the complexity of scaling and managing the program to ensure it is always highly available
+
+Instead of we taking care of deploying, running and scaling the program by our own, we can use aws lambda service which takes care of running the program without any dedicated infrastructure (server-less).
+
+The developer of the program builds the codemodule, in one of the supported lambda programming platforms using Lambda and AWS cloud sdks packages the program and delivers to the aws cloud engineer.
+The aws cloud engineer is responsible for configuring the aws lambda function with the codemodule along with configuring the invocation points on when does the lambda program should be executed.
+	
+For eg..
+whenever the etaxfiling web application has put an object (taxfiling doc) on to the S3 storage bucket, we can configure the Lamdba function to be triggered, so that the Lambda program reads the taxfiling doc, perform calculation and generates the tax documents in format that can be uploaded to income tax website and quits the execution.
+	
+If we configure this program as a lambda, then whenver the new doc got uploaded into S3 bucket the Lambda would be triggered and finish the execution and release the infra, so that we would be only charged for the amount of time the lambda program has executed only
+
+advantages:-
+	1. no dedicated infra to execute the program, which saves huge amount of cost
+	2. no infrastructure or software configuration setup required that saves lot of time
+	3. no need to manage scalability and availability
+	4. no need of prior estimates of how much ram/cpu needs to be allocated to run the program, lambda itself determins and allocates the resources while running by gathering the historical execution of the program.
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

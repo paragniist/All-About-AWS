@@ -1,0 +1,122 @@
+How does aws cloud allows us to access the cloud platform services?
+There are 3 ways aws allows us to access the cloud services
+#1. aws cloud console
+#2. programmatic access using aws cloud sdk
+#3. REST Endpoint / HTTP API Access
+
+#2 programmatic cloud sdk, #3 REST Endpoint access will be used by the cloud developers and tool provider, using which they automate the process of cloud services/resources.
+For eg.. there are IAAC tools like terraform, cloud formation uses the API access in automating the process of lifecycle management on the cloud resources.
+		
+On top of the above the aws has provided a quick and handy tool/utility called AWS CLI, it is an command-line interface which can be installed and configured to our aws account. Using the AWS CLI a cloud engineer/administrator can quickly manage the cloud resources of his account instead of logging in through cloud console
+--------------------------------------------------------------------------------------------
+AWS Architecture
+The AWS Architecture refers to how does the aws cloud platform has been organized and designed to spread/provide cloud services to the world
+
+#1. AWS Regions
+----------------
+AWS Region is nothing but a geographical location where it offered the cloud platform services from a specific location. A Region is not an country rather they can be multiple regions within a country from where AWS cloud offers the services.
+	
+For eg.. 
+United States, AWS has 4 regions
+US-EAST-1
+US-EAST-2
+US-WEST-1
+US-WEST-2
+	
+AWS has spread across 22 regions around the world from where there are operating from. upon logging into the cloud console, on top right corner we need to choose the region from where we wanted to manage or use the cloud resources/services from.
+	
+How do we choose a region to utilize the cloud resources/services of the aws cloud platform?
+There are 2 factors based on which we should choose the region
+1. network latency
+Based on the targeted audience/customers of our business we should choose a aws region closest to them. if we choose a region far away from the location from where you are offering business services, then the customer would find delay in accessing your application due to latency in transferring the request from customer location to the region where our application is hosted
+For eg.. if our targeted audience are from India, and if we host our application in us-east-2 (ohio), then it takes lot of time for sending the request all the way down to the united states and getting a response, where enduser see a delay in loading the web pages/accessing the application which would spoil the end-user experience
+2. pricing 
+different aws cloud regions offers different pricing for the cloud resources, these pricing is varied depends on local government policies and demand of services at that location.
+The aws might offer services with different price across different regions to evenly distributed the people across the regions of a location
+
+#2. Availability Zones (AZ)
+----------------------------
+Within a AWS Region, AWS has setup multiple Availability zones. An Avaiablablity Zone is nothing but a group of datacenters within a location from where AWS is offering cloud platform services from that location.
+	
+Within a AWS Region, there can be multiple Availability zones, and AWS ensure/promises to have atleast 2 Availablity Zones within an AWS Region.
+	
+AP-SOUTH-1 (Mumbai)
+	-> AZ-1 = loss/poweroutage within state (standstill)
+	-> AZ-2
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	

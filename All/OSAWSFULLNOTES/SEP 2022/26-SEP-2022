@@ -1,0 +1,48 @@
+Elastic Loadbalancer
+The AWS Cloud Platform Elastic Loadbalancer has many advantages
+1. fault tolerant
+2. resilience
+3. high availability
+4. scalability
+
+Features:-
+1. AWS Cloud Loadbalancer is a traffic distributor for routing or loadbalancing the requests across the services or resources of AWS like ec2 instances, elastic beanstalk and auto-scaling group etc
+2. it is available per region level
+3. spans across all the AZs of the region
+4. Cloud Loadbalancer is highly available, resilient and scalable. these aspects of the LBR are taken care by the AWS Cloud platform itself
+5. Healthchecks will be conducted periodically, to identify and route the traffic to only the available nodes of the cluster.
+6. supports auto-scaling group
+
+There are 4 types of load balancers are supported by aws cloud platform
+1. classic loadbalancer
+2. Application loadbalancer (ALB)
+3. Network load balancer (NLB)
+4. Gateway load balancer (GLB)
+	
+1. Application loadbalancer
+The Application Loadbalancer is used for routing or loadbalancing the incoming http/https requests across the nodes of the on which our application is running. it works at layer 7 of OSI Model
+
+
+2. Network loadbalancer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

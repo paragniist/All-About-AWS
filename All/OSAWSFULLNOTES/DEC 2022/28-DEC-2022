@@ -1,0 +1,87 @@
+Amazon SES
+SES stands for Simple Email Service, it is an relay managed email server provided by the aws cloud platform, through which we deliver bulk or promotional or transaction emails to the customers
+
+Features
+1. Delivers high-volume of emails campaings around hundreds of billions of emails per year
+2. Reaches customer inboxes as a trusted sender with secure email authentication
+
+1. create an verified identity in SES service with domain name. 
+The SES will provide DKIM records which are CName records that we need to add in our DNS registry for domain identity verification. If you have your Domain name hosted within AWS CloudPlatform under Route53. The DNS records will be added automatically and DNS verification will be performed automatically
+
+when we create a domain identity our account is under sandbox status which has a 
+1. daily email sending limit as 200 mails
+2. 1 mail per one second
+3. we can only send the emails to the verified emails only
+
+If we want to send the emails to anyone around the world of any in number then we need to request production access by filling the form and provide reason. Then AWS Cloud platform team will verify your request and promote to production usage.
+	
+Since we are in sandbox mode, we need to add an verified email to sending emails FROM the domain name to our email address for testing purpose
+
+2. create one more verified identity by entering email address to whom we wanted to send the email, then amazon ses will send link to the email address we have given which we need to open for verification
+once the email has been verified then we can send the emails from the domain name for eg.. noreply@wegoshop.net to the verified email address
+
+3. Inorder to send the email through the program we need to create SMTP credentails, which will provide USERNAME, PASSWORD using which we can send emails through our programs
+------------------------------------------------------------------------------------------------------------------------
+7. Developer Tools
+1. codecommit = GIT
+2. codebuild  = MVN/GRADLE
+3. codedeploy = ENV
+4. codepipeline = Jenkins/Hudson
+5. codeartifact = JFrog
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

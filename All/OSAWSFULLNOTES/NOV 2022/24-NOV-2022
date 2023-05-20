@@ -1,0 +1,8 @@
+CloudFront Service
+CloudFront service is an content delivery network server which is used for serving the static web content quickly there by reducing the load on the backend servers of the application
+
+The AWS takes care of hosting and distributing static content through CDN servers by placing them at various edge locations across the globe. There are around 410+ globally dispersed locations are available with automated network mapping and intelligent routing in serving the content
+
+CloudFront service is used for various different purposes
+1. Accelerating the static content of a website
+2. streaming audio or video on demand 

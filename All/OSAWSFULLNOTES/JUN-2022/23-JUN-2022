@@ -1,0 +1,220 @@
+
+How to host an distributed web application and make it accessible to the world?
+Hosting is the process of making the application accessible to the world. In order to host an application there are many options are available.
+	
+Let us explore how can the applications can be hosted prior to cloud.
+	
+#1. In-House hosting
+The business owner in order to offer business services to the customers around the world, he has to host the application. For which in an in-house hosting,the business owner itself procures required infrastructure and software for hosting the application as below.
+	
+There are 2 main aspects required for hosting an application
+1. Infrastructure
+	1.1 We need server grade computer system with high capacity cpu, ram and storage for handling the requests send by the customers/endusers
+	1.2 need a backup server incase the primary machine has been crashed to ensure 24x7 availability of the application
+	1.3 we need an infrastructure/space to setup the computing resources in running the application.
+	1.4 require an dedicate highspeed leased internet connection, to support huge customer traffic
+	1.5 an backup line to ensure the application is always available online
+	1.6 24x7 power supply to ensure zero-downtime of the application
+	1.7 Air conditioned rooms, to ensure the hardware degration will not be there and throughput of the applications are going to be high
+	1.8 Network devices, Routers and firewalls for setting up the network and securing it
+	
+#2. Softwares
+To run an application we need software packages and libraries need to be installed and configured unless otherwise we cannot run an software application, below are the softwares required for running the application
+	2.1 we need operating system software need to procure a commercial license in running the application and making them accessible to the public
+	2.2 ontop of the operating system we need to procure/purchase the software packages and libraries required for running an application
+	2.3 We need an system administrator who takescare of installing and configuring the software packages and libraries required for running/deploying the applications
+	2.4 we need an network engineering team who should be available 24x7 takes care of setting up the network infrastructure that is required to allow the applications to connect over the network and make them accessible. The network team has to setup the network, and configure necessary settings and monitor 24/7 for the safety of the systems.
+	2.5 We need an dedicated administration team available 24/7 who takes care of monitoring the infrastructure and replaces the failed hardware for continuity and availability of the application
+	2.6 we need application support and monitoring team to ensure the application is running properly, in the event of crash it has to be brough back
+	
+The in-hosting of an application is also called as "on-premise" hosting where the application is being deployed/hosted at the client/businessowner environment itself. it has lot of drawbacks/dis-advantages with in-house hosting
+
+dis-advantages/drawbacks:-
+1. The cost of investment required for setting up the infrastructure, procuring the software license in hosting the application is very huge
+2. The initial setup required in setting up the infrastructure resources and software packages in hosting the application takes lot of time at an average of 30-45 days time needed to bring up the machines for hosting the applications for eg..
+		1. we need the space to be setup with required infrastructure
+		2. power cabling need to be done for handling the load
+		3. airconditioned to be setup
+		4. power backup and generators need to be deviced
+		5. lan cabling need to be done
+		6. leased internet lines has to be procured
+		7. hardware assembling, network setup and configurations has to be taken care
+3. we need to hire manpower or relevant expertise required for carrying all the above operations which takes lot of time
+4. we need to maintain the administrators, network engineers and application supports engineers to monitor and manage applications which is going to inccur huge maintainance cost
+5. the cost of procuring the software licenses in running the application is very high
+6. we need to perform necessary validations/verifications to ensure our network/systems are safe and are not prone to any security breach
+
+From the above we can understand in-house hosting is not suitable for hosting the software applications for a small / moderate organizations/business vendors. 
+	
+It is ideal for only enterprise organizations who can bare the infrastructure and maintainance cost in hosting the application in-house
+
+advantages:-
+	1. highly secured
+	2. more control
+	
+The in-house hosting is done by banking and financial organizations who need high-end security 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

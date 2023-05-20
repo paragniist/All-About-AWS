@@ -1,0 +1,107 @@
+#1. virtual private cloud (vpc) network
+vpc is an isolated network of resources of an aws account user within the region.
+
+1. an aws account user can create at max 5 vpc per region within his account (softlimit)
+2. the resources within a vpc by default can talk to only the other resources within the same vpc
+3. an vpc spans/spreads across all the availability zones of a region
+4. by default the resources can talk to only the other resources of the same vpc,if we wanted the resources to talk to other resources of an different vpc of the aws account users then we need to enable vpc peering
+5. per each region of an aws account an default vpc is created by the aws.
+	
+purpose of vpc:
+vpc is being used in many ways for organizing and controlling the access to the resources at various different purposes
+1. across the business units/departments of an organization to isolate the resources of them we can create separate vpcs
+2. across the different projects
+3. for different environments like dev, test, prod etc
+
+How to create an vpc?
+To create a virtual private network to isolate the resources from the others we have provide the CIDR range along with name of the vpc.
+CIDR stands for class-less inter-domain routing, used for specifying the network and host address range in creating ip address for the resources.
+	
+#2. subnet
+vpc is an isolated big network which spans across all the availability zones of a region in which it has created. by default all the resources created within the vpc are accessible to each other and the same traffic restrictions are applied to all the resources.
+But for different group of resources we wanted to apply different security restrictions and accessibility, for eg.. we wanted the rds (database) instance to be private and accessible to the resources within the vpc, but we wanted the ec2 instance to be accessible publicly by anyone, this can be dont be separating and them into 2 subnet works of an vpc
+
+a vpc can be further broken down into smaller networks where we can create resources within the subnet of a vpc based on the restrictions we wanted to enforce.
+
+1. A subnet is created within the availability zone of a vpc
+2. per vpc we can create at max 200 subnet
+3. it is recommended to create minimum 2 subnets across the availability zone of an vpc.
+	
+What is the purpose of a subnet?
+There are 2 reaons why we use subnet
+1. to enforce different security/traffic restrictions to various different group of resources within a vpc we can distribute them into separate subnets
+2. to distribute the resources across the availability zones of a region
+
+How to create a subnet?
+while creating a subnet we need to specify 
+1. the vpc in which we wanted the subnet to be created
+2. availability zone in which want to create
+3. subnet name
+4. cidr notation within the vpc range
+
+There are 3 types of subnets are there
+1. private subnet
+2. public subnet
+3. hybrid subnet
+
+#1. private subnet
+by default when we create a subnet within the availability zone of a vpc it acts as an private subnet only, which means all the resources within the subnet can talk to any other resources across all the subnets of the same vpc. These resources are not acessibile publicly to the outside world
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

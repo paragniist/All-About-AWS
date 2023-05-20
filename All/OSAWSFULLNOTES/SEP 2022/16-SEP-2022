@@ -1,0 +1,196 @@
+How to provision an elastic cache on aws cloud platform?
+1. The cache is used as part of application only in general, so the elastic cache should be provisioned within the private subnet of the application vpc.
+2. by default aws cloud platform provisions the multiple replicas of cloud cache for fault tolerance & fail-over safe we need to create subnet group to 	provision the cloud cache
+3. after provisioning to verify the cache before delivering to the developers we need to provision an ec2 instance on public subnet and install redis-tools (redis-cli) using which connect to the cache and verify the instance
+
+#1. create an vpc
+vpc name: gooddealsvpc
+cidr: 10.0.0.0/16
+	
+#2. create 2 private subnets & 1 public subnet
+1 public subnet
+gooddealspubsn1 [10.0.1.0/24]
+
+2 private subnet
+gooddealsprvsn2 [10.0.2.0/24]
+gooddealsprvsn3 [10.0.3.0/24]
+
+#3 create an internet gateway and attach to the gooddealsvpc
+internet gateway: gooddealsig
+attach to : gooddealsvpc
+
+#4 route the public network traffic of the subnet through the ig by creating route table
+gooddealsigrt
+10.0.0.0/16 local
+0.0.0.0/0   gooddealsig
+
+
+#5 create 2 security groups
+1. allow ssh access to the ec2 instance for connecting to the cache
+2. allow elastic cache port to be accessed within the vpc
+
+gooddealsec2sg
+in-bound
+SSH   22  0.0.0.0/0  allow
+outbound
+ALL   ANY 0.0.0.0/0  allow
+
+gooddealsecsg
+inbound
+Custom TCP  6379   10.0.0.0/16  allow
+outbound
+ALL   ANY 0.0.0.0/0  allow
+
+we setup network infrastructure required for hosting/provision an elastic cloud cache, let us understand the steps for provisioning the cache
+1. choose the cache engine we want to provision the cache cluster
+	1.1 redis
+	1.2 memcache
+	
+2. 	Choose Cluster Mode
+	2.1 enable = cluster mode enables replication across multiple shards for enhaced scalability and availability
+	2.2 disable = The Redis cluster has only one shard with one primary node and upto  5 read replicas
+	
+3. Cluster Info
+	3.1 Name 
+	3.2 description
+	3.3 Location
+	AWSCloud or OnPremises
+	3.4 Multi-AZ
+	3.5 Engine Version
+	3.6 Port
+	3.7 NodeType (Shape)
+	3.8 number of replicas
+	3.9 subnet group settings
+		1. choose the AZ and Subnets under which the replicas has to be created
+		2. choose vpc	
+	3.10 Backup configuration
+	3.11 encryption settings
+	3.12 Maintainance Window 
+	3.13 choose security group
+	3.14 add tags
+	3.15 create
+------------------------------------------------------------------------------------------------------------------------
+Launch Ec2 instance to test and verify the cache configuration
+1. provision an ec2 instance with ubuntu operating system
+2. update and install redis-tools software package using ubuntu apt
+		
+sudo apt update -y
+sudo apt install -y redis-tools
+3. copy the primary endpoint of the elastic cache that we provisioned above and use redis-cli to connect and verify the cache
+4. redis-cli -h endpoint -p portNo
+
+5. set key value = to store data into the cache
+6. get key = to access the data from the cache
+7. key * = to see all the keys in the cache
+8. ping = to verify connectivity with the cache
+------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

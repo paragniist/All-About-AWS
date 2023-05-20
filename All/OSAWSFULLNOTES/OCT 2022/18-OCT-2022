@@ -1,0 +1,46 @@
+Elastic Beanstalk
+To run an application of any language and any technology we need 
+1. Infrastructure
+2. Platform Software 
+3. Configurations 
+so that we can deploy and run our software application. In addition to address the scalability and high-availability we need to setup loadbalancer and auto-scaling group as well.
+Setting up all these things in running an software application takes huge amount of time. Looks like the Infrastructure, Platform Software and their configurations would be same across several applications build in a language of a specific technology
+
+So Instead of we manually setting up the infrastructure/platform software for deploying and running the application aws has provided elastic beanstalk. The elastic beanstalk is nothing but predefined templates/technology stack build by aws developers and provided to us, upon choosing an bean stalk creating the environment with infra/software to run the application will be taken care by elastic beanstalk
+
+Along with this elastic beanstalk supports load balancers and autoscaling group to handle scalability and high-availability requirements of an application
+
+There are 2 types of environments supported by elastic beanstalk
+1. webserver environment
+2. worker environment
+
+#1. webserver environment
+The webserver environment provides required software packages for deploying and running an http based applications build on any language.
+	
+#2. worker environment
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

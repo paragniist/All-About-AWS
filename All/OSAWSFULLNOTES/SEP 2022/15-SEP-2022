@@ -1,0 +1,119 @@
+How to provision an elastic cache (redis) on aws cloud platform?
+Elastic Cache is an vpc scoped service, we access the cache only from the applications. The applications are deployed on compute instances (ec2) of the cloud platform. So inorder to make the cache accessible across all the instances of the application we need to provision the cache on vpc network of the application.
+	
+#1 since we access the cache only from the application, and should not let the cache accessed from public network we need to provision the elastic cache instance on private subnet of the vpc
+
+#2 By default AWS Cloud platform creates 2 replicas of the Elastic Cache for fail-over and fault-tolerance, so we need to create an subnetgroup in replicating the cache 
+
+#3. While setting up the subnet group it is recommended to distribute across the AZs of the region so that high-availability is guaranteed
+
+#4. upon provisioning the elastic cache, to verify the cache is working or not we need to consume it by placing the message/data and access it back. 
+since we are not application developers, we can verify the cache and its connectivity by provisioning an ec2 instance on public subnet, install redis-tool on ubuntu operating system, using which we can connect to cahe and verify
+
+once we verified the cache configuration we can share the endpoint of the cache to the developers to let them integrate within their application
+-----------------------------------------------------------------------------------------------------------------------
+#1 create an vpc
+vpcname: gooddealsvpc
+cidr: [10.0.0.0/16]
+
+#2. 
+we need 3 subnets as per the above plan
+2 = private subnets for HA
+1 = public subnet
+
+2.1 
+gooddealspubsn1
+cidr: 10.0.1.0/24
+	
+2.2
+gooddealsprvsn2 | gooddealsprvsn3
+10.0.2.0/24       10.0.3.0/24
+	
+#3.
+create an internet gateway (gooddealsig) and attach to the vpc
+#4 route the public network traffic of that subnet throught the ig by associating through routetable
+
+#5
+create 2 security groups
+5.1 ec2 instance to allow public ssh access
+5.2
+securitygroup: gooddealsecsg
+in-bound: 10.0.0.0/16 6379    allow
+out-bound: 0.0.0.0/0  anyport allow
+
+#6 we need to create elastic cache
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	

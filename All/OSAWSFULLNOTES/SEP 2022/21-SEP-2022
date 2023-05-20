@@ -1,0 +1,17 @@
+what are the problems with executable jars with dependent libraries?
+There are 3 problems are there in distributing an executable jar with dependent libraries to the customer
+1. no way to package and distribute as an single distributable application
+2. the dependent jars has to be placed within relative directory location of the application jar
+3. the client/customer has to be inside the directory of the application jar to launch the application
+
+To overcome the above problem we can use uber jar or fat jars technic. The uber/fat jar means the application jar and the dependent library jars are packaged into one single jar file
+which means we unjar all the classes of all the libraries/application jars and package into one single jar file.
+
+There are lot of problems with fat/uber jars:
+1. each time while delivering the application we need to unjar and rejar all the classes as a fat jar which takes huge time
+2. we cannot identify which dependents are being used for our application
+3. by looking at the distribution we cannot even know what versions of the dependencies we are using
+4. the vendor shipped signed jars would be broken upon unjar the libraries
+
+To overcome the above problems and ship an application as a single distributable application, spring boot has provided spring boot executable jar feature.
+	

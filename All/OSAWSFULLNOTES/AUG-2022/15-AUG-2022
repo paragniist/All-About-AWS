@@ -1,0 +1,142 @@
+There are 6 different types of database management systems are there
+1. Hierarchial database
+2. Network database
+3. Relational database
+4. Object-oriented database
+5. No-Sql / Semi-Structured database
+6. Un-Structed / object-storage database 
+
+#1. Relational database management system
+Relational database management system allows us to store the data interms tables. These are called as structured database management system.
+Each table should be defined with columns with fixed size and the data will be stored in the tables by adding records into the table, which are also called as "tupples"
+
+Why does the data is stored in table/structured format?
+by defining the tables with fixed columns, what data has been stored within the tables is well-known to database management system, since all the data is structured the database management system can help us in querying, filtering and acessing the data easily. In addition all the data manipulation operations are taken care by database management system itself.
+	
+To work with querying or manipulating the data in the rdbms, the database has provided an standard language called "sql". it is english like language through which we can interact and ask the database to perform operations on the data based on the structure of the data
+
+Why does the name relational database management system?
+always the business data has relationship between them, so one way to represent relationship of the data is keeping the data together by defining in one table.
+but it is not recommended to store the entire data of the business into one single table, because we run into data anamolies
+1. duplicate
+2. updation
+3. insertion 
+4. deletion
+
+Instead break the data into multiple tables and store them separately to avoid anomolies. But to establish relationship between the data we need to define primary keys and foreign keys in the tables.
+
+primary key = a column defined inthe table, which contains unique value among the records of data within that table. no 2 records contains same value in that table, so that we can identify the record using the primary key value and can be used as foreign key in another table to establish relationship
+
+foreign key = a column  defined in a table referring to the primary key column of another table through which we can establish relationship
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

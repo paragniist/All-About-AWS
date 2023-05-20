@@ -1,0 +1,188 @@
+How to store the data permanently on the computer?
+We can store the data permanently on a computer by writing onto the secondary storage devices by using FileSystem technic. FileSystem technic allows us to store and manage the data interms of Files/Folders.
+	
+We can manually write the data onto the File using text editors, but there are problems in directly storing the data on to a File
+1. human errors, due to which incorrect data will be stored on to the File
+2. modification of data is difficult because we need to identify the data we wanted to modify and place cursor at the right position within the File to modify
+3. search and identifying the data is very difficult, it is tough to apply multiple filter conditions in searching and accessing the data
+4. we need to manually read the data and perform operation on the data which will be
+	1. time consuming
+	2. leads to in-accurate in computation
+5. data is not secured
+
+To overcome the above problems in storing and organizing the data onto a File we need to use Software applications. The developers build the software applications using which we store/process the data on a File. Enduser will pass the data as an input to the Software application. The application validates the data performs operation on that data and read/writes the data onto the File	
+Advantages:-
+	1. all the data written onto the File through the application is being validated, so there is no chance that invalid data will be stored on the file
+	2. the application itself will locate the data and modify the data consistently across the File
+	3. Searching and identifying the data through complex filter conditions is easy.
+	4. application by itself can read and perform the operation on the data which will results in
+		1. faster operation
+		2. high accuracy
+	5. applications can use data security mechanisms while storing the data onto the file
+-----------------------------------------------------------------------------------------------------------------------
+Looks like all the disadvantages in storing/accessing the data manually onto the Files are overcomed through the help of Software applications. But there are challenges involved in building the software applications that works around the files.
+		
+The application developers has to use programming languages (like java, python, .net, php, scala etc)	in storing and managing the data onto the Files of the computer. The primary purpose of building an software application is to perform business operations which results in high accuracy and faster computation. In addition to that we write the logic in storing/managing the data onto the Files as well.
+So looks like while building the software application we are writing 2 types of logics
+1. business logic
+2. persistence logic
+
+There are lot of challenges are there in building applications to perform persistence operations on the Files of FileSystem.
+	1. The programmer has to use programming language support in writing the code for storing/managing the data on the File of the computer. it looks like most of the programming languages has poor support in working with Files, so the programmer has to endup in writing lot of code in performing the persistence operations on the Files which leads to several problems
+		1. The complexity in writing the code for storing the data onto the File is very high
+		2. takes more amount of time in developing the application to perform persistence operation
+		3. The cost of building the application increases since we need to write more code and it is very complex and takes more time for building
+		4. The more the amount of code, the higher the bugs are
+		5. difficult to maintain
+	
+In addition to the above looks like across every application we need to write the code for persisting the data onto the File which looks like an repeatitive effort
+To overcome all the above problems in persisting the data, the database management systems are introduced.
+	
+Database Management System:
+-----------------------------
+Database management system is a pre-built software application that contains the logic for storing/managing the data permanently on the underlying Filesystem of a computer. The application programmers dont need to write the code for storing/accessing the data from Files of the computer, rather they need to build the applications to communicate with database management system.
+all the complexcities in storing/accessing the data are taken care by the database management system software.
+	
+There are lot of features of database management system are there
+1. Many/most of the database management systems are distributed systems, so that we can run database software on one machine and application on another machine. The Software application connects to the database server remotely over the network in querying and storing the data. Since both are running on dedicated machines it results in faster throughput in running the application
+
+2. The database management system abstracts the complexities in storing and accessing the data from the FileSystem of your computer, so that we dont need to bother about how to store/access the data which greatly reduces the time/complexity and cost of building the application
+
+3. The database management systems provides tools/utilities through which we can periodically take the backup of the data and in the event of crach we can recover the data back quickly, through which we can always can restore the data back.
+	
+4. The database managment systems are highly secured in storing and allows us to access the data, there are authentication mechanisms in place allows us to controlly access the data and manage it
+
+5. database management system softwares supports clustering due to which we have plenty of advantages
+	1. scalability can be achieved in storing the data
+	2. scaled performance in carrying database operations
+	3. high availability
+	
+6. databases allows us to enforce constraint checks and data checks before allowing us to store the data 
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

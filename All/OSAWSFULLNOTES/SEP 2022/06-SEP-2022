@@ -1,0 +1,81 @@
+How does the application will persist or fetch the data from database management system?
+Each application upon performing the operation will generates data as an ouput, the application should be able to persist the data into the database management system permanently for future usage, unless otherwise we cannot reuse the data in computing various different operations on the data
+
+In order for an application to persist the data into the underlying database it has to perform the below activities
+1. the application should establish a connection/open connection to the underlying database
+2. the application has to pass the sql query asking the database to perform operation over the network
+3. the database will parse the sql query and performs an relevant operation on the underlying data
+4. the output of executing the sql query should be send back to the application over the network
+5. the application will close the connection to the database
+
+We store the business data that is produced out of the application into the database management system. Not all the data we stored in the underlying database management system will keep changing. There is some amount of data that seems to be static or constant in nature either permanently or for certain amount of time.
+	
+Let us try to understand the nature of data based on usecases:
+#1. The information about the merchants stored in an e-commerce platform will change very rarely which is an example of static data 
+
+#2. The board/university publishes the results of an examination being conducted by storing the data into the database. once the results are announced, no matter how many number of times we are acessing the data, it will never change which is an example of static data
+
+#3. The product information that is added into an ecommerce application by the merchange will seems to be remain constant for longer amount of time and may undergo changes very rarely which is another example of static data
+
+#4. There is a tour planner who has organized an trip and the information about the trip has been published through their application by storing it in the database. once the tour planner publishes the information about a trip, it will remains constant and will never change
+
+Here we have understood most of the data seems to be permanent/remains constant in nature, let us explore uses cases on the data which might change at regular intervals of time
+
+1. Daily Sales report:
+The sales information pertaining to the products of a company should be stored into the database, so that the business team can pull insight full information regarding how does the business is operating by deriving the sales dashboards/reports.
+But the information about the sales will not keep-on changing rather they would be modified at regular intervals of time.
+	
+Frequently modified data
+1. Stocks information within a stock market will be keep changing quite frequently which is an example of frequently modified data
+-----------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

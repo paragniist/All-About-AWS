@@ -1,0 +1,77 @@
+#2 Network loadbalancer
+Network loadbalancer works at layer4 of the OSI Model, the transport layer does 3 responsibilities
+1. segmentation
+2. flow control
+3. error control
+
+at the transport layer we have protocol being used in exchanging the data, ip address and the portno of the application to whom the data has to be send.
+So the network balancer loadbalance or routes the requests based on protocol and portno of the application rather than URL. Ideally suitable for the back-end applications that works on TCP or UDP or FTP protocol
+
+Application loadbalancer can be also called as Http loadbalancer, because it works especially for load balancing the requests of http/https applications only, whereas to loadbalance the requests across non-http based application we need to network loadbalancer
+
+Network loadbalancer helps us in distributing the load of backend servers to group of machines for scalability and high availability
+Let us explore the differences between Application load balancer and Network loadbalancer to understand them better
+
+#1
+Application loadbalancer
+For an Application loadbalancer, the aws cloud platform will not provide elastic public ip address, rather it generates an DNS Name using which we need to access the loadbalancer
+
+Network loadbalancer
+We can associate the network loadbalancer with an ip address in addition to the dns name 
+
+#2
+Application loadbalancer
+it works only for http/https protocol only for routing/loadbalancing the requests across the applications. it supports various conditional routes based on http protocol
+2.1 Path-based Routing
+2.2 Hostname
+2.3 Header
+2.4 Http Method
+2.5 Query Parameter
+and supports sticky sessions and session replication as well
+
+Network loadbalancer
+it works for any TCP/UDP or other network protocols and only supports protocol & port based routing only to the backend applications
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

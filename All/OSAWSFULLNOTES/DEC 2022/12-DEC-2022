@@ -1,0 +1,164 @@
+Policies
+--------
+Policies are the access grants or permissions we want to attach or issue to a aws IAM user in accessing the services or resources of an aws account.
+	
+There are 200+ services are offered by the aws cloudplatform, for each of these services we can perform various different types of actions or operations on them. So when we create an IAM user we want to grant permissions on what actions an user can perform on a Service, this is called delegating access to the account in a controlled way
+
+To support this aws has defined each action we can perform on each service as a permission. There are bunch of pre-defined permissions are there which can assigned to an user in granting access to an service/resource
+
+So whenever we add a IAM user we need to identify the list of permissions we want to assign to the user in granting access to a resource/service, which is very difficult job, because there are lot of permissions are there which can be assigned to an user
+
+
+To help us in easily managing the access permissions on the resources/service aws has introduced policies. A policy is an expression that comprises of set of actions/permissions that can be granted on a resource to a user. Now instead of assigning #30 permissions individually to an user, we can assign policy which comprises of these #30 permissions quickly
+
+So policy is nothing but collection of permissions/actions pertaining to a resource that can be granted to a owner/user of aws
+
+There are 2 types of policies are there
+1. aws managed policies
+2. user-defined policies
+
+#1 aws management policies
+The AWS managed policies are pre-defined by the aws cloudplatform people. they identified common usage patterns of the resources/services and has created pre-defined policies with actions for each type of resource, these policies can be used directly for granting access on resource to an user.
+	
+The advantage of aws managed policies is these are managed and maintained by aws itself. For eg.. in future if there is an new feature introduced on  a service, there could be additional permissions might be introduced, so necessary changes on the relevant policies based on the new permissions will be performed automatically by aws cloudplatform developers itself.
+	
+aws managed policies are available for almost all the services/resources of aws platform, few of the aws managed policies are
+1. AWSEC2ReadOnlyAccess
+2. AWSEc2FullAccess
+3. AWSS3ListBuckets
+4. AWSS3GetObject
+etc
+
+#2. user-managed policies
+AWS Root Account user can create his own policies for granting access to a specific resource(s) of his account to an IAM user.
+There are 2 types of customer managed policies are there
+1. account-level policies
+2. inline policies
+
+2.1 account-level policy
+we can define the policies at the account level and can reuse them while creating the various IAM users of the account
+
+2.2 inline policies
+while creating an IAM user we can bind policy to the user by defining directly at the user level, this policy cannot be reused for other users we create on the same account
+
+
+How to create an aws policy?
+AWS policies are defined in json format and it has 6 key attributes inside it
+1. principle = indicates an user to whom we want to grant access
+2. sid = sequence id
+3. effect = "allow | deny"
+4. action = "permissions or operations"
+5. resource = arn resourcename
+6. condition = condition based on which the permissions defined should be granted/revoked
+
+Each policy has to be assigned with an version: date and & timeInMilliseconds. version number is usually assigned with date on which we are creating the policy, to easily identify from since when it is under usgage
+Each policy has array statement defining granting/denying access to the resource.	
+1. statement represents bunch of actions to be applied on a resource
+
+{
+	"Version": 2022-12-12,
+	"Statement" : [
+		{
+			"Sid": "grant access to ec2 instances",
+			"Effect": "Allow",
+			"Action" : "permission to be issued or stopped "
+			"Resource": "arnResource"
+		}
+	]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

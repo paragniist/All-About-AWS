@@ -1,0 +1,43 @@
+An application has to store the business data within the database for future usage and further processing.
+Not all the data that is being stored as part of the database of the application will be keep changing. There can be few data that seems to static/constant permanently or certain interval of time.
+	
+Let us explore the usecases pertaining to the nature of data:
+#1 static data
+1.1 an examination results published by the university or educational board seems to be constant/static permanently and will never undergo changes
+1.2 upon adding an merchant in the e-commerce website, the information about the merchant seems to be almost constant/static and very rarely it might change
+1.3 a product that is being added by an merchant into an ecommerce website seems to be constant and may undergo changes very rearly
+1.4 Tour planner publishes the information about the tour packages into the application database and would not change the information unless required (very rarely)
+	
+#2. moderately modified at regular intervals of time
+2.1 For eg.. an shippment being routed by an cargo service provider or courier provider. once the parcel has been dispatched until it arrives to the next destination the information/status of the parcel will not be changed and remains constant for most of the time
+
+#3. frequently modified data
+Leader boards
+In a gaming application based on the points secured by the players the leaders board are drawn showing the position of the player among the other players in the world. here the points will be keep on changing for the different players and the leader board with ratings/rankings will change very frequently which is considered as frequently modified data 
+
+Let us understand how can the application can handle these various data of different nature
+#1 static data
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

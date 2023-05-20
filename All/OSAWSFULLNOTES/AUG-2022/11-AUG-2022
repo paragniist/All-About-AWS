@@ -1,0 +1,72 @@
+How to store the data on a File?
+We can store the data on a File as a sequence of set of characters by using a text editor like a linux: vim, nano	windows: notepad, wordpad etc
+If we are storing the data manually on a File there are plenty of problems we run into
+1. manually writing the data into the File is error prone job, there is no guarantee all the data written on to file is valid which will eventually leads to incorrect data and will not be helpful for performing operations
+2. out of the data that is stored on the file, modifying the data is a tedious job because we need to locate the data that we wanted to modify manually and place the cursor position at the right place to replace or modify the existing data
+3. searching and finding the data is verify difficult, querying the data with multiple filters is a very difficult job
+4. we need to read the data manually to perform calculations on the data, which is a time consuming job and we cannot guarantee the accuracy in performing the operation
+5. there is no security, any one can read the data stored on a File
+
+To overcome the above problem, let us not store the data on a File manually rather use software applications to store and manage the data on the underlying Files of the system.
+	
+Instead of we directly writing the data into the File, we use software applications which will takes the data from the user and validates it and writes/manages the data into the File of the computer. There are lot of advantages are there
+1. Any data that is written on to the File through the Software Program is guaranteed to be accurate/valid and can be used for performing operations
+2. all the File manipulations like update, delete, inserting the data is taken care by the software program itself,  the user dont need to manually locate and modify or delete the data
+3. software programs are built by keeping the support of searching the data based on complex filter conditions, so we can quickly access the data we want through programs
+4. The program by itself can read the records of data and perform operations on the data very quickly and high accuracy in performing the operation is guaranteed
+5. software programs can use data security technics like encryption to store the data on a File, so that no one can read or understand the data from the file. So information stored on the file is highly secured
+
+From the above we can understand if we are performing the operations and persisting the data through an software application we can eliminate all the problems in managing the data. But the software application to perform there activities should be developed by a developer. 
+There are lot of challenges involved in developing the software program/application which will carry these operations let us identify them
+1. It looks like majority of code we are going to writing in the software applications contributes to persisting the data on the Filesystem, where in the developer would endup in spending little amount of time on writing the business logic due to which the time required for building the application will goes up
+2. most of the programming languages doesnt have good support in storing the data onto the Files of the computer, so programmer has to write complex logic in managing the data on a File
+3. due to the complexity of the code understanding and maintaining it is very difficult. 
+4. due to huge amount of code to be written in storing the data, there is more chances of bugs in the application
+5. since it takes lot of time to build application for managing persistence operation, the cost of building the application goes high
+6. By storing the data onto a File of a computer, it is not scalable and distributable across the computers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

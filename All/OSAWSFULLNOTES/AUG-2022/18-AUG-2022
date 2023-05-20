@@ -1,0 +1,97 @@
+#2. Database domain
+1. RDS Service [Relational database Service]
+
+For every application we need database as an backend storage system, we can provision an ec2 instance on aws cloud platform and can install and configure an relational database product like an mysql server or oracle database on the cloud instance.
+	
+But there are lot of challenges in provisioning, configuring and managing the rds database by our own:
+1. while hosting an database server on the cloud infrastructure we need to take care of lot of aspects interms of network and security in allowing the database to be accessible for the applications within cloud network. To ensure greater level security we need design and plan the infrastructure up ahead
+2. upon provisioning the cloud infrastructure, the devops engineer has to manually install and configure the database server instance which deals with several aspects of
+	1. product licensing
+	2. downloading the binaries
+	3. installing and configuring the server instance
+3. to ensure the database server is always high-available we need to install on multiple ec2 instances across the availablity zones of the region and the ops engineer has to install and configure mysql server instance in active/passive install across the nodes of the vpc, which is quite complex 
+4. monitoring tools should be in place to ensure the database availablity
+5. scaling the storage is very complex, because for scaling the storage we need to scale-up the ec2 instance which involves considerable amount of down time and impacts the business
+6. scaling the database cluster for high traffic is very complex
+7. backup and recovery is a continous job and is difficult to manage
+
+From the above we can understand provisioning, installing and configuring the relational database server and manging and monitoring is a quite challenging job and requires 
+	1. huge infrastructure
+	2. tools
+	3. and man power in monitoring and managing
+
+Everyone requires an relational database server for running their application, rather we take care of provisioning and managing by ourself aws cloud platform has provided it as PaaS service
+
+1. RDS Service
+RDS stands for Relational database service, it is not an database server by its own rather it is managed service provided by aws cloud platform that supports provisioning and managing the popular relational database server products on aws cloud platform
+The RDS Service takes care of 
+1. installing database software
+2. configuring
+3. security
+4. high availability
+5. scalability (storage/performance)
+6. backup and restore
+7. patching
+8. upgradation
+etc 
+all the cloud lifecycle operations on the underlying database server, so that with no time we can quickly take our application on production.
+	
+RDS Service supports provisioning and managing the below database server softwares on aws cloud platform
+1. MySql Server
+2. Oracle database
+3. Postgres
+4. MariaDB
+5. Microsoft SqlServer
+
+In addition to the above there is an relational database service provided by aws called "Auroradb", which is an direct service of aws cloud platform
+
+How to provision and connect to an RDS Service on aws cloud platform?
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

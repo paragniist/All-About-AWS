@@ -1,0 +1,69 @@
+How many ways we can extend the storage capacity for an ec2 instance?
+There are 2 ways are there
+1. extending the storage capacity by provisioning and attaching an additional storage volume
+2. expanding the root volume
+
+#1. extending the storage capacity by provisioning and attaching an additional storage volume
+
+1. create an additional ebs volume with required capacity and add to existing ec2 instance
+2. run any one of the below commands to identify the block device that is newly attached to the ec2 instance
+lsblk
+fdisk -l
+
+the newly created volume will be found under /dev/xvdf 
+
+3. mount the new device onto the operating system
+sudo mkfs /dev/xvdf
+sudo mkdir /ext 
+sudo mount /dev/xvdf /ext
+
+to make the mount volume permanent add an entry into /etc/fstab
+
+UUID=482332bb-cda5-49ea-bd86-2b1b609c5640   /exthdd   ext4     defaults 0 2
+or
+/dev/xvdf       /exthdd          ext4   defaults 0  2
+
+------------------------------------------------------------------------------------------------------------------------
+#2. expanding the root volume
+1. take an snapshot of existing root ebs volume
+2. create an new ebs volume of required capacity from the snapshot
+3. stop the existing ec2 instance
+4. detach the root volume
+5. attach new ebs volume provisioned from the ebs volume page, while attaching the ebs volume give the devicename as /dev/sda1
+6. start ec2 instance
+
+What are the ebs volume types are there?
+Root supported volume types:
+1. General Purpose SSD gp2
+2. General Purpose SSD gp3
+---------------------------
+3. Provisioned IOPS SSD (io1)
+4. Provisioned IOPS SSD (io2)
+-----------------------------
+5. Magnetic Storage (sata) (aws deprecated)
+
+additional ebs volumes we can use 2 more types are
+1.cold ssd (low transfer rathes) (low price) (doesnt support frequent access of data)
+2. ThroughPut optimized HDD 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

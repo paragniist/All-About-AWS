@@ -1,0 +1,110 @@
+AWS Developer Tools
+In the developer tools domain all the tools required for implementing an complete devops process of ci/cd are provided. There are 5 services are available under developer tools domain
+
+1. CodeCommit
+CodeCommit is nothing but a git repository managed and hosted by the aws cloudplatform
+
+2. CodeBuild
+Using CodeBuild we can build the project and verify all the tests are running properly or not. We can think of it as similar to ci pipeline
+Upon developer commits the code we want to run the build on the project to verify all the tests are passed and required artifacts are produced out of the build or not. This requires us to bake infrastructure and write pipeline code for building and executing the tests on the project
+instead we can use aws codebuild which takes are running the build on the project
+
+3. CodeDeploy
+Through the help of CodeDeploy we can deliver the software application on the aws cloud infrastructure which is equal to cd (continous deployment) pipeline
+
+4. CodePipeline
+Through the help of CodePipeline we can execute the CodeDeployment to release the code / deploy the code
+
+5. CodeArtifact
+Code Artifact is used for storing the build artifacts that are produced through CodeBuild
+
+Instead of using these tools from third-party vendors for example 
+1. we can make use of version control system from: github
+2. we can create an ci/cd pipeline using continous integration tools like jenkins
+3. for delivering the code we need to use cloud infrastructure tools and iac tools
+
+making all of these tools work together and integrating them is quite difficult. We need to enable security across these systems to ensure they integrate and work together which is quite complex
+
+instead we can make use of the developer tools provided by aws cloudplatform which has better integration with cloud services
+
+1. CodeCommit
+The devops engineer has to choose a version control system out of the available tools like github, bitbucket, gitgogs or gitlab etc. create organizations, teams and add members to the teams. create repositories and manage permissions to the repositories to the members of the team.
+	
+Make sure the repositories we have create for the project are private and has restricted access to the members.
+For eg.. we need to group the users of the repository in teamleads and members and grant access to them. A member can pull, push, clone, commit the code and create PR. A team lead can create repositories, review PR and merge them
+none of them should have access to deleting the repositories
+
+it takes too long time to setup the repository of an external vendor and integrate them with ci tools.
+	
+Instead of the we can use AWS CodeCommit, which is fully integrated with other aws developer services and can make them quickly work. 
+For eg.. to grant access to the repositories we can create IAM users and bind policies enabling them to access the code repositories easily
+
+There are lot of pre-defined IAM policies are there which can be used for granting access to the codecommit repository for an IAM user
+1. AWSCodeCommitFullAccess
+2. AWSCodeCommitPowerUser
+3. AWSCodeCommitReadonly
+
+How to use the CodeCommit?
+1. create an IAM user and grant PowerUser policy enabling him to create repositories and manage them.
+The IAM user apikey/secret key cannot be used for accessing the CodeCommit repositories. We need to create an separate CodeCommit credentails for each IAM user using which he/she can access the CodeCommit Repository
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

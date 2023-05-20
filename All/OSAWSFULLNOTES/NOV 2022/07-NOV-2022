@@ -1,0 +1,138 @@
+EFS (Elastic FileSystem Storage)
+EFS is an network filesystem that can be mounted across the ec2 instances in sharing files/folders.
+	
+Features:
+1. Scalable Performance
+2. Scalable Storage
+3. Secured and Complaint
+4. Storage Options
+EFS offers 2 types of storage classes for storing the files
+1. Standard = Most frequently accessed data will be placed in standard storage class, the data placed in the standard storage will be replicated across all the AZs of the region to reduce the network latency and increased iops
+
+2. One-Zone = Least frequently accessed data will be kept in one-zone storage class. The name itself tells the data will be stored only in one az location only and will not be replicated. 
+	
+By using EFS Lifecycle management we can choose the options or configure the least recently or frequently data to be moved from standard to onezone storage, so that we can reduce the cost of storage of data
+
+
+Most common usages of EFS:-
+1. The applications that are running across the ec2 instances to effectively share files/folders between them with low network latency, high availability and securely 
+2. can be used for transferring the files/folders between cloud to on-premise
+3. used for data migration
+4. we can store the data on efs location so that it can be shared across multiple ec2 instances for data analytics and data processing
+
+There are 2 storage types are supported by EFS
+1. standard = when we provision the efs with standard storage class, it will be provisioned automatically across all the subnets of the vpc
+1.1 higher throughput or scaled-performance (iops)
+1.2 low-network latency
+1.3 high availability
+The cost of storage is very high
+
+2. one-zone = the EFS is provisioned only on one subnet of the vpc, recommended to store only the data that is very likely to be used. when use one-zone storage, the cost of storage comes down to 90% compared with standard
+
+How to provision an EFS Location?
+---------------------------------
+1. create a vpc	
+vpcname: hmsvpc
+cidr: 172.0.0.0/16
+	
+2. create subnets
+we can choose to provision an EFS on private or public subnet
+1. if we wanted to use the EFS only within the vpc network or within the instances of an vpc, then place in private subnet
+2. if we wanted to access the EFS from public network or on-premise instances outside the AWS network aswell then place it on public subnet
+let us create 2 public subnets and 2 private subnets
+2 public subnets: ec2 instances
+2 private subnets: efs
+
+public subnet:
+hmspubsn1, 172.0.1.0/24
+hmspubsn2, 172.0.2.0/24
+	
+private subnet:
+hmsprvsn3, 172.0.3.0/24
+hmsprvsn4, 172.0.4.0/24
+	
+#3. security group
+2 security groups
+1. ec2 instance security group
+inbound: tcp, 22, 0.0.0.0/0 outbound: any, all, 0.0.0.0/0
+2. efs security group
+inbound: tcp, 2049, 172.0.0.0/16 outbound: any, all, 0.0.0.0/0	
+	
+#4 provision efs
+name: hmsefs
+backup: no
+storage: standard
+
+ap-south-1a > hmsprvsn3 > ip > mount target
+ap-south-1b > hmsprvsn4 > ip > mount target
+
+
+#5 provision the ec2 instances
+
+#6 mount the efs location on both the ec2 instances as below
+1. ssh into any/both of those ec2 instances
+2. sudo install -y nfs-common
+
+------------------------------------------------------------------------------------------------------------------------
+How many ways we can access the EFS location?
+There are 2 ways we can access the EFS location
+1. mount targets
+2. access points
+
+when we create an efs location within the vpc, then the efs will be created with both mount target and access point for all the subnets of the vpc (given the storage class: standard)
+an access point is an pointer to the efs storage
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

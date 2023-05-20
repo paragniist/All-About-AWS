@@ -1,0 +1,244 @@
+AWS Cloud Platform
+Duration: 3 months (+/- 15 days)
+Timings: [Monday - Saturday] [6:00 am IST- 7:00 am IST] 
+         [on saturday: 6:30 am IST- 7:30 am IST], No Sunday (if i need some more time to cover extended topic, then am going to take sunday sessions)
+Fee: 6k				 
+No Videos,No recording 
+Daily Live classroom notes will be shared = on weekly basis
+--------------------------------------------------------------------------------------------
+How to recollect the content in case if we miss any session?
+	
+#1 In daily classes first 5/10 minutes revision on previous days class, that should give you the context of what happened yesterday to connect to the today session
+
+#2. You will be added to the telegram group, your fellow classmates will be there and you can connect with them with a quick zoom/google meet to go over the content you missed
+
+#3. If you miss any classes for a week long, and a topic has been lost, drop us an email to durgasoftonlinetrainings@gmail.com with your ADMISSION NO, COURSE_NM, TOPIC,then in next batch we will allow you for that topic
+--------------------------------------------------------------------------------------------
+Pre-requisite:
+#1. 
+Should know awareness around computer science stream and any relevant technologies, either a learning knowledge or working knowledge is mandatory. A non-it student directly cannot join this course
+#2.
+exposure the any programming language background is an advantage
+#3. Linux operating system and basic shellcommands are good to have
+#4. Distributed Web Applications knowledge or awareness is good to have
+
+Course Syllabus:-
+#1 
+Introduction to cloud computing
+IAAS
+PAAS
+SAAS
+Introduction AWS Cloud Architecture
+	- Region
+	- Availablity Zone
+	- Edge Locations
+	- Scope of Services
+How to create a free-tier account
+
+#2. Basics
+Linux shell commands (basics)
+Java programs how to run (basics)
+Distributed Web Applications	
+
+#3
+AWS Networking
+Virtual Private Cloud Network (VPC Network)
+Subnet
+	- Private Subnet
+	- Public Subnet
+	- Hybrid Subnet
+Internet Gateway
+Nat Gateway
+VPN Gateway
+Security Groups
+NACL Rules 
+VPC Peering
+Route53
+
+#4. Compute 
+EC2 Instance
+ASG
+Elastic Loadbalancer
+	- Application Loadbalancer
+	- Network Loadbalancer
+	- Gateway Loadbalancer
+Elastic BeanStalk
+AWS Lambda
+Key/pair
+Amazon Machine Image (AMI)
+	
+#5 Storage
+S3 Bucket
+	- ACL
+	- Bucket Policies
+Elatic Block Storage
+Storage Gateway
+Amazon Glacier
+Snowball
+Cloud Front
+Elastic FileSystem
+
+#6. Database
+Relational Data Service (RDS)
+Auroradb
+Dynamo DB
+Elastic Cloud Cache
+
+#7 Identity and Access Management (IAM)
+AWS Account
+Uses
+Groups
+Policies
+	- Account Policies
+	- Group 
+	- User
+	- Bucket policies
+Roles
+Manage Access Keys
+MFA Device
+
+#8 Developer Tools
+CodeCommit
+CodePipeline
+CodeBuild
+CodeDeploy
+
+#9. Service
+SQS (Simple Queuing Service)
+SNS (Simple Notification Service)
+SES (Simple Email Service)
+	
+	
+#10
+Management Tool
+CloudWatch
+CloudTrail
+AWS Trusted Advisor
+KMS (Key Management Service)
+	
+
+EKS
+ECR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

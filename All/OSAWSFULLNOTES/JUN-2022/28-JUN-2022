@@ -1,0 +1,119 @@
+Hosting Providers
+Hosting Providers provides shared hosting solutions to the small/moderate business vendors. In addition to the infrastructure the provide end-to-end hosting solutions.
+1. platform software/application servers based on programming language
+	- java: tomcat server or other equivalents
+	- python: wsgi/asgi
+	- php: lamp
+	etc
+2. shared database services (major: mysql/postgres)	
+3. exchange servers (relay mail servers)
+4. website building tools (zoomla, wordpress)
+5. development tools
+		- source code repositories (svn, git, wincvs)
+		- project management tools (zoho, redmine)
+6. office management tools
+		- hrm (employee managment, leave management)
+7. domain hosting tools
+
+In addition to the above they provide control tools like
+1. cpanel
+2. WHM panel
+etc
+
+installation, configuration and upgradation of these platform, softwares are taken care by hosting provider.
+
+
+advantages:-
+	1. low investment cost in hosting an software application
+	2. low maintainance, since monitoring, upgradation, patching the infra/software are taken care by hosting provider
+	3. 24/7 technical support and customer service support will be provided
+	4. 99.9% uptime is guaranteed on all the services
+
+dis-advantages:-
+	1. The hosting providers provides limited infrastructure only, with fixed cpu/ram and storage solutions, which is not suitable for enterprise applications
+	2. The technology stack these providers offer are limited, so every application of any technology cannot be deployed or hosted on shared hosting provider
+	3. less secured, as the infra is shared across the customers
+	4. migrating from one vendor to another vendor is not possible or may have limited solutions/options
+	5. we need to signup upfront contract in using the hosting provider solutions which will bind us to hosting provider
+	6. no scaleup or scaleout options are available 
+
+From the above we can understand hosting provider solutions are not suitable for enterprise class solutions, we need alternate
+
+#3. Datacenter
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		

@@ -1,0 +1,93 @@
+How many storage classes are available in S3?
+There are 7 storage classes supported by S3
+1. S3 Standard
+durable, high-available and low latency and higher through-put
+
+2. S3 Standard Intelligent-Tiering
+It is same as S3 standard, but if we dont know how frequently we are going use our data, we can place in S3 Standard Intelligent Tiering, so that it takes care of moving the data across the storage classes automatically, by monitoring the usage
+
+3. S3 Stanard IA
+S3 Standard IA (Infrequent Access). if the data is not being accessed frequently we can store in S3 Standard Infrequent Accress. The cost of store will be less than 20% standard
+	
+4. S3 Standard IA One-Zone
+The data is stored only on one availability zone and durability is not guaranteed
+
+5. S3 Glacier Instant Retrieval
+For long-term archival data we use Glacier Instant Retrieval. 80% reduced storage cost when compared with standard
+
+6. S3 Glacier Deep Archival
+Data will be stored equivalent the storage tapes, and the cheapest and suitable for archival data. it takes 12 hours of time in retrieving the data
+
+7. S3 outpost
+Instead of storing the data on cloud, the data is stored on the on-premise machines of the organization 
+
+There are 2 ways we can control or enforce security on the bucket and objects
+1. acl
+2. bucket policies
+
+by default acls are disabled, and aws deprecated acls and doesnt recommend us to use them since they have limited control in enforcing the security.
+
+when we disable the acls, the only way to grant access to the bucket/objects is through policies.
+
+#1.
+uncheck block all public access
+the bucket and objects within the bucket are accessible publicly, we dont need to authenticate to access the bucket and objects.
+but by default the bucket and objects are not accessible publicly, we need to enable public access by attaching policy
+	
+{
+    "Version": "2012-10-17",
+    "Id": "Policy1668821302963",
+    "Statement": [
+        {
+            "Sid": "Stmt1668821297968",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::rapidos3bucket/*"
+        }
+    ]
+}
+
+The policies we are binding directly to the bucket or object level or called bucket level policies
+
+#2. check block-all public access
+the bucket and objects are not accessible publicly without authentication. and even by attaching policies also we cannot grant public access
+
+{
+    "Version": "2012-10-17",
+    "Id": "Policy1668822631949",
+    "Statement": [
+        {
+            "Sid": "Stmt1668822628503",
+            "Effect": "Allow",
+            "Principal": {
+                "AWS": "arn:aws:iam::227218640239:user/terraformuser"
+            },
+            "Action": "s3:*",
+            "Resource": "arn:aws:s3:::rapidos3usermgmt/*"
+        }
+    ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

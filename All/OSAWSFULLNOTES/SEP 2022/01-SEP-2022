@@ -1,0 +1,120 @@
+There are limitations with derived queries
+1. we cannot apply joins queries
+2. we cannot use groupBy and having clauses
+
+To overcome the above problem the declarative queries are introduced.
+declarative queries
+
+In declarative queries we can declare a method in the repository interface binding with an jpql query to be executed upon invoking the method using the repository object. the query can take parameters which are supplied through method arguments and will be substituted as parameters in query during execution.
+Here we dont need to follow any method naming conventions while declaring the methods, since we are only going to bind the jpql query rather than being derived automatically
+
+we need to use declarative queries for complex requirements like
+1. joins
+2. groupBy
+3. or complex query clauses
+
+interface TripRepository extends JpaRepository {
+	@Query("from Trip trip where trip.days between ?1 and ?2")
+	List<Trip> getTripsBetweenDays(int minDays, int maxDays);	
+}
+
+here the parameters in the query are substituted based on positions, but if more query parameters are there then it is difficult to map positional parameters to the query to overcome the problem
+NamedParameters are introduced
+
+
+interface TripRepository extends JpaRepository {
+	@Query("from Trip trip where trip.days between :mnDays and mxDays")
+	List<Trip> getTripsBetweenDays(@QueryParam(name="mnDays") int minDays,@QueryParams("mxDays") int maxDays);	
+}
+
+@Entity
+@Table("delivery_associate")
+class DeliveryAssociate {
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	int deliveryAssociateNo;
+	String fullname;
+	String mobileNo;
+	String emailAddress;
+	
+	@OneToMany(mappedBy="deliveryAssociate")
+	Set<Parcel> parcels;
+	// accessors
+}
+
+@Entity
+@Table("parcel")
+class Parcel{
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	int parcelNo;
+	String description;
+	int weight;
+	double shippingCharges;
+	
+	@ManyToOne
+	@JoinColumn(name="delivery_associate_no")
+	DeliveryAssociate deliveryAssociate;
+	// accessors
+}
+
+1. I want all the parcels scheduled to be delivered by the deliveryassociate name: paul
+from Parcel parcel where parcel.deliveryAssociate.fullname=? #implicit query
+
+interface ParcelRepository extends JpaRepository<Parcel, Integer> {
+	@Query("from Parcel parcel where parcel.deliveryAssociate.fullname=?1")
+	List<Parcel> getParcelsByDeliveryAssociate(String deliveryAssociateName);
+}
+
+2. return all delivery associates who are delivering the parcels of weight more than 50 kg
+from DeliveryAssociate da inner join on da.parcels parcels where parcels.weight > ?
+	
+interface DeliveryAssociateRepository extends JpaRepository<DeliveryAssociate, Integer> {
+	@Query("from DeliveryAssociate da inner join on da.parcels parcel where parcel.weight > ?1")
+	List<DeliveryAssociate> getDeliveryAssocateByParcelWeight(int weight);
+}	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

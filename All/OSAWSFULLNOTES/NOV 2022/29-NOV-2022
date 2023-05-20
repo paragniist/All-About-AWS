@@ -1,0 +1,12 @@
+	What we need to deploy the urotaxi application using cloud front service?
+	1. urotaxivpc
+	2. #2 private subnet (rds instance)
+	3. #2 hybrid subnet (ec2 instances)
+	4. #2 public subnets (lbr)
+	5. internet gateway
+	6. nat gateway
+	7. 1 security group ec2
+	   1 security group rds
+		 1 security group lbr
+	8. dbsubnet group
+	

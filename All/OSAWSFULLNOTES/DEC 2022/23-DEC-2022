@@ -1,0 +1,8 @@
+1. SNS 
+SNS stands for Simple Notification Service which is pub/sub model of exchanging messages between the Systems. It is called an Topic.
+Topic = Whenever a message has been published to a topic, it would delivered to all the subscribers who has subscribed for that topic
+
+Amazon SNS is an Fully managed Pub/Sub messaging and event-driven computing service, instead of we installing, configuring and managing an Messaging queue system on the on-premise environment, we can use Amazon SNS Topic
+
+
+	

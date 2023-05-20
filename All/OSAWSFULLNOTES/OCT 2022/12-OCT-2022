@@ -1,0 +1,37 @@
+when do we use scale-up/scale-down?
+if the computing resources required for running our application has been increased, it could be due to several reasons like
+1. change in underlying platform version
+2. patch/upgradation of a software
+3. new version of the application released which might need more resources
+then inorder to run the application with increased capacity we need to use scaleup, in otherway to decreases the computing capacity we need to use scale-down
+
+when do we use scale-out/scale-in?
+if the enduser traffic in accessing the application has been increased, to meet the demand of the users we need to use scale-out, so that the traffic  can be evenly distributed across multiple resources on which the application is running, viceversa if the traffic goes down we can release a resource using scale-in 
+----------------------------------------------------------------------------------------------
+How to work with ASG?
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,56 @@
+How to install and configure apache2 server to host an static web application?
+1. Install apache2 server
+sudo apt update -y
+sudo apt install -y apache2
+
+2. scp crazyeats.zip into the ec2 instance
+scp -i ~/.ssh/awskp.pem crazyeats.zip ubuntu@ip:/home/ubuntu
+
+3. copy the crazyeats.zip into hosting directory
+cp crazyeats.zip /var/www
+
+4. extract the zip
+unzip crazyeats.zip
+/var/www/
+		|-crazyeats
+		
+5. write the site configuration file in routing the domain request to the DocumentRoot directory
+sudo touch /etc/apache2/sites-available/crazyeats.conf
+sudo vim /etc/apache2/sites-available/crazyeats.conf
+
+<VirtualHost *:80>
+	ServerName www.crazyeats.com
+	DocumentRoot /var/www/crazyeats
+</VirtualHost>
+
+6. sudo a2ensite crazyeats
+	 sudo systemctl reload apache2
+	 
+Windows Host
+Add a local dns entry with the domain routing the request to apache2 server on the ec2 instance
+open c:\Windows\System32/drivers/etc/hosts
+ipec2  www.crazyeats.com
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,65 @@
+To use the services of the aws cloud platform, we need to create an aws account. An aws account is the one through which aws keep tracks of the services and resources being created by an user within the aws cloud infrastructure.
+Which resources are created or entitled for which account and who can access, administor and manage the resources are driven through aws cloud account.
+There are 2 types of users are there in aws cloud
+#1. Root account user
+#2. IAM user
+
+#1. Root account user
+The Root account user will be created aspart of the aws cloud account creation/sigup/registration process itself. The root account user has unrestricted access to all the services of the aws cloud platform. 
+The root user can delegate access to the aws services/resource of his account and grant permissions to the resources to other users of his account.
+	
+#2. IAM user
+An aws root user can delegate access to the services/resources by creating additional users in his account who are called "IAM user"
+	
+The aws offers free-tier account upon signup for an aws account. but not all the services are free and there is an usage limit on each service.
+--------------------------------------------------------------------------------------------
+AWS domains
+-------------
+There are lot of cloud services offered by the aws cloud platform, identifying the services and using them becomes messy or difficult. To easily help us in locating, navigating and identifying the AWS Cloud services, aws has grouped the services into domains.
+	
+A domain is nothing but group of related services of similar nature so that users can quickly browse them at one place
+The AWS has categorized its services into 7 domains
+1. Compute
+2. Network
+3. Storage
+4. Database
+5. Security
+6. Management Tools
+7. Messaging
+--------------------------------------------------------------------------------------------
+How can we access and use the services/resources offered by the aws cloud platform?
+To access the aws cloud platform services we need aws cloud account and we need users of the account to access the services.
+The aws allow us to use the cloud services in 3 ways.
+#1. aws cloud management console
+aws cloud management console is an web application exposed/provided by the aws cloud platform through which we can browse the service offerings of the aws cloud platform. we can perform all the lifecycle operations on the cloud services through aws cloud console application.
+	
+The Cloud developers, administrators or cloud engineers uses the aws cloud console to easily navigate and use the services of the aws cloud account.
+	
+#2. programmatic access 
+The aws cloud platform has provided cloud sdk/api (support different languages), so that the developers can use these apis in using, managing and administering the cloud resources of the aws
+
+#3. REST api access
+The aws cloud platform has exposed REST Endpoints through which we can browse, administer and manage the cloud services
+
+#2, #3 are for programmers not for cloud engineers.
+
+AWS has provided an tool called AWS CLI (Command-Line interface)
+AWS Cloud Shell -> aws cli commands
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

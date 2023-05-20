@@ -1,0 +1,51 @@
+Http protocol
+1. GET
+2. POST
+3. PUT
+4. DELETE
+5. HEAD
+6. OPTIONS
+7. TRACE
+8. PATCH
+9. CONNECT
+
+STATIC WEB APPLICATION
+- GET
+- HEAD
+- OPTIONS
+
+POST
+PUT
+DELETE
+---------- MODIFYING THE DATA ON THE SERVER
+
+GET
+HEAD
+---------  ACCESSING THE DATA
+------------------------------------------------------------------------------------------------------------------------
+glacier
+snowball
+storage gateway
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

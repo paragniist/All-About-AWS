@@ -1,0 +1,19 @@
+How many ways we can access an EFS location?
+There are 2 ways are there
+1. using mount targets
+2. access points
+
+#1. mount targets
+we can access the efs location by mouting the mountTarget onto the ec2 instances within the vpc, through mountTargets we have
+1. access to the root filesystem of the EFS
+2. all the operations we perform on the efs location will be performed on the root user
+
+
+#2. access points
+access points help the application easily accessing the efs location. For each application we create an separate access point dedicating a directory. 
+per application we create an linux user and configure in access point to perform operations on efs location through the application user. 
+advantages:
+1. every application will perform operations on their dedicated directory location on the efs location, so no chance of 2 different applications overlapping the data of each other
+2. security, not 2 different applications can see or access others data
+3. multiple instances of the application can access the accesspoint through the same user
+

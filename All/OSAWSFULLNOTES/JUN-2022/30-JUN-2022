@@ -1,0 +1,45 @@
+cloud computing
+on demand delivery of computing services to the world is called "cloud computing". As part of the cloud computing there are 3 types of services are provided.	
+1. IAAS = infrastructure as a service
+2. PAAS = platform as a service
+3. SAAS = software as a service
+
+
+#1. IAAS 
+IAAS stands for infrastructure as a a service. all the computing resources required for hosting/running an software application are provided as part of IAAS.	For eg..
+	1. compute instance (computer) (operating system platform)
+	2. network resources 
+		2.1 gateways
+		2.2 firewalls
+		2.3 subnets
+		2.4 private networks
+	3. ip adresses
+	4. storage (network storage, additional storage backup) 
+	5. load balancers
+	6. dns resgistries
+	7. dns services
+
+virtualization technology
+virtualization technology is used for creating multiple parallel isolated environments on a physical computer system
+
+If we look at the above IAAS is merely looks like an data center, but there are lot of benefits are there
+1. The shape of the machines that can choosen in procuring the infrastructure is flexible we can compose the configuration of the machine with which we want to procure the resources
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	

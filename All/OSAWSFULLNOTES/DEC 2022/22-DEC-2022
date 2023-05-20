@@ -1,0 +1,9 @@
+#6. Messaging Domain
+All the messaging related services are part of messaging domain. There are 3 main services are there in messaging domain
+1. SNS = Simple Notification Service
+2. SQS = Simple Queuing Service
+3. SES = Simple Email Service
+
+
+1. SNS
+Simple Notification Service which is nothing but an Topic in pub/subscriber model

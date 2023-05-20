@@ -1,0 +1,12 @@
+6. Messaging domain
+All the messaging related services are provided aspart of the messaging domain. There are 3 services are there in messaging domain
+1. Simple Notification Service (SNS)
+2. Simple Queuing Service (SQS)
+3. Simple Email Service (SES)
+	
+	
+1. SNS & SQS
+Simple notification Service and Simple queuing service are used for building distributed messaging oriented applications.
+	
+
+	

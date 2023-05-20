@@ -1,0 +1,173 @@
+Storage Domain
+--------------
+7 services are there in storage domain
+1. elastic block storage
+2. simple storage service (s3)
+3. elastic filesystem
+4. cloud front
+5. snowball
+6. glacier
+7. storage gateway
+
+There are 3 different storage types are supported by aws cloudplatform
+1. block storage 
+stores the data on the disk interms of Files & Folder on a FileSystem
+2. object storage
+any object which can be an audio, video, document, image etc can be stored and accessed using unique identifier
+3. network storage
+The data stored on a network storage system can be mounted across the ec2 instances and can be accessed.
+
+#1. elastic block storage (ebs)
+elastic block storage acts as an harddisk for an ec2 instance. we can store data interms of Files & Folders on the FileSystem of the Elastic block storage. At the time of provisioning an ec2 instances, the aws cloud platform provisions an default ebs volume and attaches as an harddisk to the ec2 instance
+
+by default the size of volume if we have not specified anything during the time of provisioning the ec2 instance is 10gib and is mounted as a root volume onto the ec2 instance. The max allowed storage capacity is upto 16tb
+The default or the root volume that is attached to the ec2 instance at the time of provisioning cannot be extended further.
+	
+So how to extend the storage capacity of an ec2 instance after provisioning the instance?
+There are 2 options are there
+1. mount an additional storage volume on to the existing ec2 instance
+2. expand the storage volume of an existing instance
+
+
+#1. mount an additional storage volume onto the existing ec2 instance
+1. create an additional ebs volume of required capacity and attach/mount it as one or more storage devices of the ec2 instance
+upon creating a new ebs volume and attached to the ec2 instance it appears under the below directory of the linux filesystem.
+/
+|-etc
+|-var
+|-bin
+|-lib
+|-sbin
+|-opt
+|-mnt
+|-media
+|-home
+|-proc
+|-tmp
+|-usr
+|-boot
+|-dev [physical devices attached to the computer are shown here]
+	|-sda2 [this volume is mounted as root] 
+|-root
+
+1.
+lsblk
+fdisk -l
+these commands shows the block devices attached to the ec2 instances
+identify the block volume that is attached newly mostly the new volume is attached under /dev/xvdf
+
+2. mount the device onto the operating system of the ec2 instance
+2.1 format the new harddisk device we attached using ext4 filesystem
+sudo mkfs -t ext4 /dev/xvdf
+2.2 sudo mkdir /ext
+2.3 mount the new device onto the /ext directory we created above
+sudo mount /dev/xvdf /dev
+
+whenever we go into /ext directory of the filesystem we are actually storing/accessing the data onto the newly attached harddisk
+
+note: when we restart the ec2 instance, the volume we attached will automatically detached, and we need to manually remount upon startup of the machine everytime
+
+to overcome this problem add an entry into fstab file, so that linux operating system will auto-mount the storage volumes listed in fstab file during the boot up
+
+fstab
+devicepath  mountdirectory    filesystem   default 0  2
+/dev/xvdf   /ext              ext4         default 0  2
+	
+#2. expand the root volume
+we have an existing root ebs volume of 10Gib in size which is already full,
+1. now take the snapshot of the existing root ebs volume
+2. create an new ebs volume of required capacity from the snapshot we have created above
+3. stop existing ec2 instance
+4. detach the root ebs volume
+5. attach the new ebs volume we created from the snapshot as root volume onto the ec2 instance and start it
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

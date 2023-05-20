@@ -1,0 +1,71 @@
+security groups
+security groups are used for enforcing traffic restriction on an individual resource unlike the NACL used for enforcing traffic restrictions on the group of resources on a subnet level
+1. security groups are created at the vpc level, so that those can be reused by attaching to the individual resources of the vpc/subnet
+2. security groups are stateful which means it can keep track of a request/response 
+	We can configure Ingress and Egress rules in allowing inbound/outbound network traffic from the resource of the vpc/subnet.
+	Statefull means:-
+		- If we configure an ingress rule we dont need to configure an egress rule to allow the response for the request from the source of the vpc/subnet
+		- Similar to the above, if we configure an egress rule we dont need to configure ingress rule to receive response from the external network for the request our resource has sent from the vpc/subnet
+3. Security Groups can be applied only for few types of resources only
+	1. ec2 instance
+	2. elastic beanstalk
+	3. load balancer
+	4. rds instance
+	5. autoscaling group
+
+while creating an resource within an vpc of a subnet, aws cloud platform enforces us to create/select an security group if applicable for that resource.
+based on the type of the resource, aws configures the default ingress/egress rules in a security group
+for ec2 instances the default security group configuration shown up
+	ingress:
+		ssh  0.0.0.0/0  22  allow
+	egress:
+		*    0.0.0.0/0   *  allow
+-----------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

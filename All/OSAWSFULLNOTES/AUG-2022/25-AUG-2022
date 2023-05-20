@@ -1,0 +1,18 @@
+There are limitations or dis-advantages with RDBMS databases
+1. only suitable for storing structured data of fixed set of columns per each record within the table. poor at handling semi-structured data either, if we try to store semi-structured data it results in
+	1.1 huge memory wastage
+	1.2 or the complexity of the schema would be high and difficult to program
+	
+semi-structured = each record may not have the same set of columns to store the data, so the columns of the data we wanted to store is not fixed
+
+2. the cost of storing the data would be very high while storing the data in relational database management system, because these databases requires huge computing capacity for storing and processing the data, they need high-end server grade machines to install these databases.
+	
+So the storage cost of data = along with storage cost + computing resources cost which is results in huge price of storage.
+So these databases are not ideal choice for storing non-relational data like videos, audios, images etc
+
+3. difficult to achieve highest-level of concurrency
+RDBMS databases supports transactionality so we cannnot achieve highest-level of concurrency
+
+To overcome the above problems the no-sql or semistructured and object-storage databases are introduced
+
+	

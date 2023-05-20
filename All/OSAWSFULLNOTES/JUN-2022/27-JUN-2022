@@ -1,0 +1,69 @@
+The hosting provider provides the services at a cheaper price through shared hosting services.
+	
+Shared hosting services:-
+The idea behind shared hosting services is most of the small or moderate applications doesnt require huge computing resources like cpu/ram and storage for running their applications, but to host their applications the business owner has to invest majorly in hosting their application which incurrs huge amount of cost, instead the shared hosting services are introduced.
+
+In Shared hosting services the physical infrastructure, computing resources and software platforms/libraries or packages along with manpower resources are distributed/shared across multiple customers, which will brings down the cost of hosting the applications.
+	
+By sharing the physical resources across the customer globally, we landup into security problems, to mitigate or overcome the problem, the shared hosting providers provides few control panels or administrative console softwares for granting access to their hosting services of their account.
+	
+In addition the hosting providers provides e2e hosting/deployment solutions by providing common infrastructure/platform and software components necessary for hosting the solutions like
+1. application servers (shared/dedicated) (based on language)
+	- tomcat (java)
+	- lamp (php)
+	- wsgi/asgi (python)
+2. shared database services (mysql/postgres)
+3. email exchange servers
+4. website builder tools (zoomla, wordpress)
+5. development tools
+		- sourcecode (wincvs, svn, git)
+		- project management softwares (zoho, redmine)
+		- hrm (leave, employee)
+6. 	dns hosting services/registries
+
+Control Tools
+-------------
+Controlling tools are used for accessing and managing the above services by the users/customer.
+1. CPanel
+2. WHM Panel
+
+ 		
+advantages:- 
+1. In cost of investment and maintainance required in hosting an software application is very very less. 
+2. No need to wait for setting up the infrastructure, softwares etc in hosting the application, upon place a request, the hosting provider provides the hosting service/account within 8/24 hours window time with preinstalled and configured.
+3. 24/7 uptime is guaranteed
+4. a dedicated technical support and customer service will be available for resolving any issues
+5. software license, upgradations and configurations are taken care by the hosting providers
+6. No need of maintainance, monitoring and security aspects in managing the infrastructure and network resources, these are taken care by the hosting provider
+
+dis-advantages:-
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

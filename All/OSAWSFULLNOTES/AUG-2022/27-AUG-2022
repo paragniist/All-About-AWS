@@ -1,0 +1,45 @@
+How does no-sql databases stores the data?
+There is no standard format in storing the data by the no-sql databases, different database products stores the data in different format but we can generalize and can understand.
+since no-sql database supports storing semi-structured data where each record may not have all the columns of data so these databases will not store the data in structured tables
+
+rather these databases stores the data in collections. In each collection we store doc/record of information where each record has a varied key/value pair of data
+
+In case of mongodb it supports storing the data interms of docs in a collection. each doc is stored in json format represent a record of information
+Cassendra is called columnar database which supports storing the data in key/value pair
+
+In addition to the above aws cloud platform has provided dynamodb as an no-sql database management system.
+
+DynamoDb
+--------
+There are plenty of advantages of using dynamodb when compared with other no-sql databases available in the market
+1. DynamoDb is an managed service that is hosted by the aws cloud platform which takes care of all the lifecycle operations like provisioning/de-provisioning, scaleup/scaledown, scale-out/scale-in, backup/restore etc. if we are using any of the third-party provider databases, these has to be manually takencare by the ops engineer which is quite complex and huge cost in managing
+2. Optimized for performance at scale = irrespecitve of amount of data being stored in the DynamoDb database we can achieve same level of consistency interms of performance while accessing the data from the database
+3. High Availability / Durability = no matter always the database is available and the data is durable without loss
+4. Integrate with other AWS Services
+5. Cost effective usage based payment model
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

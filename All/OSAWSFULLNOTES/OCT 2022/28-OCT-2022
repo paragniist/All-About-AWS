@@ -1,0 +1,352 @@
+How to setup the network loadbalancer?
+To setup the network loadbalancer and route the traffic across the applications based on protocol and portno we are considering 2 different applications/servers
+1. tomcat server running with java application
+2. ftp server 
+
+we run #2 instances of tomcat server deployed with sailor application and #2 instances of vsftpd server within the same vpc
+#2 tomcat servers are setup and deployed with application on hybrid subnet
+#2 vsftpd servers are setup and deployed on private subnets
+the network loadbalancer receives the request on public network and distributes the traffic across the instances of tomcat or vsftpd server based on the protocol/port on which the request is coming.
+	
+#1 aws networking
+1.1 create an vpc
+vpc name: paypalvpc
+cidr: 172.17.0.0/16
+	
+1.2 create #6 subnets
+#2 private subnets
+#2 hybrid subnets
+#2 public subnets
+under vpc: paypalvpc
+
+paypalprvsn1 [172.17.1.0/24]
+paypalprvsn2 [172.17.2.0/24]
+paypalpubsn3 [172.17.3.0/24]	
+paypalpubsn4 [172.17.4.0/24]
+paypalhybsn5 [172.17.5.0/24]
+paypalhybsn6 [172.17.6.0/24]	
+	
+	
+#3. setup internet gateway and route the public network traffic of the public subnets through internet gateway
+3.1 create an internet gateway
+internet gateway name: paypalig
+3.2 attach to paypalvpc
+3.2 create route table to route the public network traffic from both public subnets through ig
+route table name: paypaligrt
+vpc: paypalvpc
+subnet associate: paypalpubsn3, paypalpubsn4
+
+            cidr       target
+route rule: 0.0.0.0/0  paypalig
+
+#4. setup natgateway and route the outgoing public network traffic through nat gateway
+4.1 create natgateway
+nat gateway name: paypalng
+create under vpc: paypalvpc
+choose public subnet: paypalpubsn3
+subnet associate: paypalhybsn5, paypalhybsn6
+route table to route the traffic through nat gateway
+            cidr           target
+route rule: 0.0.0.0/0     paypalng
+
+#5 setup security group for tomcat, ftp and jumpbox servers
+create these security groups under: paypalvpc
+security group name: tomcatsg
+in-bound
+protocol     port    cidr  
+custom tcp    8080    0.0.0.0/0
+	ssh           22    172.17.0.0/16
+	
+in-bound
+protocol     port    cidr  
+any protocol all    0.0.0.0
+	
+	
+security group name: ftpsg
+in-bound
+protocol     port           cidr  
+custom tcp    21            0.0.0.0/0
+custom tcp    32768 - 65535 0.0.0.0/0
+ssh           22            172.17.0.0/16
+	
+in-bound
+protocol     port    cidr  
+any protocol all    0.0.0.0
+	
+security group name: jumpboxsg
+in-bound
+protocol     port           cidr  
+ssh          22            0.0.0.0
+
+in-bound
+protocol     port    cidr  
+any protocol all    0.0.0.0	
+-----------------------------------------------------------------------------------------------------------------------
+#2. provision the compute instances on the above subnets
+1. create #2 ec2 instances
+name: paypaltomcatec21 - paypalvpc, paypalhybsn1
+      paypaltomcatec22 - paypalvpc, paypalhybsn2
+shape: t2.micro
+ami: ubuntu
+security group: tomcatsg
+vpc: paypalvpc
+subnets: paypalhybsn4, paypalhybsn5
+keypair: jk.pem
+
+2. create #2 ftp server instances
+name: paypalftp1
+      paypalftp2 
+ami: ubuntu
+shape: t2.micro
+vpc: paypalvpc
+subnets: paypalprvsn1, paypalprvsn2
+keypair= yourchoice
+security group: ftpsg
+
+3. create a jumpbox ec2 machine on public subnet so that we can connect and install software on tomcat & ftp server as well
+name: paypaljumpbox
+vpc: paypalvpc
+subnet: paypalpubsn3
+security group: jumpboxsg
+shape: t2.micro
+ami: ubuntu
+keypair: jk.pem
+enable public ip: true
+	
+note: during the time of installing the software on ftp ec2 instances add a route rule routing the outbound network traffic from paypalprvsn1, paypalprvsn2 through nategateway temporarily, so that it acts as hybrid subnet. once we completed installation we need to remove the route rule from route table to return back those subnets as private subnets
+
+#5 install tomcat and deploy the applications on tomcat ec2 instances
+ssh into both the tomcat ec2 instances through jumpbox and execute the below commands to setup and deploy application on tomcat server
+
+sudo apt update -y
+sudo apt install -y openjdk-11-jdk
+sudo mkdir -p /u01/middleware
+cd /u01/middleware
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.68/bin/apache-tomcat-9.0.68.tar.gz
+gunzip apache-tomcat-9.0.68.tar.gz
+tar -xvf apache-tomcat-9.0.68.tar
+
+mv apache-tomcat-9.0.68 tomcat9
+
+create tomcat.service under /etc/systemd/system/ directory
+tomcat.service
+[Unit]
+Description=tomcat server
+After=network.target
+[Service]
+Type=forking
+
+User={{tomcat_os_user}}
+Group={{tomcat_os_group}}
+
+Environment="JAVA_HOME={{java_home.stdout}}"
+Environment="CATALINA_HOME={{tomcat_install_dir}}{{tomcat_dir}}"
+
+ExecStart={{tomcat_install_dir}}{{tomcat_dir}}/bin/startup.sh
+ExecStop={{tomcat_install_dir}}{{tomcat_dir}}/bin/shutdown.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
+sudo systemctl reload tomcat
+sudo systemctl start tomcat
+sudo systemctl enable tomcat
+
+build the sailor application on host env and copy the war into tomcat9/webapps directory, by scp through jumpbox
+scp -i ~/.ssh/jkp.pem target/sailor.war ubuntu@jumpboxip:/home/ubuntu
+from jumpbox copy to both ec2 tomcat server instances 
+/home/ubunut:/> scp -i ~/.ssh/jkp.pem sailor.war ubuntu@tomcat1ip:/u01/middlware/tomcat9/webapps
+/home/ubunut:/> scp -i ~/.ssh/jkp.pem sailor.war ubuntu@tomcat2ip:/u01/middleware/tomcat9/webapps
+------------------------------------------------------------------------------------------------------------------------
+#6. setup vsftpd server on ftp ec2 instances
+sudo apt update -y
+sudo apt install -y vsftpd
+sudo systemctl enable vsftpd
+sudo systemctl start vsftpd
+
+sudo ufw allow ftp/21
+sudo ufw allow ftp/20
+
+add a new user to be authenticated for ftp server access
+sudo useradd -m -s /bin/bash ftpuser
+sudo passwd ftpuser (welcome1)
+
+create an ftp home directory, by default the directory path is /srv/ftp
+sudo mkdir -p /srv/ftp
+
+copy files under /srv/ftp directory so that we can get the by connecting from ftp client
+
+#7. verify the ftp server configuration by connecting from jumpbox
+from jumpbox:
+bash$ ftp ip
+prompts for username/password authenticate using ftpuser/welcome1
+ftp:/> ls
+ftp:/> cd /srv/ftp
+ftp:/> ls
+ftp:/> get
+remote: filename
+local: filename
+------------------------------------------------------------------------------------------------------------------------
+#8 Network loadbalancer
+To create the network loadbalancer we need to create target groups, we need to create 2 target groups each having #2 ec2 instances (tomcat/ftp)
+	
+1. target group - 1
+group name: tomcattg
+port: 8080
+protocol: TCP
+-> choose to include both tomcat ec2 instances we have created above
+
+2. target group - 2
+group name: ftptg
+port: 21
+protocol: tcp
+-> choose both ftp ec2 instances to be part of the target group
+
+3. create loadbalancer
+1. select type as: network loadbalancer
+2. loadbalancer name: paypalnlb
+3. choose the vpc: paypalvpc
+4. choose the 2 availability zones and public subnets within those availability zones
+subnets: paypalpubsn3, paypalpubsn4
+5. configure listeners
+create #2 listeners one for http traffic and 2nd for ftp traffic
+Listner#1
+protocol: tcp
+port: 80
+targetGroup: tomcattg
+
+Listener#2
+protocol: tcp
+port: 21
+targetGroup: ftptg
+click on create load balancer
+
+once the loadbalancer has been created, we need to copy the dns name to access the application or ftp server through it
+access web application:
+1 open webbrowser on your host and type
+http://dnsnamelbr/sailor/index.htm
+
+2 accessing ftp server
+goto any linux machine (for eg.. jumpbox)
+ftp dnsnamelbr
+prompt for username/password, enter ftpuser/welcome1
+you will successfully logged into ftp server
+------------------------------------------------------------------------------------------------------------------------
+Storage Domain
+All the storage class services related to storing and maintaining the data on aws cloudplatform are grouped under storage domain. There are total 7 services are there in storage domain
+1. Simple Storage Service (S3)
+2. Cloud Front (CDN Server)
+3. Snowball (Migrational Service)
+4. Glacier (Backup for RDS)
+5. Elastic Block Storage (EBS) (harddisk for ec2 instance)
+6. Elastic FileSystem (shared network storage location)
+7. Storage Gateway (bridge between on-premise and cloudplatform)
+	
+In AWS Cloudplatform the data can be organized into 3 storage types
+1. block storage
+block storages are also called as block volumes. These are nothing but FileSystem storage locations in which we can store the data interms of Files/Folders and access them.
+	
+2. object storage
+object storage systems are in which we can store any type of object which can be an audio, video, image, document etc and can be accessed it using an unique id
+
+3. network storage
+these are the distributed storage systems that can be attached to multiple ec2 instances and can be access over the network.
+	
+The storage domain services can be categorized into one these storage type solutions
+
+
+#5. Elastic Block Storage (EBS)
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

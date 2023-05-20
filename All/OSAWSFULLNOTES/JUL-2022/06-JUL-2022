@@ -1,0 +1,166 @@
+How does the business organizations has to use these Enterprise Software Applications that are pre-built and are ready for usage?
+For eg..
+	1. SAP
+	2. Oracle EBusiness Suite
+	3. JDEdwards
+	4. Peoplesoft
+	5. Salesforce
+	6. Sibel CRM
+	7. Microsoft Dynamics
+	8. Taleo
+	9. Oracle Apps
+	
+#1. The business organization has to procure the license for the Enterprise Software System and respective module licenses based on their usage
+- The cost of procuring the lincense in using these Software products are pretty much high
+
+#2. These systems requires huge computing capacity and storage in running on the machines. So the business organization has to procure groups of server grade computers for installing and running these software products
+- The cost of infrastructure in running these software products are quite high
+
+#3. Installing and configuring these enterprise software systems are quite complex, and requires special engineers who are called administrators of the software product to be hired for installing/configuring the product
+
+#4. we need experts of the product, takes care of customizing and adopting the product for our business organization and the processes
+
+#5. We need a support team or an administration team who will monitor continously and perform regular maintainance activities required for ensuring the smooth running of the software system like
+	- backup
+	- restore
+	- cleanup activities etc
+
+From the above we can understand adopting and using these enterprise software products is a quite tedious job and required huge investment/maintainance cost incurred in running these systems.
+A moderate business organizations cannot afford in using these enterprise software products
+
+To overcome all the above dis-advantages in using a software product by the endusers the SAAS has been introduced by the cloud providers
+
+There are lot of popular enterprise software products popularly used by many of the organizations in the world, so such software products are identified by the cloud provider and provisioned and provided them to the organizations
+
+
+SAAS
+Software as a Service, where the cloud provider provides the Enterprise Software products to the world in a multi-tenant model.
+	
+1. The cloud provider takes care of provisioning, installations and configuration of the enterprise software product
+2. since it is an multi-tenant installation, the cost of infrastructure and licenses of the software is distribtued/shared to multiple customers/endusers
+3. monitoring and maintainance activities like backup/restore are taken care by the cloud provider
+4. all the lifecycle activities like
+	- scaleup/scaledown
+	- scale-out/scale-in 
+are handled by the cloud provider
+
+There are lot of cloud providers are there in the market
+1. Amazon Web Services cloud (AWS)
+	# IAAS
+	# PAAS and SAAS support 
+	
+2. Google Cloud Provider (GCP)
+	#technology innovation 
+	#IAAS 
+	
+3. Microsoft Azure	
+4. Oracle Cloud Infrastructure (OCI) #strong
+#technology companies
+	- Platform Software products
+	- Enterprise Software products	
+etc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

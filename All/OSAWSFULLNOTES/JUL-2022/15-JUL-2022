@@ -1,0 +1,56 @@
+What is SSH, why do we use it?
+SSH stands for Secure Shell protocol. SSH is used for accessing the remote linux computers over the network securely.
+	
+How to connect to the remote linux machine over ssh?
+1. we need to install gitbash tool on our machine
+2. run ssh command for connecting to the remote computer
+
+ssh -i pathKeyFile username@publicip
+--------------------------------------------------------------------------------------------
+#Network domain
+The network domain provides various types of network resources like routers, firewalls and gateways etc that are required for hosting, interconnecting and enforce security or traffic restrictions on the resources with aws infrastructure
+
+#1. Virtual Private Cloud (vpc) Network
+vpc network stands for virtual private cloud network, it is an isolated network of resources of an aws account user.
+An aws account user can create an vpc network, he can provision resources within the network keeping them isolated from other resources of the aws cloud platform. The resources of one vpc are completely isolated from the resources of another vpc
+
+1. vpc are created at the user account level per region of the user
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

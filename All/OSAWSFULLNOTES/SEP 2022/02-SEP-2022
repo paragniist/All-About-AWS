@@ -1,0 +1,116 @@
+Read capacity/ Write Capacity
+The billing on DynamoDB takes place based on read/write units consumed. The DynamoDB is server-less so there is no computing capacity reservered for usage, so the only cost parameter that can be taken into consideration is based on usage of the database.
+while is nothing the read/writes we perform on the DynamoDB
+
+1. Read Unit
+	- 2 eventual consistent reads of size 4kb is considered as one read unit
+	- 1 strongly consistent read of size 4kb is considered as one read unit
+if we read operation resulted in fetching the data more than 4kb more read units will be allocated
+
+2. Write Unit
+	- 1 write of an item upto 1 kb in size 
+	- 1 transaction write upon an item of size 1kb is considered as 2 write units
+if more data has been writen as part of the write, the more write units will be allocated
+
+While creating the table in DynamoDB the ops/cloud engineer can allocate the read and write capacity units for a table 
+For eg.. if we allocate 2 write capacity units and 4 read capacity units means
+within a second for that table it allows
+	2 write operations of 1kb in size
+	1 transaction write of 1kb in size
+	(or)
+	4 write operations of 2kb in size
+	2 strongly consitent read of 2kb in size 
+are permitted on the table
+if any thing beyond the capacity has been recieved, then DynamoDB blocks/keeps the requests under waiting for next interval
+
+From the above we can understand choosing wisely the read/write capacity units are very important to allow operations to be performed on the table. DynamoDB allows us to allocate read/write capacity on table in 2 modes
+
+1. provisioned
+2. ondemand
+
+1. provisioned
+the cloud engineer is going to allocate fixed read/write capacity on table allowing to perform operations. the provisioned mode is the default mode under which a table will be created 
+
+2. ondemand
+aws will automatically scaleup/down the read/write capacity of a table based on the usage.
+-----------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

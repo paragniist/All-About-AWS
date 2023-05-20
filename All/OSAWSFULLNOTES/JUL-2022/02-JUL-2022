@@ -1,0 +1,74 @@
+Cloud computing
+on-demand delivery of computing resources to the external world is called "Cloud Computing". There are 3 different types of services offered by cloud providers
+#1. IAAS
+#2. PAAS
+#3. SAAS
+
+#1. IAAS = stands for infrastructure as a service, all the computing and infrastructure resources required for hosting and running an software application is provided as part of IAAS.
+The lifecycle activities like
+1. provisioning
+2. deprovisioning
+3. backup
+4. restore
+5. scale-out
+6. scale-in
+7. scale-up
+8. scale-down
+are taken care by cloud provider
+
+The advantages of cloud over data center or other hosting platforms
+1. flexibile shapes
+2. no up-front cost/contractual signups or agreement in leasing the infra/compute services
+3. pay per usage
+
+#2. PAAS
+PAAS stands for platform as a service. For our applications to execute or run on a machine we need the language software or application servers to be available. unless otherwise our applications will not run on the underlying machine.
+	
+The softwares that acts as a base/foundation on which the applications softwares run ontop of them are called "platform softwares" for eg..
+	1. all the language softwares
+		1.1 java sdk
+		1.2 python sdk
+		1.3 php sdk
+		etc
+	2. all the application servers or middlewares on which our applications work
+		1.1 tomcat/weblogic/websphere servers etc
+		1.2 wsgi/asgi servers
+		1.3 lamp / xamp server etc
+		
+	3. database servers like
+		3.1 mysql server
+		3.2 postgres sql server
+		3.3 oracle
+		etc
+unless these softwares are installed/configured on the compute instances, our applications cannot be deployed. 
+The business organization has to hire a team of system administrators, who takes care of procuring licencse, installing, configuring and managing these platform software
+
+weblogic server -> (cluster) 
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	

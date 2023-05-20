@@ -1,0 +1,24 @@
+Hybrid Subnet
+1. ap-south-1 (region)
+2. toylandvpc [172.16.0.0/16]
+3. subnets:
+		- toylandpubsn1 [172.16.1.0/24]
+		- toylandhybridsn2 [172.16.2.0/24]
+		- toylandprivatesn3 [172.16.3.0/24]
+4. toylandig 
+		- attach to toylandvpc
+		- toylandigrt 
+			- associate: toylandpubsn1
+			- route: 0.0.0.0/0 -> toylandig
+5. toylandng
+		- attach to the toylandvpc
+		- choose toylandpubsn1
+		- allocate elastic ipaddress
+		- toylandngrt
+			-> associate: toylandhybridsn2 
+			- route: 0.0.0.0/0 -> toylandng
+			
+ec2 instance - public subnet = external  network we can SSH
+ec2 instance - hybrid subnet or private subnet = external network we cannot SSH
+               only way is through bastion host/jumpbox from public subnet
+							 

@@ -1,0 +1,95 @@
+How many types of subnets are there?
+There are 3 types of subnets are there
+1. private subnet
+2. public subnet
+3. hybrid subnet
+
+#1. private subnet
+by default when we create a subnet within the vpc it becomes private subnet, all the resources within the private subnet cannot be accessed from the external world or the resources within the private subnet cannot access the traffic on the external world
+inbound/outbound external network is not available
+all the resources across the subnets of the vpc can communicate with each other
+
+#2. public subnet
+The resources within the public subnet will have both inbound/outbound to the external network.
+To make an subnet as an public subnet we need to attach an internet gateway
+
+#3. Internet Gateway
+Internet Gateway is a aws network device which is attached to public internet. To make an subnet as a public subnet, we need to create an internet gateway (IG) and attach to the vpc of our network
+
+we can use the internet gateway to route the traffic from the subnets of our vpc to the external network, by attaching the IG to the VPC.	
+Note: when we attach an IG to the vpc, the subnets of our vpc will not become public subnets, to make a subnet public subnet we need to configure routing rule
+
+#4. RouteTable (RT)
+By default when we create an vpc, a default route table will be created by the aws.
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

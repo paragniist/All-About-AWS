@@ -1,0 +1,104 @@
+The cloud providers offer 3 types of services
+1. IAAS
+2. PAAS
+3. SAAS
+
+every cloud vendor/provider doesnt provide all the 3 services, depends on the cloud provider and their footprint in those areas they provide different types of services.
+	
+different cloud providers provides different array of services, we need to choose the cloud provider carefully based on the product requirements we wanted to host on the cloud platform
+--------------------------------------------------------------------------------------------
+AWS Cloud
+AWS Cloud stands for amazon webservices cloud provider offers the 3 types of cloud services to the world
+1. IAAS
+2. PAAS
+3. SAAS
+
+AWS Cloud provider offers free-tier account for 1 year. dont go by the world free-trail means everything is free.
+There are few services categorized to free-tier and have their usage limits as well.
+For eg.. 
+an AWS Compute instance is free for 720 hours only (per month) - 1 year
+similarly for all the types of services there is a usage limit we should read the billing and pricing details before using the aws services.
+	
+To start with aws cloud we need to create an aws free-tier account. while creating an aws free-tier account you need a debit/credit card handy, so that aws authenticates your card but deducting $1 or 2 INR to open your account.
+	
+There are 2 types of accounts are there in aws cloud
+1. AWS ROOT account
+ROOT Account is the owner of the aws account who has complete/un-restricted access to all the services of the aws account. 
+	
+note:- make sure you keep the account credentials highly secured and dont disclose to anyone, giving the credentails of your aws account to other users is equal to providing access to your bank account directly
+
+AWS Root account is the user who can keep track of all the services/resources that are created under the aws account. he can control or grant access to the aws account by creating additional users called IAM Users
+
+
+
+2. IAM User account
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

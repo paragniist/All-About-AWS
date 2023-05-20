@@ -1,0 +1,44 @@
+Storage Gateway
+---------------
+Storage Gateway offers hybrid-model of running on-premise applications on the cloud infrastructure. if our application is designed and coded to work on on-premise, moving them to the cloud infrastructure is going to be difficult. We need to
+1. rewrite the application program/code to use aws sdk/api to persist the data on aws services
+2. we need to recreate the infrastructure resources equivalent to the data center or on-premise where the existing applications are running
+3. move all the data from on-premise to the cloud infrastructure
+
+rewriting the application involves re-development of the existing applications and cost involved in rewriting and re-deploying them would be very high, and we cannot move all the applications overnight to the cloud, we need to check and ensure the applications are compatible to the cloud env.
+	
+So it would better to identify the least customer impact applications and move them into cloud platform in phases-out manner, so that few applications runs on on-premise and over the time we can move them into cloud.
+	
+Then how to run and bridge the applications which are running on on-premise and cloud parallelly, that is where storage gateway comes into picture
+
+By using storage gateway, the existing applications which are running on on-premise doesnt need to be rewritten, rather through the help of storage gateway, they can push the application data generated on the on-premise into the cloud platform, so that the applications which are running on on-premise and cloud both can use the same storage/data to run
+
+over the time we can migrate the whole bunch of applications to the cloud and can demolish the on-premise the infrastructure
+
+
+For eg.. 
+If we have an existing application storing the data interms of Files/folders on the local filesystem of an on-premise server, if we want to move the application onto the aws cloud we need to re-write the code to let the application store the data on ebs volume. Instead of re-writing the application we can make use of storage gateway with ebs volume. The storage gateway creates and ebs volume and let us mount it onto the on-premise machine so that the application can start writing the data asif the volume is an local volume and doesnt require any code change.
+	
+There are 3 types of storage gateways are there
+1. volume gateway
+2. tape gateway
+3. file gateway
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

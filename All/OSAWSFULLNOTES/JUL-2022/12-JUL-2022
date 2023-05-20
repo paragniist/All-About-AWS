@@ -1,0 +1,96 @@
+AWS Architecture
+
+AWS Architecture refers to how does aws cloud platform has spread across and provides the cloud services to the world.
+	
+#1. AWS Region
+AWS Region is a geographical location from where AWS cloud platform is providing its services across. There are total 22 regions over which AWS Cloud platform has spread across. AWS Region is not an country rather a place where it is located within the a country from where it is operating in providing the services. A country can have more than one regions as well.
+	
+There are 2 factors based on which we should choose a region in using the cloud services.
+	1. network latency
+	2. pricing
+	
+#2. Availability zone
+Availability zone is a group of datacenters within a region from where aws cloud platform is offering the cloud services. In each AWS Region atleast 2 availability zones are setup by the AWS Cloud platform for ensuring High Availablity 
+
+The availability zones are meant for high availability of the services/resources within a region. The AWS recommends us to host our applications across he AZ of the region, so that if one Availablity Zone fails/crashes there is guarantee that your application still exists and can serve the customer from the other AZ of the region.	
+The purpose of AZ is for achieving the High Availablity
+
+AWS Cloud platform chooses the availability zones within a region, by carefullying evaluating various different parameters like
+1. Climatic conditions
+2. Power availablity
+3. Cyclone conditions
+4. Tornados etc
+
+So that the likeliness of all the availablity zones within a region going down is very less.
+These Availablity zones are inter-connected with dedicated high-speed internet lines to ensure there is zero no network latency across the AZ within the region.
+
+#3. Edge Locations
+Edge locations are the mini datacenters co-located across the regions of a aws cloud platform. There are few shared/global services are there within AWS Cloud platform like
+1. Cloud Front
+2. Route53
+etc
+to reduce the network latency in distributing these services to the customers, aws has setup mini datacenters from where they operate these shared/global services
+
+These edge locations are replicated centers across the regions in offering the global services with low latency.
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	

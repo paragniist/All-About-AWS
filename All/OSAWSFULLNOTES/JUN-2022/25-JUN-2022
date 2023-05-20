@@ -1,0 +1,88 @@
+What is hosting?
+hosting is the process of making the application live! or making it available to access by the people around the world
+
+There are several ways we can host an application.
+#1 In-house hosting
+#2 Hosting provider
+
+#2. Hosting provider
+The hosting providers offers 2 types of services
+1. hosting services = providing infrastructure, software platform, libraries & packages and few tools for hosting and managing the applications is called "hosting services"	
+2. dns service = providing domainname service and dns registry for resolving the domain name is called "dns service"
+Where as an DNS Service provider will not provide hosting services, he might only provide DNS Service.
+--------------------------------------------------------------------------------------------
+#Hosting provider
+The hosting provider will procure hardware, infrastructure and space at a large scale and deploy them to providing hosting services to the world
+The hosting provider takes care of the below things:
+1. procure hardware infrastructure at a large scale with high-end server grade machines
+2. acquire space for placing and setting up the infrastructure
+3. 24/7 power and backup
+4. leased internet lines with backup lines
+5. aircooled environments
+6. highspeed network devices, routers and firewalls
+7. procure software licenses required
+8. manpower
+	1. administration team for installing and configuring the machines/software packages
+	2. network administration team
+	3. support engineering team	
+9. domain naming services
+
+The hosting provider offers various different types of hosting services to the world
+1. static webhosting
+2. php webhosting
+3. java webhosting
+4. linux vps hosting
+5. java vps hosting
+6. windows vps hosting
+etc
+
+How does the hosting providers offers the above services for cheaper price?
+The hosting provider provides shared hosting services, rather than dedicated environments.
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

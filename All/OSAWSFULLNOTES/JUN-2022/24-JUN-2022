@@ -1,0 +1,109 @@
+How many ways an distributed application can be hosted and made available to the public world?
+There are 4 ways of hosting an distributed application
+
+#1. In-House hosting
+The business owner by themself procure infrastructure resources, software required for hosting and making the application available for the public. So as part of the process of hosting he has to acquire/procure
+1.1 Infrastructure
+	a) high-end server grade machine and a backup machine
+	b) leased internet line and a backup line
+	c) network devices like network adapters, routers & firewalls
+	d) space for managing the hardware infrastructure
+	e) aircooled rooms
+	f) 24x7 power supply & backup
+	g) high-capacity power/lan cabling
+	
+1.2 Software and Manpower 
+	a) operating system
+	b) software packages and libraries
+	c) administration team to install and configure the softwares required for hosting the application
+	d) networking team to setup the network infrastructure
+	e) support engineering team to monitor the availability of the application
+	f) validation of the security configuration and monitoring for safety and security of the systems
+	
+There are lot of dis-advantages with the in-house hosting
+1. cost of investment is very high
+2. it takes lot of time in setting up and hosting the application
+3. the maintenance cost involved in managing the infrastructure/hardware is very high
+4. the maintenance cost involved in procuring and managing the manpower resources in monitoring and managing the application is very high
+5. the cost involved procuring the software licensing in running the application is high
+
+advantage:-
+1. highly secured as the infrastructure/physical resources are within our premises
+2. more control in managing the devices/systems/hardwares/applications
+
+In In-house hosting solution is not feasible/non-profitable for small/moderate businesses in offering their services over the web/network/online
+For enterprise organizations it would be an ideal solution.
+	
+To overcome the above problems in in-house hosting the hosting providers are introduced.
+#2. Hosting Providers
+For hosting an application we need 3 things
+1. Infrastructure resources
+2. Software platform, packages and libraries
+3. Domain Name Service (DNS)
+	
+An Hosting provider provides infrastructure, software platform ,libraries and packages for hosting an software application which are called "hosting services"
+	
+To make the application accessible to world we need DomainName Resolution which is called as "DomainName Service"	
+	
+There are 2 types of people are there in the market
+1. DNS providers
+DNS providers only provide domain naming service, which means we can buy domain names and we can register them with the backend systems on where our applications are running.
+For eg.. godaddy.com only provides DNS Services
+	
+2. Hosting Providers
+An Hosting provider provides along with DNS Service the infrastructure and softwares required for hosting the application
+For eg..
+mochahost.com, bigrock.com, hostinger etc
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

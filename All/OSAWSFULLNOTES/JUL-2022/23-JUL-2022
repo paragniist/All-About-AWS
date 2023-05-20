@@ -1,0 +1,18 @@
+There are 3 types of subnets are there
+1. private subnet
+2. public subnet
+3. hybrid subnet
+
+#2. public subnet
+1.
+crazyeatsvpc [172.1.0.0/16] [ap-south-1]
+|-crazyeatspublicsubnet1 [172.1.1.0/24] [az-1]
+|-crazyeatsprivatesubnet2 [172.1.2.0/24] [az-2]
+
+2. internet gateway -> attach to crazyeatsvpc
+		|-crazyeatsig
+		
+3. route table [crazyeatspublicroutetable]
+		|-add subnet associate [crazyeatspublicsubnet1]
+		|-add routetable [0.0.0.0/0 -> IG]
+

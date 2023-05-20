@@ -1,0 +1,109 @@
+What is cloud computing, what is the purpose of cloud computing?
+on-demand delivery of computing resources to the world is called "cloud computing", a cloud computing vendor provides 3 types of services.
+1. IAAS
+2. PAAS
+3. SAAS
+
+#2. PAAS 
+PAAS stands for Platform as a Service. For running/deploying an software application on a computing machine along with operating system we need additional software libraries, packages or application server infrastructure.
+For eg..
+1. a java application = we need jdk software and application servers to be installed and configured like (tomcat, weblogic or websphere etc) on the machine
+2. a python application = we need python sdk along with aswi/wsgi servers to be installed
+etc
+
+similar for each application of a specific technology we need underlying software packages or libraries or servers to be installed and configured on which our applications works. these libraries/packages/servers on which our application works are called "platform software".
+	
+The platform software required for running an application will be different from applicationt to application, the architect/developer of the application needs to determine what platform software is required for running an application
+
+The devops engineer or relevant platform software expert/administrator has to takecare of installing and configuring it, so that we can run our application.
+	
+There are lot of problems in manually installing, configuring and managing the platform software.
+	1. upon procuring/provisioning an cloud compute machine from a cloud provider, to run the software application on the infrastructure, the devops engineer or platform administrator has to manually install and configure the platform software on that machine.
+	The time required for installing/configuring the platform software is more that delays the delivery of the application and accumulates to the cost of delivery of the application
+	
+	2. if the platform software has to be configured/installed on a cluster of machines, it would be highly complex and requires lot of expertize in installing and configuring the relevant platform software and many of the times landup in in-appropriate configurations which leads to issues
+	
+	3. manually managing the platform software installations and configurations is going to be time consuming process when we are rolling on to a large group of applications on a wider scope of machines, so the business owner has to hire a devops automation engineers, will work on writing the programs/scripts for automating the process of installing and configuring these software using tools like
+	- shellscript
+	- ansible
+	- puppet
+	- chef
+	etc
+	the cost incurred in automating the platform software setup is going to be very high
+	
+	4. periodical backup and restoring the platform software has to be taken by the devops/platform administrator team manually which is an tedious job
+	
+	5. upgradation of the platform software to a newer version has to be taken care by the devops / platfrom administration team. an excessive care and proper strategy has to be choosen for software upgradation. an sandbox environment has to be setup in testing the existing application and identifying the fine tune configurations required in running the application on new versions of the platform
+	it is quite risky and time consuming job in upgrading the underlying platform software and inccurs huge amount of cost in upgrading the platform.
+	and eventually may require some sort of automation to be inplace in upgrading the platform software to expedite the process.
+		
+	6. uptaking the patches and monitoring the systems to ensure their stability is a tough job
+	
+	7. procuring the necessary software licenses and ensuring there are properly used need to be taken care
+	
+	8. The scale-out and scale-in of the underlying machines will be taken care by the cloud provider, but scaling-out and scale-in of the platform software has to be manually managed by the devops/platform administrator which is a tough job
+	
+	9. the scale-up and scale-down lifecycle activities on the platform software has to be taken care by the devops/platform administrator
+	
+Even though the cloud providers are providing the IAAS services (infrastructure/computing resources) to the users, managing the platform softwares and ensure to work on lifecycle activities are quite difficult.
+		
+To overcome the above challenges, the cloud providers supports PAAS.  
+
+provision: a computer 4gb ram, 2 core cpu, 500 gb hdd
+
+provision: a weblogic server computer, 8gb ram, 4 core cpu, 1 tb hdd (not compatible)
+					-> 2 node cluster instance for HA
+					-> Loadbalancer 
+					-> Backup policy and restoration
+					-> upgradation/patches (schedule upgrades/autoupgrades)
+					-> create
+10/20 minutes -> 
+						
+#1 scale-out - 2 more instances of weblogic server 						
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+		
+		
+	
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	

@@ -1,0 +1,169 @@
+There are few limitations or dis-advantages with RDBMS databases 
+1. supports only structured data, but not all the data is structured, and if we store semi-structured data in RDBMS
+	1.1 huge amount of memory will be wasted
+	1.2 schema becomes quite complex and difficult to program
+2. the RDBMS are not recommended to be used for storing audios, videos and images which are un-structured data. by storing these data in RDBMS the underlying machines quickly runs out of resources and requires scaling the database due to which the cost of storage increasing
+3. we cannot achieve highest level of concurrency, because these databases are transactional
+
+From the above we can understand it is not recommended to store semi-structured or un-structured data in RDBMS, till now there is no alternate systems available people used to store the data in RDBMS. Thereafter identifying the problems with RDBMS to eliminate or overcome them other types of database management systems are innovated and introduced.
+1. no-sql databases
+2. object storage databases
+
+1. no-sql database
+no-sql databases are designed to store semi-structured data, the way the data is stored in no-sql databases differs from product to the product there is no standard format or hard and fast rule in the way we the no-sql databases supports storing data
+
+since different products has different storage formats, let us generalize and understand the way these databases supports storing the data
+
+In no-sql databases we dont define tables with fixed-set of columns, because different records data has different columns. 
+So here we dont create tables rather we create a data structure which is loosely structured called usually "collections". 
+For eg.. to store mobile phones information we create mobile collection in which we store information about various different mobiles. Similary we create product collection in which we can store information about different products of varied fields/columns
+
+Now we store the data as records in the collection, each record will contain key/value of data. In a record we can define any number of keys and values which differ from another record of data in the collection
+
+product
+#1 [product_no=837
+	  model="Iphone 13 Pro Max"
+	  color="Red"
+	  storage="128gb"]
+   [product_no=938
+	  model="Samsung 32 inch LED tv"
+	  sound="5.1 Dolby Atmos"
+	  displayType="LED"
+	  pixel="1Million"
+	 ]
+Each row can have different keys and different values, as the structure of the data is not same these are called "semi-structured" databases. So to access the data from these databases we cannot use sql for querying the data so these are even called "no-sql" databases
+
+These databases are suitable for storing
+1. semi-structured data which doesnt have fixed columns in nature
+2. no relationship between the data
+3. dont need transactionality
+
+There are lot of no-sql database management systems are available in the market produced/developed by various different vendors
+1. mongodb
+2. casendra
+3. couchdb
+4. oracle bigdata
+5. aws dynamo db
+6. graph db
+
+each of these databases has their own model of representation allowing us to store the data
+For eg.. 
+In mongodb allows us to store the data interms of json format
+To store data in mongodb we need to create a collection per each type of data. For eg.. we want to store product information create products collection
+In collection we store data as collection documents
+
+we can image a collection       = table of RDBMS
+                 - document     = record in the table
+								    - key/value = column/value (fixed)
+                      (varied)
+	
+product [
+	{
+		"product_no": "938",
+		"title": "Samsung LED Tv",
+		"manufacturer": "Samsung",
+		"price": "100000"
+	},
+	{
+		
+	}
+]
+But when it comes to cassendra database it is called columunar database it allows us to store the data in key/value pair format as how we described above
+
+Now AWS DynamoDB is also an no-sql database management system that should be used for storing semi-structured data.
+	
+AWS DynamoDB database
+----------------------
+AWS Cloud Platform has provided an no-sql database service which is DynamoDB that allows us to store the data by definining interms of keys/values
+There are plenty of no-sql database products available in the market, then why should we use DynamoDB in storing the semi-structured data
+
+There are lot of advantages are there with DynamoDB database 
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

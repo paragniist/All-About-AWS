@@ -1,0 +1,153 @@
+database domain
+database domain contains all the services related to managing the data, there are 5 services are there within it
+1. RDS Service (Relational Database Service)
+2. Dynamo DB
+3. Aurora DB
+4. Elastic Cache
+5. Redshift
+
+Why do we need to store the data permanently, what is the purpose of it?
+always the business is going to produce data, and the business data has to be stored permanently for future usage and performing computation of the data.
+To store the data permanently we can maintain the business data by writing on a piece of paper or by keeping the information in ledger books, petty cashbooks etc
+
+There are dis-advantages in storing the data on the physical medium like paper or books
+1. information written on a paper may not be legitimate and everyone may not be able to read and understand what has been written
+2. business data grows over the time and at any point of time if wanted to retrieve the data in past, searching or identifying the data over the books is very difficult and time consuming operation and at somepoint of time we may not be able to locate the data as well
+3. physical medium of storing the data has wear and tear and might be lost in future (it is not permanent)
+4. not secured any one who has access to the books can read the information
+5. there is no way to backup and restore in case of lost
+
+from the above we can understand permanently storing the data on a physical medium (book/paper) has lot of problems, to overcome them permanent storage of data on the computer system has been introduced.
+
+How to store the data permanently on a computer system?
+The computer systems are attached with permanent storage devices like floppy, cd, pendrives and harddisk devices into which we can store the data permanently.
+The process of permanently writing the data into these devices is called "persistency".
+
+How to permanently store the data into the secondary storage devices of the computer?
+To store and organize the data on the secondary storage devices of the computer, the FileSystem technics are introduced.
+By using the FileSystem technics we can store the data interms of Files/folders on the computer system.
+	
+File: File is a datastructure that holds the address of the data where it resides on the physical storage device of the computer. Each file is associated with a name, through which we can easy locate and access the data stored on the secondary storage device of the computer
+
+Folder: group of related files are kept together, so that those can be located and accessed quickly.
+------------------------------------------------------------------------------------------------------------------------
+How to store the data on the File of a computer?
+We can store the data on a file as a set of sequence of characters (text data) inside them. we can use any of the text editors available in storing and reading the data from the files.
+	
+even though we can store characters of data manually in a file using the text editors, there are lot of problems are there in storing the data.
+	1. manually storing the data on a file is error prone. there is no way the data entered by the user is valid or invalid and all of the data gets persisted on to a file, which eventually leads to incorrent and un-usable data.
+	2. modifying the existing data on a file is very difficult and it is time consuming job, because we need to identify the data stored in past on the file place the pointer at the right location and modify it
+	3. searching and find the data within the text file is very difficult
+	4. we stored the data on a file to perform different types of calculations, but to use the data and perform calculations we need to manually read the data which is a time consuming job
+	5. manually reading and performing the computation on the data stored on a file may not result in accuraccy and takes lot of time as well.
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

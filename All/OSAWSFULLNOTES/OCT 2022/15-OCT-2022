@@ -1,0 +1,95 @@
+How to setup an auto-scaling group?
+#1 Build an AMI
+
+Networking:
+1.1 create an vpc
+sailorvpc [10.0.0.0/16]
+
+1.2 create #2 public subnets, #2 hybrid (or) private subnets
+sailorpubsn1 [10.0.1.0/24]
+sailorpubsn2 [10.0.2.0/24]
+sailorhybsn3 [10.0.3.0/24]
+sailorhybsn1 [10.0.4.0/24]
+
+
+1.3 create an internet gateway and attach to the vpc
+sailorig - attach to sailorvpc
+
+1.4. create an route table routing public subnet traffic through the sailorig
+sailorigroutetable
+subnet associations: sailorpubsn1, sailorpubsn2
+route:
+10.0.0.0/16  local
+0.0.0.0/0    sailorig
+
+1.5 create nat gateway under sailorvpc
+sailornatgw
+subnet: sailorpubsn1
+internet-facing
+attach public elastic ip address
+
+1.6 create a route table routing hybrid subnets traffic through nat gateway
+sailornatgwrt
+subnet associations: sailorhybsn3, sailorhybsn4
+route:
+10.0.0.0/16  local
+0.0.0.0/0    sailornatgw
+
+1.7 create 3 security groups
+	a) one security group for an instance from which we create AMI
+	b) application security group
+	c) lbr security group
+a) sailoramiec2sg
+in-bound
+ssh         22    0.0.0.0/0
+custom tcp  8080  0.0.0.0/0
+outboud
+all         any   0.0.0.0/0
+
+b) sailorjappsg
+in-bound
+custom tcp   8080    10.0.0.0/16
+out-bound
+all          any     0.0.0.0/0
+	
+	
+c) sailorlbrsg
+in-bound
+http       80   0.0.0.0/0
+out-bound
+all          any     0.0.0.0/0
+
+-----------------------------------------------------------------------------------------------------------------------
+#create an instance with application deployed, configured to autostart upon boot up
+1. provision an ec2 instance on public subnet
+instance name: sailoramiec2
+vpc: sailorvpc
+subnet: sailorpubsn1
+securitygroup: sailoramisg
+enable public ip address: yes
+shape: t2.micro
+ami: ubuntu:24.02
+key-pair: jkp.pem
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

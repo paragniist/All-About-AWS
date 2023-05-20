@@ -1,0 +1,49 @@
+We can classify the data into 3 types
+1. static data
+2. moderate data
+3. frequently modified data
+
+#1. static data
+The static data is nothing but throughtout the lifetime of the application the data will not change, and will not grow. So, it is an good candidate for caching
+
+#2. moderate data
+Moderate data seems to be most of the time fixed but would rarely going to change or might grow during the runtime of the application. since the data is runtime and may modify during the execution of the application we need to cache the data based on below 2 characteristics
+1. we need to apply retention policy while storing the data into the cache like TTL, LRU, MRU, MFU, LFU algorithms
+2. whenever the application has modified the data into the database, we should have a mechanism in place to remove the data from cache if exists
+
+#3. frequently modified data
+Frequently modified data is the data that would gets modified very frequently through the endusers operations on the application. Such data is not being considered as a candidate for cache, because the cost of maintaining the data in the cache seems to be overhead than using the data from cache.
+	
+But there is an exception to this, for eg.. applications like
+1. gaming
+2. stock markets
+3. sales reporting
+where the frequency at which we access the data seems to more than the duration of interval in which the data would be changed. So such data if it is being used more frequently than the interval change can be cached for short-interval of time 
+1. we should maintain TTL or any retention algorithms in cleaning up the data
+2. and should stale the data whenever there is change 
+
+How about maintaining the data in the cache within the cluster deployments?
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

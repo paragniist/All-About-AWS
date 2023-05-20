@@ -1,0 +1,61 @@
+How to install aws mount utils on ubuntu?
+1. sudo apt update -y
+2. sudo apt install -y nfs-common
+
+3. sudo apt-get -y install git binutils
+4. git clone https://github.com/aws/efs-utils
+5. cd efs-utils 
+6. ./build-deb.sh
+7. sudo apt-get -y install ./build/amazon-efs-utils*deb
+
+How to install boto-core?
+sudo apt-get update
+sudo apt-get -y install wget
+
+3.sudo vim install.sh
+if echo $(python3 -V 2>&1) | grep -e "Python 3.6"; then
+    sudo wget https://bootstrap.pypa.io/pip/3.6/get-pip.py -O /tmp/get-pip.py
+elif echo $(python3 -V 2>&1) | grep -e "Python 3.5"; then
+    sudo wget https://bootstrap.pypa.io/pip/3.5/get-pip.py -O /tmp/get-pip.py
+elif echo $(python3 -V 2>&1) | grep -e "Python 3.4"; then
+    sudo wget https://bootstrap.pypa.io/pip/3.4/get-pip.py -O /tmp/get-pip.py
+else
+    sudo apt-get -y install python3-distutils
+    sudo wget https://bootstrap.pypa.io/get-pip.py -O /tmp/get-pip.py
+fi
+sudo ./install.sh
+
+4. sudo python3 /tmp/get-pip.py
+	sudo pip3 install botocore
+---------------------------------------------------------------------------------------------------------------------
+To work with access point apart from installing aws efs utils and boto-core we need to add an linux user with specific userid & groupid across the machines.
+	
+mountTarget -> efsLocation ("/") (root)
+accessPoint -> efsLocaiton (accessPoint RootDirectory: /efs) (1001/1001)
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

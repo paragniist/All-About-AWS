@@ -1,0 +1,235 @@
+What is cache, why do we need caching?
+Cache is used for storing the data temporarily within the memory, so that we can avoid repeatedly accessing the data from the database and serve the data from the cache. By applying the caching mechanism we can improve the scalability & performance of the application
+
+depends on the nature of the data and their usage we need to decide and cache the data within the application
+1. static data = always can be cached permanently within the application
+2. moderate data = since it is runtime data, that should be cached based on retention policy and should mark the data as stale whenever the underlying data has been modified
+3. frequently modified data = it is not an good candidate for caching, but can be considered to be cached given if the frequency at which the data is accessed is more than the interval of change then we can cache the frequently modified data as well.
+	
+when we are deploying an application in clustered environment, we need to use distributed caching technology for caching the data. There are lot of third-party caching libraries provided by various different vendors
+1. ehcache
+2. jcache
+3. swarncache
+4. rediscache
+5. memcache
+6. oscache
+7. coherence cache
+
+The developer writes the code as part of his application using the cache libraries/apis in caching the data, whereas the devops/aws cloud engineer has to
+1. provision the infrastructure
+2. install and configure the cache libraries 
+3. take of securing aspects in ensuring the cache is not comprimised
+4. scalability, high availability
+5. monitoring
+taken care in managing the cache
+
+manually taking care of provisioning, installing, configuring and maintaining the cache on the clustered instances over the network is a very difficult job. The aws cloud platform has provided Elastic Cloud Cache service 
+
+Elastic Cloud Cache service
+-----------------------------
+The Elastic Cloud cache service is an managed service that takes care of provisioning, installing, configuring and managing the third-party caching libraries on aws cloud platform, which is similar to RDS service.
+As of now there are 2 cache library providers are supported by Elastic cloud cache
+1. REDIS
+2. MEMCACHE
+
+There are differences interms of features between these 2 cache libraries, so based on the requirement we need choose an appropriate provider that suites our application
+1. Mem Cache: supported data types: simple key/value pair
+   Redis Cache: supported data types: complex types which includes lists, sets, hashes and sortedset etc
+
+2. 
+Mem Cache: Multi-thread support
+Redis Cache: No Multi-thread support
+
+3. 
+Mem Cache: Node upgrade is not supported (we cannot change the shape of the CacheNode)
+Redis: Node shape upgrade is supported
+
+4. 
+Engine upgradation: both providers support engine version upgrade
+
+5. 
+Mem Cache: Replication is not supported, so fault-tolerance is not there
+Redis: Replication is supported, so high availability is guaranteed
+
+6. 
+Mem Cache: Data Partition and shrading is supported
+Redis Cache: No support for data partition
+
+7. 
+Mem Cache: doesnt support automatic fail-over
+Redis: Optional can be configured
+
+8. 
+Mem Cache: No support for publish/subscriber model
+Redis: supports publish/subscriber model
+
+9.
+Mem Cache: supports huge volumes of data to be cached
+Redis: doesnt support huge volumns of data to be cached
+
+10. 
+Mem Cache: no back and restore support
+Redis: backup and restore is available
+
+How to provision an AWS Elastic Cache?
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

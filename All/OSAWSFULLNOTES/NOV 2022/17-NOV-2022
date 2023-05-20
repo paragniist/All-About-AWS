@@ -1,0 +1,104 @@
+How does S3 stores the data?
+S3 is an object-storage database that allows us to store objects of data like audio, videos, images, docs etc into it. upon storing an object in S3 we wanted to access the object back aswell, to help us in conviniently access an object S3 will assign an id for each object that has be stored inside it.
+	
+To help us in organizing and accessing the data quickly, S3 allows us to create buckets. We can image an bucket is S3 as equal to an folder in a FileSystem. We group related files and folders and store them hierarchial on a persistence storage device interms of folders, so that we can quickly navigate, locate in accessing the data.
+	
+Similar to the same, in S3 we can create storage buckets and store related objects into those buckets, so that we can quickly identify and access the data. Even though S3 permits us to create an storage bucket, there is no physical entity class an bucket really exists in S3 world, rather its an logical name that is prepended to the file that represents as an folder structure
+
+For eg.. we create an storage bucket called "crazyeats"
+	
+crazyeats (storage bucket)
+|-logo.png
+|-site.css
+|-common.js
+|-beep.mpeg
+
+actual there is no bucket called crazyeats rathen s3 while storing the objects will prepend to the file name the bucket and stores inside
+crazyeats/logo.png
+crazyeats/site.css
+crazyeats/common.js
+crazyeats/beep.mpeg
+
+In reality S3 stores everything in Flat surface only (there is no hierarchial storage like the Filesystem). but from the end-user perspective it visualizes as hierarchial folder structure
+
+advantages:-
+There are lot of advantages of using S3 storage
+1. durable and redudant, which means when we store the data in S3 storage bucket, it is guaranteed to be available 99.99999 without any loss of data. S3 takes care of replicating the data across the AZ automatically we dont need to worry about lossof data
+2. Throughput optimized performance, depends on the requirement of the data access the S3 scales up serving the objects at great speed without comprimising the performance
+3. cheapest storage cost at $0.234 per gb, thus making it one of favourable platform for storing the un-structured data
+4. S3 service has provided under freetier upto 12 months of max capacity of 5GB
+5. Introduced Storage classes for S3 which makes further the cost of storage much cheaper based on the usage of the data
+6. highly secured and can be restricted through nacl rules or bucket policies of aws security
+
+Interview questions:-
+1. What is the difference between rds service, dynamodb and S3 storage, can you compare and explain which one should be used when?
+2. What is the difference between EBS volume and EFS location?
+3. What is the difference between EFS and S3?
+Looks like both EFS and S3 are storage solutions that supports storing and accessing the data across the network, but they different fundamentally from the usage point of view
+EFS:-
+	1. EFS has to be mounted onto the ec2 instance whereever we wanted to use, unless it doesnt becomes accessible
+	2. Even though we can store the files/folders on the EFS location, the programmers has to write complex logic within their application in storing or accessing the data from EFS location using FileSystem apis of that language
+	3. it is ideally suitable for data backups, data migrations and moving the data between on-premise to cloud, where most of these operations needs to hold the data temporarily
+	
+S3:-
+	1. S3 is an managed service that is hosted by the aws cloud platform and exposed through HttpEndpoints or sdk, so to access the objects in S3 we dont need to mount it onto any instances
+	2. The programmers dont have to write complex logic in storing/accessing data from the Filesystem, rather they can manage in storing/retriving the objects using sdk or api
+	3. ideally suitable for handling the object storage requirements of application programs
+	4. due to the low cost storage offering, S3 is even suitable for backup the data as well
+-----------------------------------------------------------------------------------------------------------------------
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

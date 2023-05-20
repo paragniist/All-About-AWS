@@ -1,0 +1,10 @@
+SQS
+----
+SQS Stands Simple Queuing Service, its an fully managed message queuing system that is used for building microservices, distributed application and serverless applications
+
+Advantage of using SQS 
+1. No need to setup infrastructure 
+2. no need to install, configure and monitor the queuing software
+3. reliable delivery of large volumes of data with higher throughput
+4. securely can exchange the sensitive data through the support of encryption
+5. scale elastically based on usage

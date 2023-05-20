@@ -1,0 +1,108 @@
+There are 2 ways we can apply security on S3
+1. acls = access control list
+2. policies = iam policies at bucket level 
+
+
+1. access control list (acls)
+ACLs are the one of the security mechanism available for enforing security on the bucket and objects in S3. acls are very old mechanism and is deprecated and no more recommended by aws to enforce security on bucket/objects.
+There are only limited permissions are available to be applied through acls
+1. we can basically grant permissions on bucket or object either to
+	a) owner
+	b) others
+we can grant permission to a bucket or object to a specific aws iam user, which is an limitation.
+	
+2. there are only few permissions can be enforced on a bucket of object
+for bucket we can enforce 
+a) read
+b) write
+c) list
+
+on an object
+a) read
+b) write
+either to the owner or others
+
+From the above we can understand acls are not powerful enough to enforce security on buckets or objects since there are very limited options are available. So by default when we create an S3 bucket acls disabled. if we wanted to still enforce security through acls we need to enable it manually
+So the default way of securing the bucket and objects is bucket policies.
+------------------------------------------------------------------------------------------------------------------------
+while creating the S3 storage bucket, the aws allows us to choose the below options
+1. acls disabled (recommended)  means we can enforce security on bucket and objects through policies
+2. block all public access  (by default checked)
+	2.1 if we un-check block all public access to buckets and objects, then 4 checkboxes are enabled below.
+	2 checkboxes are used for blocking or unblocking the access through acls
+	2 checkboxes are used for blocking or unblocking the access through policies
+	since we choose acls disabled first #2 checkboxes doesnt apply for now.
+	2.3 Block public access to buckets and objects granted through new public bucket or access point policies
+	if we check the above checkbox, we will not be able to grant access to the bucket or objects public access through policies		
+	2.4 Block public and cross-account access to buckets and objects through any public bucket or access point policies
+	we block public access also and cross-account user access as well in permission access to objects and buckets
+
+now we have to options
+1. block all public access
+even we create bucket policy granting access to any user/publicly, aws doesnt allows you to apply the policy. only our account IAM users only we can grant access to the S3 bucket and objects
+
+2. un-block all public access
+now we need to decide between 3 options
+1. any un-authenticated user, my account IAM user, any account iam user can access then uncheck 2.3, 2.4
+2. block un-authenticated access, permit only my account IAM user and cross-account iam user then check 2.3 and uncheck 2.4
+3. block un-authenticated access and cross-account access, only permit my account iam users only then uncheck 2.3 and check 2.4
+if we check 2.3, 2.4 means block all public access
+		
+even we enable allow public access, still the objects are not accessible publicly because we need to bind policies on the bucket to permit public access explicitly
+----------------------------------------------------------------------------------------------------------------------
+#2. enable acls
+then policies are not applied only acls we have to use for enforcing security
+2. block all public access
+ 2.1 then the permissions we granted for other users doesnt apply for public (authenticated) only authenticated users of aws account only the permissions are applied
+ for eg..
+	bucket     owner       others (authenicated users only, becuase we block public access)
+	           read(y)     read(y)
+						 write(y)    write(n)
+						 list(y)     list(y)
+3. if we unblock all public access then others means any one (un-authenticated or authenticated users)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+
+
+

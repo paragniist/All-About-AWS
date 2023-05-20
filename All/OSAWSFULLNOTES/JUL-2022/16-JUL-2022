@@ -1,0 +1,76 @@
+#1. Virtual Private Cloud Network (VPC Network)
+VPC is an isolated network of resources of an aws account user, all the resources within an vpc are isolated from other resources of another vpc by default.
+	
+1. A vpc is created per user account, per region, where all the availability zones of the region are part of the vpc
+2. by default all the resources within the vpc can communicate with each other
+3. per aws user account, per region we can create at max 5 vpcs only (soft limit)
+4. by default a resource in one vpc cannot communicate with another resource of other vpc, even though both vpcs belongs to same aws useraccount of same region, if we want resources across the vpcs to communicate with each other we need to enable vpc peering
+5. by default per each user account, across all the regions aws will configure one default vpc
+
+
+In aws cloud platform there are 2 types of limits are there
+1. softlimit = something by default enforced by the aws cloud platform for each type of service (if required) and can be extended upon request
+2. hardlimit = the hardlimits cannot be extended or modified.
+	
+What is the purpose of a vpc?
+There are many ways vpc is used for organizing and managing the resources of an organization
+
+#1. business unit/department
+In an organization there can be multiple business units or departments, across the business units or departments we want to deploy and host the applications specific to the department. How to ensure the applications of various different departments are deployed and kept isolated from one another. How to enforce a different security restrictions on different resources of various different departments.
+That is where we can keep them separately as part of 2 different vpcs
+
+#2. across the projects
+we can create separate vpcs per each project and can isolate the resources of one project from another one using vpcs
+
+#3. per environment
+we can create different vpcs each per environment like
+devvpc
+testvpc
+prodvpc
+etc
+
+How to create an vpc?
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

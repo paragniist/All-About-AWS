@@ -1,0 +1,47 @@
+What is NACL, why do we need to use it?
+NACL stands for network access control list, it is a firewall configured at the subnet level to enforce traffic restrictions on the group of resources of a subnet
+1. By default when we create an vpc and subnets, the aws cloud platform creates default nacl rules for all the subnets of the vpc
+2. Through the help of NACL rules we can enforce traffic restrictions on the subnet of resources based on
+	1. source cidr
+	2. protocol
+	3. port
+	allow/deny the network traffic to the resources
+3. NACL rules are stateless
+		1. Stateless refers to the request and response are treated separately. NACL Engine doesnt keep track of a request to identify and allow the response for that request. so we need to separately configure inbound/oubound rules in allowing the network traffic in both the directions
+    2. To allow network traffic in both the directions we need to configure separately 
+			- Ingress = refers to the rules to applied in allowing the in-bound network traffic
+			- Egress = refers to the rules to be applied for allowing the network traffic from subnet of resources to the external network traffic
+4. NACL rules are ordered, which means each rule is given an priority or sequenceno in which the rules has to be applied.
+------------------------------------------------------------------------------------------------------------------------
+What are security groups, why to use them?
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+	

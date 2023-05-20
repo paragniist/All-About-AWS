@@ -1,0 +1,146 @@
+AWS Glacier
+Glacier is an archival data storage service in which we can store the archieval data (long-term data) ata cheapest cost.
+	
+Archival Data: The data that is not actively being used but need to be stored for longer-time for future usage if required.
+if we store the archival data in rds or dynamodb or s3 storage the cost of storage would become very high, instead we can store such archival data on a magnetic tape mediums at a cheaper price which is nothing but glacier
+
+How does the data is stored in Glacier?
+The data is stored in Glacier interms of objects like audios, videos, images, documents etc. The runtime application data will not be written directly into the glacier, all the applications writes the data into persistence storage databases like
+1. rds
+2. dynamodb 
+3. s3
+depends on the nature of the data. There after upon meeting the sla agreement, the data will be moved from these sources into the glacier by converting them into archival formats
+
+moving data from rds/dynamodb into glacier:
+both the systems holds the data differently from the storage format that is supported by Glacier, so aws will not automatically moves the data between rds/dynamodb into glacier. The application developers has to write data archival programs which access the data from these source systems and converts into archival format and stores into glacier by using aws glacier apis, this data can be accessed back only through apis again.
+	
+moving the data from S3 to glaicer:-
+since both the worlds stores the data into the same format, we can make useof aws s3 lifecycle policy which takes care of moving the data from S3 to the Glacier based on sla we configured. the data that is stored through S3 lifeycle cannot be read back using apis
+
+
+features:-
+1. cheapest cost
+2. durablity
+3. secured
+4. infinite storage
+5. region specific cost
+
+In Glacier we need to create vaults, vaults are similar to S3 storage bucket where group of related files, documents can be stored together in a vault.
+vault is used for 
+	1. grouping related data
+	2. we can apply access restrictions on the vaults
+	3. we can build policies
+	
+The Galcier supports
+1. storing the data instantaneously (realtime data)
+2. but while retriving the data, it will not works in real-time. we need to place a request to the glacier asking for reading the data, so that glacier will make the data available for usage after sometime.
+
+1. Data Storage
+DataTransfer into Glacier:
+In the Galcier we need to create vaults into which we can store the data in 3 ways
+1. through aws glacier apis
+2. glacier tools
+3. S3 Storage bucket lifecycle policy into Glacier
+
+The storage cost varies per region and the minimum cost of storage starts at: $0.0036 per GB/ month
+All the data storage or uploads into Glacier Vaults are free
+
+2. Data Retrieval
+For each data retrieval from Glacier amazon charges us. Since Glacier offers storage of data at cheapest/lowest cost, all the data we stored into glacier will be written by amazon into magnetic tapes. So that data in galicer is not readily availbale, so we need to place request into aws glaicer asking toread the specific data , it would read the data from magnetic tapes and make it available so always reading the data from galicer is delayed
+
+To support retrieval of data from Glacier, it has three retrieval modes:
+1. expedited
+2. standard
+3. Bulk
+
+
+we can use fast-glacier tool for storing and accessing the data from aws glacier service
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

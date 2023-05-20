@@ -1,0 +1,95 @@
+What are the ebs volume types are there
+There are 7 types of EBS volumes are there
+1. General Purpose SSD gp2
+2. General Purpose SSD gp3
+----------------------------
+3. Provisioned IOPS SSD (io1)
+4. Provisioned IOPS SSD (io2)
+-----------------------------
+5. Magnetic Storage (SATA) 
+------------------------------
+Additional EBS Volumes we can use are
+1. Cold SSD 
+2. Throughput optimized HDD 
+
+1. Standard Magnetic Storage Volumes
+These are the previous generation standard EBS volumes (not currently under use), backed by magnetic harddrives. These can be used when the performance is not the criteria. These EBS volumes can have a maximum size of 1 TB and can offer upto 200 IOPS (Input/output operations per second)
+	
+2. Cold HDD (sc1 type)
+These are the lowest priced EBS Storage volumes ($0.015/1GB per month) and are suitable for storing infrequently accessed data like backups and archives. 
+	
+3. Throughput optimized HDD (st1 type)	volumes
+There is a significant difference between st1 & sc1. When we provision the st1 HDD we can specify the IO Throughput volumes. These volumes are better suitable for workloads like log management, big data, data warehouse, ETL etc
+
+4. General Purpose SSD gp2
+gp2 is the default SSD backed EBS volume for ec2 instance. AWS recommends us to use these type of volumes for smaller workloads like boot volumes or non-production environments or small-scale applications
+
+5. General Purpose SSD gp3
+gp3 is the latest generation general purpose SSD-backed EBS Volume. These has low latency when compared with gp2 and can be used for single instance databases, VDI etc
+
+6. Provisioned IOPS (io1)
+io1 provisioned IOPS SSD-Backed EBS volumes offers high IO performance, throughput and lower latency than the other general purpose SSD. These volumes are best suited for IO and throughput intensive workloads like RDBS or NoSQL Databases
+
+7. Provisioned IOPS (io2)
+The io2 provisioned IOPS SSD EBS Volumes are similar to io1 SSD Volumes, both has same IOPS throughput. but io2 has higher durablity and IOPS to storage ration when compared with io1. AWS recommends us to use io2 SSD for SAP, IBM DB2 and Oracle etc
+
+Based on the type of the workload/application we are running on an ec2 instance, we need to choose an appropriate EBS volume type during provisioning
+-----------------------------------------------------------------------------------------------------------------------
+Storage Domain
+1. Elastic Block Storage (EBS)
+2. Elastic Filesystem (EFS)
+3. Simple Storage Service (S3)
+4. Cloud Front (CDN Server)
+5. Storage Gateway
+6. Glaceir
+7. Snowball
+
+#2. Elastic Filesystem
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

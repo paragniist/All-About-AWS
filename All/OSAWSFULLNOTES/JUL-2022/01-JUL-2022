@@ -1,0 +1,124 @@
+Cloud computing 
+on-demand delivery of computing resources to the world is called "Cloud Computing". As part of the cloud computing there are 3 types of services are provided	
+1. IAAS
+2. PAAS
+3. SAAS
+
+#1. IAAS
+IAAS Stands for infrastructure as a service. The compute instance and network infrastructure required for hosting the applications are provided aspart of the IAAS.
+like 
+1. Compute instance
+2. Network infrastructure
+	- Routers
+	- Gatways
+	- vpn
+	- subnets
+	- virtual private networks
+	- firewalls
+3. load balancers
+4. dns registries
+5. dns service 
+6. ip address
+7. cloud storage
+etc
+
+The cloud providers uses virtualization technology in offering IAAS layer flexible to the world.
+Virtualization
+Virtualization is used for creating multiple parallel isolated environments on a physical computer system. The Virtualization technology works based on hypervisor.
+	
+There are 2 types of hypervisors are there
+1. software hypervisor = Hypervisor as a software is shipped by the vendors, that has to be installed on the host machine operating system, using which we create virtual machines to share the physical system resources of the machine.
+advantages:-
+	1.1 cost effective solution in creating multiple environments
+dis-advantages:-
+	1.1 throughput or the performance of the virtual machines are low
+	1.2 computing resources of the physical machine are wasted because of running host operating system
+	
+2. hardware hypervisor = The hypervisor is shipped directly as an hardware device which runs on the machine itself without the need of host operating system
+advantages:-
+	1. higher throughput
+	2. effective utilization of system resources of the host machine
+dis-advantages:
+	1. very costly
+	
+The cloud vendors/providers relies on virtualization technology in providing infrastructure to the world.
+advantages:-
+1. We can procure the computer instance of flexible shape in nature, based on the requirement in running the application, there is zero wastage cost in utilizing the machines as we dont need to signup for high shapes because of restrictions
+2. The cloud providers within couple of minutes will be able to provision the infrastructure and make the compute instances available almost instantly
+3. The cloud providers works based on pay-per usage model. 
+	based on the usage of cpu/ram and storage and network i/o the enduser has to pay the amount rather than how long the infrastructure has been kept 
+4. There are absolutely no long-terms contracts required in signing up for the infrastructure. instantly the compute instances are alloted and can be terminated or released immediately, there is no fixed period of usage restrictions are not there
+5. scale-out and scale-in of the infrastructure is done instantly, many of the cloud providers offers autoscaling configurations which means we can periodically configure the scale-out and scale-in intervals based on the usage.
+6. scale-up and scale-down is supported by the cloud provider
+7. periodical backup and restoration in the event of crash is handled by cloud.
+	
+The cloud providers takes care of managing the lifecycle of the compute resources 
+1. provisioning
+2. deprovisioning
+3. backup
+4. restore
+5. scale-out/scale-in
+6. scale-up/scale-down
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

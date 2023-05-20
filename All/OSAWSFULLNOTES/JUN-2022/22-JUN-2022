@@ -1,0 +1,37 @@
+How many types of applications are there?
+We can classify the software applications broadly into 5 types
+1. standalone or desktop application
+2. distributed web application
+3. enterprise application
+4. mobile application
+5. backend application
+
+How to host an distributed web application to the public world?
+Hosting an application is a process of making the application live or accessible to the people around the world. To make an application accessible to the people around the world we need to do 2 things
+1. we need a hosting space or a computer on which we should be able to run our application
+2. we need a domain name registered with a dns registry to route the request to our application
+
+How can we host an application to the world, where can we get the hosting space?
+There are many ways we can host an application let us explore
+#1. Inhouse hosting
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,6 @@
+ftpec2
+tomcatec2
+#1. private port range 
+
+21 ftp port = incoming
+ftp -> server

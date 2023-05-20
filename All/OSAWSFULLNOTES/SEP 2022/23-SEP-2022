@@ -1,0 +1,103 @@
+The basic functionalities of the load balancers:
+1. distribute traffic across the nodes of the cluster on which our application is running
+2. high availability & fault tolerance through session replication
+3. sticky sessions
+4. path-based routing
+5. ssl for security
+6. periodical healthchecks 
+
+We can setup an load balancer manual to route the network traffic across the nodes of the cluster but there are lot of challenges are there
+1. setting up the infrastructure and installing & configuring the load balancers takes lot of time
+2. configuring the servergroups and routing the requests based on path is very complex 
+3. if there is node in the cluster went down, we need to reconfigure the server group by detaching the node and attaching the new node, which is an maintainance aspect
+4. enabling ssl configuration is a difficult job
+5. healthchecks has to be configured to identify the faulty nodes to stop routing the network traffic to those nodes
+6. loadbalancer should be configured as HA
+7. for fault tolerance and HA we need to enable stickysession and session replication
+
+To overcome the above problems AWS cloud platform has provided elastic loadbalancer service.
+Elastic Loadbalancer
+-------------------- 
+We host our applications on ec2 instances of AWS Cloud platform. AWS Cloud platform recommends us to host the application across the ec2 instances of multiple availability zones. To route the traffic of our application to any of the ec2 instances across AZs of the region it recommends us to use Elastic Load Balancer.
+	
+We can take lot of advantages by using an load balancer:
+1. fault tolerant = if a machine on which our application is running has been crashed, always we have other machines on which our application is running to serve the requests
+2. resilience = In case an ec2 instance is heavily loaded with huge traffic, the loadbalancer can route/redirect the traffic to other nodes helping the node to recovery
+3. high availability = always we have instances on which application is running so that one goes down there is another available for serving the request
+4. scalability = if more number of requests are received for our application we can deploy our application on one more ec2 instance and add to the backend sets of the LBR to route/scale 
+
+1. elastic load balancer is an traffic distributor across the services or resources of AWS like
+- ec2 instance
+- autoscaling group
+- elastic beanstalk
+
+2. spans across the availability zones of the region
+3. the elastic loadbalancer is highly available, resilient and scalable, all these aspects of Loadbalancer are managed by the AWSCloud platform we dont need to provision or configure it
+4. health checks = the LBR conduts periodical health checks to determine the fault nodes and routes the requests only to the nodes that are available
+5. supports autoscaling group (asg) = autoscaling group takes care of scaling up the ec2 instances of our application automatically based on the threshold configuration like cpu utilization : 85% scale-out, memory etc, and modifies the LBR backendsets automatically to route the traffic to scaled instances as well.
+when the traffic patterns has been decreased the automatically the asg deprovisions or scale-in the instances to reduce the cost
+
+The AWSCloud platform supports 4 types of loadbalancers
+1. AWS Classic Loadbalancer 
+Initially AWS has provided only one loadbalancer service on AWS Cloudplatform called "classic loadbalancer", there after it has been deprecated and AWS encourages us to use other loadbalancers apart from classic. and right now the classic loadbalancer is not available.
+	
+Modern Loadbalancers (2017):	
+2. Application Loadbalancer = application loadbalancer should be used for routing and loadbalancing the http/https traffic to our application. The application loadbalancers works at application layer and intercepts and routes the requests based on path
+
+
+3. Network loadbalancer = 
+
+4. Gateway loadbalancer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

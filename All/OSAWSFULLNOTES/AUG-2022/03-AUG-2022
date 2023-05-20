@@ -1,0 +1,51 @@
+vpc peering
+------------
+virtual private cloud network (vpc)
+vpc is an private network in which the resources of an vpc are isolated from any other resources of aws cloud platform.
+	
+For any resource on aws cloud platform there are 2 types of ip address assigned.
+	1. private ip address = is an internal ip address generated or assigned to any resources created on the aws cloud platform which is local to the aws network.
+	using the private ip address we can access the resources from other resources of the same vpc within the aws cloud platform.
+	There are 2 reasons for why aws cloud platform assigns for every resource a private ip address
+		1.1 For each resource to identify uniquely over the network and make them accessible internally within the cloud network aws assigns an private ip address
+		1.2 by using the private ip address the low network lantency and bandwidth speed at which the data transfers takes place will be really high, so it is always recommended to use private ip ony while communicating between the resource of the same vpc.
+		Note: private ip address are local to the aws cloud platform and cannot be used for accessing the resources from external network
+	
+	2. public ip address = public ip address are assigned to the resources of public subnet. even though we assign public ip address to a private subnet resource, there is of no use, since the network itself is not connected to a public network using the public ip address the resource cant be reached.
+		 The aws cloud platform supports 2 types of public ip addresses
+		 1. empheral public ip address = is an public ip address assigned to the resource during provisioning of the resources by aws cloud platform. The empheral ip address assigned is an temporary ipaddress, that would be changed for that resource during a restart.			 
+
+		 The empheral ip address is not assigned to the resource by default.
+		 There are 2 ways we can assign empheral ip address to the resources.
+			 1. while creating the subnet we need to choose auto assign public ip address to the resources of the subnet, then for each resource that is created within the subnet, aws cloud platform assigns an empheral ip address
+			 by default when we are creating the subnet, the auto assign public ip is disabled.
+			 2. while creating the resource for eg.. an ec2 instance, we need to choose the optional manually in assigning an ip address.
+				
+			 Post provisioning of the resource also we can assign ip address to an resource. we need to goto network interfaces section of the resource and attach a new nic and choose assign public ip address.
+				 
+			 
+		 2. elastic public ip address 
+		 if we want the resources to be assigned with an permanent ip address then we need to use elastic ip address. aws allows us to create an elastic ip address pool in which we reserve the public ip addresses upto a limit of #5. there after we can attach/assign these ip address to the resources of our account.
+		 even the resource has been deleted the ip address will be returned to the pool, the ip address will not be deleted.
+		 elastic ip addresses are chargeable and if not being used we should release and remove them
+		 
+		 
+		 
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+	

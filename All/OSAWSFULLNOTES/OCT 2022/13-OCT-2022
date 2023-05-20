@@ -1,0 +1,51 @@
+How to work with Auto-scaling group (ASG)?
+#1. provision an ec2 instance using an AMI
+#2. install & configure required set of software libraries & packages on the machine
+#3. automate your application startup along with the bootup of the machine
+#4. enforce right security groups/restrictions
+------
+#5 export the current ec2 instance as an 
+	1. AMI
+	2. SNAPSHOT
+
+AMI = Amazon Machine Image which is an disk copy of EBS volume of an ec2 instance which is an bootable disk from which we can create an ec2 instance. AMIs are used for creating identical ec2 environments
+
+SNAPSHOT = is a copy of an EBS volume of an ec2 instance, which can copied into another EBS storage volume, but not bootable. We can think of an Snapshot as a backup disk we have created from an existing EBS volume, so that in case of crash we can recover from the snapshot
+
+#6. Setup an autoscaling group configuration, here we need choose
+	1. shape
+	2. subnet across the availability zones on which we wanted the scaleout to be taken place
+	3. AMI/Snapshot out of which the instance should be scaled-out
+	4. Scaling policies
+		- performce
+		- cost
+	and save the autoscaling configuration
+#7. create an autoscaling group by passing the autoscaling configuration attach an LBR and apply it
+
+whenever the threshold limits are reached either interms of capacity or time, the instances will be scaled-out/scaled-in automatically. In addition the LBR Target Groups will be modified by the ASG automatically
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

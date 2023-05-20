@@ -1,0 +1,6 @@
+DynamoDb
+DynamoDb is an NoSql database provided by the aws cloud platform as an alternate to the RDS service.
+
+Why do we need No-Sql databases when we have RDBMS databases?
+There are problems or limitations with RDBMS database due to which there are not been an ideal choice for few types of applications. 
+If we look at the relational database management system, they allow us to store the data in structured format by defining data interms of tables with fixed-set of columns within it.

@@ -1,0 +1,3 @@
+Elastic FileSystem (EFS)
+Elastic FileSystem is a network storage location that can be mounted across multiple ec2 instances to share the data effectively between the applications	
+

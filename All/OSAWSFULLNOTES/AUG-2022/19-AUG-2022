@@ -1,0 +1,207 @@
+What is RDS Service, why do we need to use it?
+RDS stands for relational database service which is an managed service provided by the aws cloud platform. RDS service provisions and manages most of the popular relational database products in the market like
+1. mysql server
+2. oracle database
+3. postgres
+4. mariadb
+5. microsoft sql server
+
+its an PaaS service that takes care of managing all the lifecycle operations on the underlying database instance provisioned through RDS Service like
+1. provisioning
+2. deprovisioning
+3. scaleup
+4. scaledown
+5. scaleout
+6. scalein
+7. backup
+8. recovery
+9. patching
+10. upgradations
+-----------------------------------------------------------------------------------------------------------------------
+How to provision MySql Server datatabase instance using RDS Service of AWS?
+1. create vpc
+CIDR = 172.16.0.0/16
+NAME = rconnectvpc
+
+2. create subnets
+The RDS Database is always recommended to be provisioned in private subnet only for security and accessibility reasons
+So create multiple private subnets (across the AZs) for HA/Scalability so that RDS can provision the database instance across any of the private subnets.
+	
+#2 private subnets
+rconnectprvsn1 [172.16.1.0/24]
+rconnectprvsn2 [172.16.2.0/24]
+
+#1 public subnet [jumpbox] = to connect to mysql service provisioned above and verify
+rconnectpubsn3 [172.16.3.0/24]
+	1. create internet gateway
+	NAME=rconnectig
+	2. attach to vpc [rconnectvpc]
+	3. create route table at the vpc level
+	NAME = rconnectigrt
+	Subnet associate: rconnectpubsn3
+	Route: 0.0.0.0/0 -> rconnectig
+	
+3. Navigate to RDS Service
+1. From the left navigation menu choose create dbsubnet group
+1.1 click on create dbsubnet group
+1.2 choose the vpc
+1.3 choose the AZ from where we want to pick subnets from
+1.4 choose the subnets within the vpc->AZ where you wanted RDS Service to provision database instance and maintain replicas
+
+What is the purpose of dbsubnet group?
+when we ask RDS service to provision an database instance by choosing the dbsubnet group, it will takes care of replicating the db service instance on multiple subnets of the group for HA and scalability. There are 2 reasons for creating db subnet group
+1. High availability
+2. scalability
+
+4. create an security group at vpc level for dbinstance
+rconnectmysqlsg
+Ingress
+TCP  172.16.0.0/16  3306    
+Egress
+ALL  0.0.0.0/0      ANY
+
+jumpboxsg
+Ingress
+SSH  0.0.0.0/0  22
+Egress
+TCP  0.0.0.0/0  ANY
+
+5. Start creating RDS Service Instance by going to RDS Service from menu
+1. click the create database
+2. choose the database type we wanted to provision using RDS Service
+	1. aurora db
+	2. mysql server
+	3. oracle
+	4. postgres sql
+	5. maria db
+	6. microsoft sqlserver
+3. choose the version of the mysql server we wanted to provision 
+4. the provision mode
+	1. standard = we need to choose and pick the configuration options using which we wanted to create the instance
+	2. easy = the default options will be auto-populated and we dont need to configure any values
+5. Choose the instance Type
+	1. production = all the production capabilities in running the sql instance are enabled
+		1. Multi-AZs (active/passive) provisioning
+		2. EBS Storage Classes
+		3. backup policy
+		4. shape
+		5. enabling autoscaling		
+	2. development/test
+	3. freetier
+	
+6. choose vpc
+7. choose subnet group
+8. security group
+9. shape
+10. choose ebs storage class
+11. autoscaling configurations
+12. dbsinstance name
+13. username/password
+14. authenticationType (username/password, IAM Authentication, SAML/Kerbores Authentication)
+15. ip address (public/no)
+16. launch
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

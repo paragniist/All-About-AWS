@@ -1,0 +1,70 @@
+There are lot of advantages of using database management system
+1. Database management systems are distributed software systems that can be accessed remotely
+2. Database Management systems abstracts the complexity in storing/accessing the data from the underlying storage of the computer, so developer dont need to write complex logic in managing the persistence operations within the application.
+3. Dataase management systems provides tools for backup and recovery of the data in case of crash
+4. highly secured
+5. Most of the database supports clustering by which we have many advantages
+	5.1 scaled storage = distributed storage of the data
+	5.2 scaled processing = through clusting we can achieve scaled performance in managing the data
+	5.3 high availability
+6. we can enforce checks on the data that is written on the database, so that invalid data never goes into the system
+
+There are lot of Software manufacturers who are producing/building/manufacturing the database software and distributing to the world. Few are opensource and many are commercial. We need to download and install the database management system software on our computer to use them
+
+There are different types of database management systems are available
+1. Hierarchial database
+2. Network database
+3. Relational database
+4. Object oriented database
+5. No-Sql or Semi-Structured database
+6. Object storage database
+
+In the above many are of them are not being used in the market and the popular database management system ares
+1. Relational database
+2. No-Sql database
+3. object storage database
+
+
+#1. Relational database management system
+we wanted to always store fields of data that acts as an input in performing the operations using the data, not everything serves meaningful in carrying the operations.
+	
+To permit us to query and access the data from the database management system, the relational database managements systems allows us to define tables with columns with fixed size. So that we can store the data by adding records into the table
+
+sales
+customer_nm  sale_date    mobile_no   email_address    quantity     total_amount    discount    paid_amount
+peter        13/Aug/2022  939373839   peter@gmail.com  10           2500             250         2250
+paul         13/Aug/2022  938339499   paul@gmail.com   11           3500             200         3300
+	
+as we stored the data in structured format with pre-defined columns in a table, database can understand the data we stored, so the database helps us in querying and filtering the data we are looking for rather than we accessing the entire data and filtering it
+
+The relational database management systems provided an langauge called sql (structured query language)
+based on the data structure we query(access) the data
+
+select columns from table where column condition value
+select * from sales where quantity >= 11
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	

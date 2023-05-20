@@ -1,0 +1,95 @@
+What is elastic beanstalk, what is the purpose of it?
+To deploy and run an application we need infrastructure (ec2 instance), and necessary platform software to be installed and configured on an environment.
+	
+To address the scalability and high availability aspects of running an application we need to create an AMI/Snapshot with the application and configure autoscaling group and loadbalancers
+
+Looks like we need to spend lot of time in setting up the infrastructure, platform software to run the application along with taking care of HA and scalability aspecst
+
+For each technology based application, the platform software requirements in running the application seems to be same. For eg.. in deploying an java application we most of the time need platform software as 
+1. jdk
+2. tomcat server
+
+setting up them seems to be repeatitive process. instead aws cloud platform developers identified it as an common requirement and pre-created templates / techonology stack for each popular platform softwares and provided to us as elastic beanstalk
+
+Now the aws engineer can quickly choose from pre-defined elastic beanstalk templates which environment he need in running the application and can quickly create infrastructure, platform software for the application.
+	
+In addition to the above the elastic beanstalk supports configuring auto-scaling group and loadbalancer in addressing scalability and high-availablity in running the application
+
+The Elastic beanstalk supports 2 types of environments
+1. WebServer Environment
+2. Worker Environment
+
+#1. WebServer Environment
+To run an web application on a compute instance, we need infrastructure and platform software. these aspects in setting up the environment is taken care by elastic beanstalk of the aws cloud inrastructure
+
+For different languages and technolgies aws cloudplatform has pre-defined elastic bean stalk webserver environments using which we can provision the environments quickly
+
+#2. worker environment
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

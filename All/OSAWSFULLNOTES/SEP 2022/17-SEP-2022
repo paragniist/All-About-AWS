@@ -1,0 +1,12 @@
+compute domain
+The computing services required for running the application are part of compute domain. There are 5 services are there in compute domain
+1. ec2
+2. elastic beanstalk
+3. elastic load balancer
+4. autoscaling group
+5. lambda
+
+#1. ec2
+ec2 stands for elastic compute cloud, it is nothing but an bare machine installed with operating system (AMI) provided as an infrastructure resource by the aws cloud platform
+How to deploy an multi-tier java application on aws cloud platform?
+	

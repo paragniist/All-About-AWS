@@ -1,0 +1,106 @@
+There are 5 main types of records are there in DNS server
+1. A record     = A stands for address record, it is used for mapping the domainname with the ip address and used by the web browsers to lookup for the ip for a given domain to route the request to the webserer
+2. AAAA record  = same as A record but holds the ipv6 address
+3. CName        = defining alias or sub-domains for a given domain
+4. MX record    = for a domain to define mail server address we use MX records
+5. NS record    = Nameserver ip address for the given domain
+
+Amazon Route53
+--------------
+Amazon Route53 is a Domain Name System (DNS) web service that is an DNS Server that resolves the domain name to an ip address of a resource on which our application is hosted
+
+There are many advantages of using Route53 when compared with public dns server offered by the hosting providers
+Features:-
+1. highly available and scalable
+2. fully complaint with ipv6 based routing
+3. cost effective based routing, only the dns queries that are resolved through Route53 will be charged, there is no fixed charge of using the service (pay-per usage)
+4. we can buy the domain names through Route53 domain registration feature
+5. Route53 is capable of resolving a domain to an aws resource like ec2, lbr, s3, cloudfront service by using private dns name of the resource, so we dont need public ip address to resolve dmain name queries to the resource
+6. There are different routing policies are supported by Route53 based on which we can route the domain name to a resource
+7. Healthchecks and health monitoring of the available resources is supported by Route53
+8. Route53 is secured through IAM access
+
+What are the different routing policies supported by Route53 service?
+There are 7 routing policies are supported by Route53
+1. Simple Routing Policy = The domainname will be mapped to an single resource 
+2. Failover Routing Policy = when we want to configure active/passive failover we can use this policy. if the primary node on which our application is running has been failed/dead, then we want the Route53 to route the traffic to the secondary node using Fail-over routing policy
+3. GeoLocation Routing Policy = routes the requests to the server or node nearest to the location of the user
+4. Geoproximity Routing policy = either to the user location or something close to the user location
+5. Latency Routing Policy = The resources are hosted on multiple aws regions, we want to route the traffic basedon the region that provides low-latency and less round-trip time then use latency-based routing
+6. Multivalue anwser Routing Policy = we can configure upto 8 records for a domain-name, so that for each request route53 randomly returns a response
+7. Weighted Routing Policy = if we want to distribute the traffic across the nodes based on proportion or weight for eg.. 60% to server1 and 40% to server2 then use weighted routing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

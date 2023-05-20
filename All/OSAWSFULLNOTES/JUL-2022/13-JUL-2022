@@ -1,0 +1,148 @@
+Edge locations
+edge locations are the co-located locations within an aws region, which are a kind of mini/small datacenters. In these edge locations amazon hosts global/shared services to reduce latency in offerring them
+
+1. cloud front
+2. route53
+--------------------------------------------------------------------------------------------
+Scope of AWS Services
+There are various different cloud services offered by the aws cloud platform, these services can be categorized into 3 different scopes based on their availablity/accessibility
+The scope of services means, those are created and bounded to which scope within the cloud platform so that cloud engineers can access and manage these resources/services created.
+	
+1. Global
+2. Regional
+3. Availability Zone
+
+#1. Global scope
+The services categorized to the global scope are accessible and available across all the regions of the aws cloud platform. A change in these services will effect all the regions of the aws account.
+For eg.. let us explore few global services to understand
+1.1 Amazon Route53 
+If we publish an dns entry into Route53 service, the change would be applied and propagated across all the regions of the aws infrastructure for that account
+1.2 IAM registry
+The AWS accounts are created and changes applied to the aws account users are propagated and applied globally at the account level
+1.3 AWS Cloud Front 
+AWS Cloud Front is an cdn (content delivery network) server, into which we can propagate an static content like js, css, images etc and these resources would be propagated across all the regions of the aws infrastructure automatically
+
+#2. Regional scope
+These services are created within a region and are accessible/visible within the region only
+2.1 DynamoDB
+it is an nosql database which is an region based service, upon creating the aws cloud platform partitions the dynamodb table and replicates across the availability zones of the region for HA
+2.2 S3 bucket
+The objects stored within an S3 bucket are scoped to the region level
+2.3 Elastic Load Balancer
+2.4 Virtual Private Cloud Network
+
+#3. Availability Zone scope
+These services are scoped to the Availability zone in which those are created and can be visible and managed only within the zone 
+3.1 Amazon Elastic Block Storage
+EBS volume is an harddisk drive for an ec2 instance and is scoped to the ZA location only, we can attach an EBS volume to the ec2 instances of the same AZ only
+3.2 Amazon EC2
+3.3 Subnet
+--------------------------------------------------------------------------------------------
+#Architecture of AWS
+1. AWS Region
+2. Availability Zone
+3. Edge Locations
+4. Scope of Services
+
+The AWS Cloud services can be categories into 8 core domains
+1. Compute domain
+2. Network domain
+3. Storage domain
+4. Database domain
+5. Security domain
+6. Management Tools
+7. Messaging
+8. Developer Tools
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

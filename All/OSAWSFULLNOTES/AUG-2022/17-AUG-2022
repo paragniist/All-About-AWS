@@ -1,0 +1,45 @@
+How to install mysql server? [private ec2 instance machine]
+1. Install MySql Server
+sudo apt update -y
+sudo apt install -y mysql-server-8.0
+
+2. alter mysql_native_user password
+sudo mysql -uroot
+alter user 'root'@'localhost' identified with mysql_native_password by 'root';
+exit
+	
+2. configure secure access
+sudo mysql_secure_installation
+
+3. change the bind address
+sudo vim /etc/mysql/mysql.conf.d/mysqld.conf
+
+change from 127.0.0.1 to 0.0.0.0
+bind-address            = 0.0.0.0
+
+4. add new user and grant permission for access remotely
+mysql -uroot -proot
+create user 'rconnectuser'@'%' identified by 'welcome1';
+grant all privileges on *.* to 'rconnectuser'@'%';
+exit
+
+How to install mysql client? [public ec2 instance machine]
+1. sudo apt update -y
+2. sudo apt install -y mysql-client-8.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

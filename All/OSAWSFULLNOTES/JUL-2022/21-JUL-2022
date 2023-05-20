@@ -1,0 +1,59 @@
+subnet
+subnet is a sub-network out of an vpc network to enforce traffic/security restrictions on a group of resources
+
+1. subnets are scoped to the availability zone
+2. at max we can create 200 subnets within an vpc
+3. it is recommended to create atleast 2 subnets across the availability zones of an vpc to distribute the resources
+
+There are 2 main reasons for using an subnet
+1. to distribute resources across the availability zones of an vpc in an region
+2. to enforce traffic restrictions/security on different groups of resources
+
+we might need to create multiple subnets within the availability zone for enforcing different security restrictions on different group of resources
+
+There are 3 types of subnets are there
+1. private subnet
+2. public subnet
+3. hybrid subnet
+
+#1. private subnet
+by default when we create a subnet within the availability zone of a vpc within a region, the subnet becomes private subnet only, which means the resources within the private subnet cannot be accessible from external network.
+only the resources within the vpc across the subnets can communicate with each other
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

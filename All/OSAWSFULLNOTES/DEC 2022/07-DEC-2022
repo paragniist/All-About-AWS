@@ -1,0 +1,88 @@
+4. storage domain
+1. elastic block storage (ebs) = harddisk for ec2 instance
+2. elastic filesystem (efs)    = network file storage server provided by aws, the storage space can be shared across multiple instances over the network. There are 2 ways we can mount the efs on the ec2 instances
+	1. mountTargets = root access
+	2. accessPoints = specific location for an specific user allowing applications to use
+3. simple storage service (s3) = object storage allows us to store audio, video, images, docs etc
+4. cloud front                 = content delivery network service provided by aws. hosted across the edge locations in serving static content to the clients quickly
+5. glacier                     = archival storage to store the long-living static data at lower cost
+6. snowball                    = migrating the data from on-premise datacenters to the aws cloud platform
+7. storage gateway             = hybrid service to migrate the applications from onpremise to the cloud
+
+3. database domain
+1. rds            = relational database service which is an managed service for hosting the popular databases on aws cloud platform
+2. aurora db      = rds provided by the aws built ontop of mysql
+3. dynamodb       = no-sql database that stores the data in tables with key/value pair. a record must and should have partition key and optionally sortKey
+4. elastic cache  = it is the server side cache for storing static or moderate or frequently accessed data to reduce database roundtrips in fetching or re-computing the same data
+5. redshift (not covered)
+
+2. compute domain
+1. ec2                      = compute machine
+2. loadbalancer             = #3 types are there (application loadbalancer, network loadbalancer, gateway loadbalancer)
+3. auto-scaling group       = scale-in or scale out the compute instances based on auto-scaling policy
+4. elastic beanstalk        = pre-created templates (comprising most frequently used technologies), we can choose them to quickly bring up the env, so that we can deploy the applications. There are 2 types of env are there
+  1. application/webserver env
+	2. worker env                            
+5. lambda (not covered yet)
+
+1. networking domain
+vpc
+subnet 
+- private
+- public 
+- hybrid
+internet gateway
+nat gateway
+route tables
+security groups
+elastic ips
+nacl rules
+vpc peering
+------------------------------------------------------------------------------------------------------------------------
+1. networking
+2. compute
+3. database
+4. storage
+5. iam/securing
+6. messaging
+7. developer tools
+8. management tool
+
+#5. IAM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

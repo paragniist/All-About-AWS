@@ -1,0 +1,56 @@
+vpc network
+vpc network is an isolated network of resources of an aws user account within a region
+
+subnet
+vpc is a very big network that scopes to the region level, there are various resources we wanted to create for an application, the access registrictions and security rules we want to apply for these resources are different from one to the another, if we place all of these resources under onesingle network, then we cannot control/restrict the resources differently
+The subnet is nothing but a smaller network within the vpc in which we can create resources and manage the security restrictions on them
+
+1. per vpc it is allowed to create at max 200 subnets
+2. subnet is scoped to the availability zone level
+3. it is recommended to create atleast 2 subnets across the availability zones within a vpc for high availability, so that we can distribute the resources across the AZ
+
+There are 2 reasons for creating a subnet
+1. to apply different traffic restrictions to the group of resources within the subnet
+2. the way we can bind resources to a specific availability zone of a region within the vpc is through subnet
+
+within the region max #200 subnets are allowed, we can create any number of subnets within an AZ, based on group of resources and restrictions we want to apply. but cummulative no of subnets should not exceed #200 within that vpc
+
+
+There are 3 types of subnets are there in aws cloud platform
+1. private subnet
+2. public subnet
+3. hybrid subnet
+
+#1. private subnet
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

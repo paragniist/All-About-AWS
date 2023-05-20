@@ -1,0 +1,109 @@
+AWS Service scope
+AWS Service scopes refers to the a resource or service of a AWS is entitled for which level and the manageability aspect of the service. There are 3 scopes are there in aws cloud platform.
+1. global
+2. regional
+3. availability zone
+
+1. global scope
+the service is created and accessible across all the regions of the cloud infrastructure platform.
+- Route53
+- AWS Cloud Front
+- IAM registry
+
+2. Regional scope
+The service is created to the region level and is accesible and manageable within the region.
+- DynamoDB
+- Elastic LoadBalancer
+- S3 Bucket
+- Virtual Private Cloud Network
+
+3. Availabiblity Zone
+These services are created per AZ 
+- Elastic Block Storage 
+- EC2 instance
+- Subnet
+--------------------------------------------------------------------------------------------
+#network domain
+
+#compute domain
+ec2 instance
+ec2 stands for elastic cloud compute, which is nothing but an machine/computer created on the aws cloud platform 
+
+#provisoning = The process of creating an resource on a cloud platform is called provisioning.
+	
+How to launch an ec2 instance on aws cloud platform?
+#1. goto services choose compute and navigate into ec2
+#2. click on launch instance
+#3. we need to provide the details in creating the ec2 instance
+	3.1 provide name for the instance (for eg.. javainstance)
+	3.2 choose the AMI (amazon machine image) (operating system)
+		- ubuntu family
+		- 22.04 LTS (free tier)
+	3.3 choose the shape of the instance (t2.micro only)	
+	3.4 click on create keypair
+		This generates an ssh keypair in accessing the ec2 instance
+		3.4.1 enter the keypair name 
+		3.4.2 choose the algorithm (default: RSA)
+		3.4.3 choose type of keypair (default: pem)
+		The pem file will be downloaded upon clicking on finish, place the ".pem" into $USER_HOME/.ssh directory
+		
+		upon creating the keypair choose the keypair name from the drop down which which we want to create the instance
+	3.5 choose the default vpc, subnet and enable public ip address (everything is auto-selected, just cross-check and leave it to the default)
+	3.6 scroll-down and click on launch
+	
+goto ec2->instances page and identify the instance we provisioned and copy the public ip address of the instance and use it for ssh into the computer	
+
+How to connect to ec2 instance?
+1. install gitbash on your machine
+2. open gitbash
+3. enter ssh command for connecting to the ec2 instance using public_ip and pem file as below.
+	ssh -i ~/.ssh/javainstancekp.pem ubuntu@publicip
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

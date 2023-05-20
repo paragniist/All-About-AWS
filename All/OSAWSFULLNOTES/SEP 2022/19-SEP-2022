@@ -1,0 +1,12 @@
+Compute Domain
+There are 5 services are there in compute domain
+1. elastic compute cloud (ec2)
+2. elastic beanstalk
+3. autoscaling group
+4. elastic loadbalancer
+5. lambda
+
+4. elastic loadbalancer
+Load balancers (LBR) are used for distributing network/application traffic across the nodes on which our applications are running.
+	
+	

@@ -1,0 +1,15 @@
+AWS Cloud developer Tools
+There are 5 developer tools are available in AWS Cloud Platform
+1. CodeCommit
+2. CodeBuild
+3. CodeArtifact
+4. CodeDeploy
+5. CodePipeline
+
+4. CodeDeploy is used for automating the process of deploying an application into one the aws services like
+1. ec2
+2. Lamdba
+3. ECS
+4. Fargate
+5. On-Premise
+

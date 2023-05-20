@@ -1,0 +1,81 @@
+There are 6 features are there in spring boot
+1. auto configurations
+2. starter dependencies
+3. actuator endpoints
+4. devtools
+5. embedded servlet containers
+6. spring boot cli
+
+4. devtools
+devtools helps the developers in sophisticated developing the application while working with spring boot.
+during the time of development of the application, developer goes in cycles in debugging and modifying the code multiple times. each time the developer modifies the code, he has to recompile, repackage and redeploy the application by restarting the server.
+The amount of time the developer would spend in debugging the application would be quite high that is where devtools comes to rescue us
+each time the developer modifies the code during executing the devtools identifies the modified class file and reloads the classfile into jvm memory by replacing the old copy of the class file thus reflecting the changes
+hence we dont need any repackage, redeploy and restart of the server thus saves huge amount of development time
+
+#5. embedded servlet containers
+
+while working with servlet / spring mvc based applications we need to have servlet containers installed and configured on the target environments in which we are going to deploy the application.
+In an microservices world the application is broken down into smaller microservices and deployed independently from each other, which means each mircroservice has to be deployed and executed on its own jvm or servlet container environment. So the time it takes to setup/configure the container to make the microservices application execute takes lot of time.
+	
+Instead to rescue us from the above problem, embedded servlet containers are introduced. The container is shipped as part of the code itself so we dont need to install, package and deploy the application on the server rather we can directly execute the application on the server like a regualar java application
+	
+#6. spring boot cli
+we can quickly build the prototypes and verify them by using spring boot CLI. we dont need to create the projects, declare configurations etc 
+directly implement the functionality we wanted to experiment or expore by leaving the rest of the aspects of running the application to the SpringBoot CLI
+
+we can write and run directly an class itself on a container without any deployment or configuration
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

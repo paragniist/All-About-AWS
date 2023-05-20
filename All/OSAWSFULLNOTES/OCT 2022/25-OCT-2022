@@ -1,0 +1,69 @@
+#1.
+1. create am IAM user and IAM Group
+digicogroup
+|-digicouser (api access)
+2. add role to the group
+AmazonSQSFullAccess
+
+download the accessID and secretAccessKey for the digicouser
+-------------------------------------------------------------------------------------------------------------------------
+
+#2. create sqs queue
+1. standard queue
+2. queueName =	requestStatementQueue
+3. Define who can send messages to the queue
+	Choose: Only the specified AWS accounts, IAM users and roles
+	paste the ARN: of the IAM User
+	Define who can receive messages from the queue
+	Choose: Only the specified AWS accounts, IAM users and roles
+	paste the ARN: of the IAM User
+create queue and copy the queueURL
+https://sqs.ap-south-1.amazonaws.com/227218640239/requestStatementQueue
+-------------------------------------------------------------------------------------------------------------------------
+#3. open digico application and edit the env.properties
+env.properties
+queueURL=
+aws_access_key_id=
+aws_secret_access_key=
+	
+and build the application mvn clean verify
+
+#4.
+build the digicoworker application
+
+#5. create an application in elastic beanstalk for deploying webserver env, leave all the options to default
+choose: Tomcat
+
+#6. create worker environment
+1. click on environment from left menu
+2. click on create environment
+choose: worker env
+3. applicationName: digicoworker
+4. platform: managed
+5. platform: tomcat
+6. upload your code:
+	upload digicoworker.war
+7. now click on more configuration options
+	7.1 goto worker section and click on edit, in the workerqueue: drop down choose the requestStatementQueue we created earlier
+	7.2 http endpoint as /api/statement
+then click on create environment
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

@@ -1,0 +1,66 @@
+Distributed web applications
+In a distributed applications, there are 2 parts are there
+1. server
+In a distributed web application the server computer will be running with an web application, that can take the web request over the network from the client. then performs operation and returns an HTML/Web page as a response back to the client.
+The whole business logic/processing is centrally located on the server computer only
+
+2. client
+The client is a thin-client application, the application will not perform any operation at the client-side, the client application just collects the data from the enduser, sends the data over the network to server application. and receives response from the server and displays to the user
+
+if we see, the client-applications doesnt consume any cpu/memory in performing operations, so these are called thin-client applications. A web browser can act as an thin-client application to be installed and used at client computer
+
+advantage:-
+	1. To run the thin-client application we can use thin-client machines/computers which doesnt have any cpu or huge memory in running these browsers. So, the cost of setting up the infrastructure required for running the thin-client application is very less
+	2. No need to install the thin-client application on the thin-client station, as the web browsers are the default software that comes as part of the system itself. So we dont need to spend lot of time on installing and configuring the client application on the computer.
+	3. There is no need of upgrading/patching the thin-client software which saves huge amount of maintainance cost
+	4. As we can use any browser software to access the server application, we dont see any compatible issues interms of hardware architecture or operating system platform in using the application
+	5. No need of a dedicate IT Support team to monitor, maintain and install the client s/w applications
+	
+dis-advantage:-
+	1. if the network brokes down the whole system/business goes down, so we always need an backup line to ensure we have the connectivy 24/7 which is quite expensive to maintain
+	2. we need high-speed internet/data line to communicate with the server. as the huge volumes of data will be transmitted between the server/client programs
+	3. if the server computer brokes down, the whole system goes down, so we need to ensure always we have multiple servers on which application is running for high-availability
+	4. If more users are communicating with server/application, then the load on the server will be high and results in performance degradation. so we need to ensure we run our application on multiple servers to handle the load
+	
+	
+There are 5 types of applications are there
+1. standalone / desktop applications
+2. distributed web applications
+3. enterprise applications
+4. batch processing applications
+5. mobile applications
+
+#3. Enterprise applications
+Enterprise application refers to very large application which comprises of multiple functional modules that are required for running an enterprise business system.
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

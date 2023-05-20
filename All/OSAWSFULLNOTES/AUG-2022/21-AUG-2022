@@ -1,0 +1,8 @@
+Database domain:
+There are 5 services are there in database domain
+1. RDS Service
+2. DynamoDB
+3. Aurora
+4. Elastic Cache
+5. RedShift
+

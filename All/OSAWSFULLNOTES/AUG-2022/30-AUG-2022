@@ -1,0 +1,62 @@
+DynamoDB
+DynamoDB is an managed no-sql database provided as part of the aws cloud platform. It is scoped to AWS Region and upon creating the table in a Region, it would be accessible across all the AZ, VPCs and subnets of the region.
+
+For eg.. if we create a table called "orders" within a region ap-south-1 it will be scoped to ap-south-1 and is accessible across all the AZs of the region. we cannot create one more table within the ap-south-1 of the name "orders".
+but we can create a table with name "orders" under us-east-1 without any problem.
+
+DynamoDB supports multi-region replication where a table created in one region can be made accessible across other regions also within cloud platform
+
+DynamoDB is serverless database, self-managed by AWS Cloud platform.
+	
+In DynamoDB we can store the data by creating the tables, while creating the tables in DynamoDB we dont need to specify the columns of data we wanted to store, since it is an no-sql database. In the tables we store collection of items, where each item is nothing but key/value pair of data (we can image a collection as a record in relational table)
+	
+For every table we create in DynamoDB we need to create a column partition_key, it is mandatory and based on the value of the partition_key only the data is distributed across the partitions of the table within the DynamoDB cluster.	
+If a table has only the partition_key then it acts as primary_key of the table, so no 2 collections of the table can carry the same value for the partition_key
+
+The DynamoDB takes the partition_key of the collection and computes the hash value of partition_key we provided and computes the partition in which the data has to stored within the table, so that the data is distributed uniquely across the partitions. So while lookingup for the data based on partition_key the DynamoDB again computes the hash value for the partition_key we supplied and determines the partition in which the data is stored and retrieves it quickly.
+	
+If we see even the data is scaled to terrabytes as well just with one single lookup we can fetch the data consistently across the collections we stored in the table
+
+In addition to the partition_key we can create one more column called sort_key. if a table contains partition_key and sort_key then together both becomes primary_key of the table.
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

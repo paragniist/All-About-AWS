@@ -1,0 +1,2 @@
+If the incomming network traffic is coming within private port range means, it is not an inbound request, it is an response for the request we send.
+	

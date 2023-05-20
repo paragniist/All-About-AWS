@@ -1,0 +1,73 @@
+Elastic File System (EFS)
+------------------------
+Elastic File System is a network storage location that can be mounted across multiple compute instances to share the data across the applications
+
+An EBS volume is an Elastic Block Storage volume which is an harddisk for an ec2 instance attached during the time of provisioning the instance. All the data written by the applications running on the ec2 instance will be stored locally on the EBS volume only. when we deprovision the ec2 instance, automatically the ebs volume also will be destroyed. So all the data that is being stored on the ec2 instance will be lost
+
+From the above we can understand all the data that is being stored on an ec2 instance will be kept local to the instance and accessible on that instance only
+
+But if we want to share the data between multiple ec2 instances or applications that are running how can we do it effectively?
+That is where Amazon AWS Cloud has provided EFS (Elastic File System) which is an network location that can be mounted across the ec2 instances. Using EFS we can not only share the files across the ec2 instances, we can even transfer the files between EFS and On-Premise servers as well
+
+Features:
+1. Scalable performance
+Amazon EFS can provide throughput IOPS to lower the latency in accessing the data for various different workloads
+2. Scalable Storage
+We start wth initial capacity during the time of provisioning, when we store the data onto the EFS location, automatically the storage space will be increased and when we delete the data, the storage space will shriked
+3. Secured & Complaint
+EFS locations can be protected by Amazon Virtual Private cloud networking. we can configure the secure access to the NFS location through subnets and security groups
+4. Storage Options
+EFS offers 2 storage classes
+1. Standard = Most frequently accessed data can be placed in standard storage class. 
+EFS locations are provisioned within a region, when we choose storage class as standard, then the EFS location is replicated across all AZs of the region automatically for optimized access
+
+2. one zone = Less frequently accessed data can be placed on one-zone. The name itself will tells you the data being stored with One-Zone storage class will be kept only at one availability zone only.
+	
+We can configure EFS lifecycle management 	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

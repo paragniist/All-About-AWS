@@ -1,0 +1,46 @@
+vpc peering
+by default the resources within a vpc can communicate with other resources across the subnet of the vpc. If we wanted to make the resource of a vpc accessible externally we need to make the subnet as public subnet.
+	
+But what if we wanted the resources of our vpc to be accessible by the other resources of another vpc within the aws cloud?
+There are many ways to make the resources accessible across the vpcs of the cloud platform
+#1. make the subnet as public subnet, so that all the resources of that subnet in the vpc becomes accessible to other vpcs of the cloud platform. but there are dis-advantages with this approach
+	1.1 the resources will not only become accessible across the vpcs of the cloud platform, those are exposed to the external world as well, which poses an unecessary security threat
+	1.2 all the communicate to these public subnet resources goes through the external network channel due to which a huge network latency and delay in bandwidth transmission exists when compared with internal network of aws. so there is huge impact on the performance of the applications communicate over the external route.
+#2. use vpc peering
+	vpc peering is a technic of inter-connecting or routing the network traffic across the vpcs of the aws cloud platform. by peering vpcs there is no additional data/network line will not be established, all the data between these 2 vpcs moves internally within the aws network thus providing high level security
+	
+	The vpc peering can be done across any 2 different vpcs of
+	1. across the regions
+	2. across the aws accounts	
+But there are few conditions to be taken into account in order to perform vpc peering
+1. The ip ranges of both the vpcs we wanted to peer should not overlap
+2. Transitive peering, edge routing, internet gateway access is not supported
+3. No Nat Routing between the vpcs
+4. cannot resolve private DNS values across the vpcs
+5. No cross referencing of security groups between the vpcs
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

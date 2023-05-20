@@ -1,0 +1,11 @@
+There are lot of challenges are there in setting up an load balancer for an application over the cluster.
+1. provisioning the required infrastructure and installing and configuring the load balancer manually takes lot of time
+2. to host and route the traffic to an application on the cluster, we need to configure servergroups and enable path-based routing at the load balancer level, which is highly complex job
+3. each time there is a change in the servergroup dues to an node went down, the ops engineer has to identify and modify LBR configuration which is an recurring and maintainance job
+4. need to enable healthchecks to determine faulty nodes and stop routing the traffic
+5. need to configure or enable SSL on the Load balancer which is an difficult job
+6. if the loadbalancer itself is down, the application availability becomes zero. so need to host the load balancers based on HA configuration
+7. to enable HA and Fault Tolerant the ops engineer has to configure sticky session and session replication which is complex things to achieve
+
+Looking at the above we can understand provisioning, installing, configuring and maintaining the load balancer manually seems to be an difficult job instead we can use AWS Cloud Loadbalancers
+

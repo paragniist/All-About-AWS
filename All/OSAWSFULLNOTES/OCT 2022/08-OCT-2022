@@ -1,0 +1,37 @@
+Compute Domain
+There are 5 services are there
+1. ec2 instance
+2. Loadbalancer
+	2.1 Application Loadbalancer
+	2.2 Network Loadbalancer
+	2.3 Gateway Loadbalancer
+3. Auto-Scaling Group
+4. Elastic BeanStalk
+5. Lambda
+----------------------------------------------------------------------------------------------
+#3. Auto-scaling group
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

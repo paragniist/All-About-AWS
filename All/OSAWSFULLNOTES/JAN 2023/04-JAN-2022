@@ -1,0 +1,95 @@
+Code Commit, Code Build, Code Deploy and CodePipeline
+#1 create 2 IAM roles
+1.1 For ec2 instance
+AWSEC2CodeDeployRole
+Common Usecase: EC2
+permissions:
+	AWSCodeDeployFullAccess
+	AmazonS3FullAccess
+		
+1.2 For CodeDeploy
+UseCase: CodeDeploy
+Policy: AWSCodeDeployRole
+
+#2 Provision an EC2 instance
+AMI: Amazon Linux2
+Attach: AWSEC2CodeDeployRole while creating the instance
+UserData section: paste the below shellscript to install AWSCodeDeploy Agent on the instance
+Name: FoodiesJavaServer
+
+#!/bin/bash
+sudo yum -y update
+sudo yum -y install ruby
+sudo yum -y install wget
+cd /home/ec2-user
+wget https://aws-codedeploy-ap-south-1.s3.ap-south-1.amazonaws.com/latest/install
+sudo chmod +x ./install
+sudo ./install auto
+sudo yum install -y python-pip
+sudo pip install awscli
+
+#3. once the instance has been started install jdk11 and tomcat9 on to the instance by ssh into the instance
+1. install jdk11
+ ssh -i ~/.ssh/awskp.pem ec2-user@13.232.82.192
+
+sudo yum update -y
+sudo yum install java-11-amazon-corretto
+
+2. install tomcat9 under user home directory
+wget https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.70/bin/apache-tomcat-9.0.70.tar.gz
+tar -xvzf apache-tomcat-9.0.70.tar.gz
+
+3. check the codedeploy agent is installed and running by using the below command on the ec2 instance
+sudo service codedeploy-agent status
+
+
+#4. create an CodeBuild project by choosing CodeCommit Pipeline as source
+In CodeBuild choose the platform or operating system as Ubuntu, because in buildspec.yml we wrote the ubuntu shell commands for installing the jdk11 and maven on the ec2 of the codebuild
+
+#5. setup CodeDeploy
+1. create an CodeDeploy Application with Target as EC2/On-Premise
+2. Create an Code Deployment Group 
+Unselect loadbalancer
+Choose EC2 Target
+Enter Label as 
+Name FoodiesJavaServer
+
+#6. CodePipeline
+Source: CodeCommit
+Build Provider: CodeBuild
+Deployer: CodeDeploy
+Create
+------------------------------------------------------------------------------------------------------------------------
+1. Lamdba
+2. CloudWatch
+3. Forgate
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
